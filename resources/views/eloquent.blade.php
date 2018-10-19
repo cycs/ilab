@@ -3,6 +3,6 @@
 
 @section('content')
     @foreach($bears as $bear)
-        <li>{{ $bear->name }} ---------- {{ $bear->type }} </li>
+        <li>{{ $bear->name }} - {{ $bear->type }} </li>
     @endforeach
 @endsection
