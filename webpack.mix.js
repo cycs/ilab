@@ -11,11 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.browserSync('localhost:8000')
+    .js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .options({
-        postCss: [
-            require('postcss')()
-        ]
+        purifyCss: false,
+        clearConsole: false,
+        postCss: [require('postcss')()]
    });
 
