@@ -10,7 +10,6 @@
         </tr>
     @foreach($bears as $bear)
         <tr>
-            <td>{{ $bear->name }}</td>
             <td>{{ $bear->type }}</td>
             <td>{{ $bear->danger_level }}</td>
         </tr>
