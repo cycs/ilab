@@ -27,6 +27,7 @@ class CreateSeedsTable extends Migration
             $table->date('planting_period_end');
             $table->date('harvest_period_start');
             $table->date('harvest_period_end');
+            $table->integer('harvest_within_time');
             $table->string('grown_img_url');
             $table->string('seed_img_url');
             $table->integer('price');
