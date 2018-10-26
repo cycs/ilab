@@ -17,6 +17,8 @@ class SeedTableSeeder extends Seeder
         DB::table('illnesses')->delete();
         DB::table('seeds_illnesses')->delete();
 
+        /* Seeds */
+
         $tomatoes = Seed::create([
             'name' => 'tomate',
             'latin_name' => 'Solanum lycopersicum',
@@ -61,6 +63,8 @@ class SeedTableSeeder extends Seeder
         ]);
 
 
+        /* Illnesses */
+
         $mildiou = Illness::create([
             'name' => 'mildiou',
             'description' => 'Le mildiou est un champignon qui se propage très facilement dans des conditions humides.',
@@ -71,5 +75,8 @@ class SeedTableSeeder extends Seeder
         ]);
 
         $tomatoes->illnesses()->attach($mildiou);
+
+
+
     }
 }
