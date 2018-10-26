@@ -5,5 +5,5 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Soil extends Model {
-    protected $fillable = ['name', 'address', 'granulometry', 'ph', 'humus_percent'];
+    protected $fillable = ['name', 'address', 'lat', 'long', 'granulometry', 'ph', 'humus_percent'];
 }
