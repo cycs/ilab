@@ -16,6 +16,7 @@ class SeedTableSeeder extends Seeder
         DB::table('seeds')->delete();
         DB::table('illnesses')->delete();
         DB::table('seeds_illnesses')->delete();
+        DB::table('seeds_permacultures')->delete();
 
         /* Seeds */
 
@@ -31,6 +32,7 @@ class SeedTableSeeder extends Seeder
             'planting_period_end' => '2018-05-31',
             'harvest_period_start' => '2018_07_01',
             'harvest_period_end' => '2018_10_31',
+            'harvest_within_time' => 90,
             'grown_img_url' => '/tomate_fruit.jpg',
             'seed_img_url' => '/tomate_seed.jpg',
             'price' => '1.79',
@@ -51,6 +53,100 @@ class SeedTableSeeder extends Seeder
                     'planting_period_end' => '2018-05-31',
                     'harvest_period_start' => '2018_07_01',
                     'harvest_period_end' => '2018_10_31',
+                    'harvest_within_time' => 120,
+                    'grown_img_url' => '/tomate_fruit.jpg',
+                    'seed_img_url' => '/tomate_seed.jpg',
+                    'price' => '1.79',
+                    'difficulty' => 'hard',
+                    'tutorial' => '',
+                    'advices' => '',
+                    'soil_ph'=> 7,
+                    'soil_humus_percent'=> 5,
+                    'soil_granulometry'=> 'limons fins',
+        ]);
+
+        $eggplant = Seed::create([
+                    'name' => 'aubergine',
+                    'latin_name' => 'Solanum tuberosum',
+                    'variety' => 'bintje',
+                    'type' => 'tubercule',
+                    'exposure' => 'soleil',
+                    'water' => '1 l/jour',
+                    'fertilizer' => '',
+                    'planting_period_start' => '2018-03-01',
+                    'planting_period_end' => '2018-05-31',
+                    'harvest_period_start' => '2018_07_01',
+                    'harvest_period_end' => '2018_10_31',
+                    'harvest_within_time' => 40,
+                    'grown_img_url' => '/tomate_fruit.jpg',
+                    'seed_img_url' => '/tomate_seed.jpg',
+                    'price' => '1.79',
+                    'difficulty' => 'hard',
+                    'tutorial' => '',
+                    'advices' => '',
+                    'soil_ph'=> 7,
+                    'soil_humus_percent'=> 5,
+                    'soil_granulometry'=> 'limons fins',
+        ]);
+        $chili = Seed::create([
+                    'name' => 'piment',
+                    'latin_name' => 'Solanum tuberosum',
+                    'variety' => 'bintje',
+                    'type' => 'tubercule',
+                    'exposure' => 'soleil',
+                    'water' => '1 l/jour',
+                    'fertilizer' => '',
+                    'planting_period_start' => '2018-03-01',
+                    'planting_period_end' => '2018-05-31',
+                    'harvest_period_start' => '2018_07_01',
+                    'harvest_period_end' => '2018_10_31',
+                    'harvest_within_time' => 50,
+                    'grown_img_url' => '/tomate_fruit.jpg',
+                    'seed_img_url' => '/tomate_seed.jpg',
+                    'price' => '1.79',
+                    'difficulty' => 'hard',
+                    'tutorial' => '',
+                    'advices' => '',
+                    'soil_ph'=> 7,
+                    'soil_humus_percent'=> 5,
+                    'soil_granulometry'=> 'limons fins',
+        ]);
+        $cabage = Seed::create([
+                    'name' => 'chou',
+                    'latin_name' => 'Solanum tuberosum',
+                    'variety' => 'bintje',
+                    'type' => 'tubercule',
+                    'exposure' => 'soleil',
+                    'water' => '1 l/jour',
+                    'fertilizer' => '',
+                    'planting_period_start' => '2018-03-01',
+                    'planting_period_end' => '2018-05-31',
+                    'harvest_period_start' => '2018_07_01',
+                    'harvest_period_end' => '2018_10_31',
+                    'harvest_within_time' => 80,
+                    'grown_img_url' => '/tomate_fruit.jpg',
+                    'seed_img_url' => '/tomate_seed.jpg',
+                    'price' => '1.79',
+                    'difficulty' => 'hard',
+                    'tutorial' => '',
+                    'advices' => '',
+                    'soil_ph'=> 7,
+                    'soil_humus_percent'=> 5,
+                    'soil_granulometry'=> 'limons fins',
+        ]);
+        $leek = Seed::create([
+                    'name' => 'poireau',
+                    'latin_name' => 'Solanum tuberosum',
+                    'variety' => 'bintje',
+                    'type' => 'tubercule',
+                    'exposure' => 'soleil',
+                    'water' => '1 l/jour',
+                    'fertilizer' => '',
+                    'planting_period_start' => '2018-03-01',
+                    'planting_period_end' => '2018-05-31',
+                    'harvest_period_start' => '2018_07_01',
+                    'harvest_period_end' => '2018_10_31',
+                    'harvest_within_time' => 50,
                     'grown_img_url' => '/tomate_fruit.jpg',
                     'seed_img_url' => '/tomate_seed.jpg',
                     'price' => '1.79',
@@ -76,6 +172,9 @@ class SeedTableSeeder extends Seeder
 
         $tomatoes->illnesses()->attach($mildiou);
 
+        /* Permaculture */
+
+        $tomatoes->permacultures()->attach($leek, ['positive_effect' => true, 'location' => 'after']);
 
 
     }
