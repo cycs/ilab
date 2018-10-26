@@ -29,7 +29,4 @@ class Seed extends Model {
     public function illnesses(){
         return $this->belongsToMany('App\Illness', 'seeds_illnesses', 'seed_id', 'illness_id');
     }
-    public function soils(){
-        return $this->belongsTo('App\Soil', 'seeds_soils', 'seed_id', 'soil_id');
-    }
 }
