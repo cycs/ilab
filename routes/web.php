@@ -1,6 +1,7 @@
 <?php
 
 use App\Bear;
+use App\Seed;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('eloquent', function() {
 
     return View::make('eloquent')
-        ->with('bears', Bear::all());
+        ->with('bears', Bear::all())
+        ->with('seeds', Seed::all());
 
 });
 
