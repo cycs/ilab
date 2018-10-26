@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\UserTableSeeder;
 use Illuminate\Database\SeedTableSeeder;
 use Illuminate\Database\IllnessTableSeeder;
+use Illuminate\Database\SoilTableSeeder;
 use App\Bear;
 use App\Fish;
 use App\Tree;
@@ -18,14 +19,16 @@ class DatabaseSeeder extends Seeder {
     public function run() {
         Eloquent::unguard();
 
-        $this->call('BearAppSeeder');
-        $this->command->info('Bear app seed finished');
+        //$this->call('BearAppSeeder');
+        //$this->command->info('Bear app seed finished');
         $this->call('UserTableSeeder');
         $this->command->info('User app seed finished');
         $this->call('SeedTableSeeder');
         $this->command->info('Seed app seed finished');
         $this->call('IllnessTableSeeder');
         $this->command->info('Illness app seed finished');
+        $this->call('SoilTableSeeder');
+        $this->command->info('Soil app seed finished');
         // $this->call(UsersTableSeeder::class);
     }
 }
@@ -43,7 +46,7 @@ class BearAppSeeder extends Seeder {
 
         //seed our bears table
         // 3 different bears
-
+/*
         $bearLawly = Bear::create([
             'name' => 'Lawly',
             'type' => 'Grizzly',
@@ -144,6 +147,6 @@ class BearAppSeeder extends Seeder {
             'type' => 'The Pooh',
             'danger_level' => 0
         ]);
-
+*/
     }
 }
