@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\UserTableSeeder;
+use Illuminate\Database\SeedTableSeeder;
+use Illuminate\Database\IllnessTableSeeder;
 use App\Bear;
 use App\Fish;
 use App\Tree;
@@ -16,7 +19,13 @@ class DatabaseSeeder extends Seeder {
         Eloquent::unguard();
 
         $this->call('BearAppSeeder');
-        $this->command->info('Bear app seeds finished');
+        $this->command->info('Bear app seed finished');
+        $this->call('UserTableSeeder');
+        $this->command->info('User app seed finished');
+        $this->call('SeedTableSeeder');
+        $this->command->info('Seed app seed finished');
+        $this->call('IllnessTableSeeder');
+        $this->command->info('Illness app seed finished');
         // $this->call(UsersTableSeeder::class);
     }
 }
@@ -30,6 +39,7 @@ class BearAppSeeder extends Seeder {
         DB::table('trees')->delete();
         DB::table('picnics')->delete();
         DB::table('bears_picnics')->delete();
+
 
         //seed our bears table
         // 3 different bears
@@ -117,6 +127,12 @@ class BearAppSeeder extends Seeder {
         Bear::create([
             'name' => 'Billy',
             'type' => 'Polar',
+            'danger_level' => 10
+        ]);
+
+        Bear::create([
+            'name' => 'Emilie',
+            'type' => 'RrrrRRrR',
             'danger_level' => 10
         ]);
 
