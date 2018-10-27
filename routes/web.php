@@ -1,6 +1,6 @@
 <?php
 
-use App\Bear;
+use App\Soil;
 use App\Seed;
 
 /*
@@ -28,6 +28,16 @@ Route::get('eloquent', function() {
         ->with('seeds', Seed::all());
 
 });
+
+Route::get('/map', function() {
+
+    return View::make('map')
+        ->with('soils', Soil::all());
+
+});
+
+Route::get('/seeds', 'SeedsController@index')->name('seeds');
+
 
 
 
