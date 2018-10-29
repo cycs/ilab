@@ -21,3 +21,27 @@ body {
 td {
   width: 200px;
 }
+
+.seeds {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+
+  &__unit {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    flex: 1 300px;
+    margin: 2%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, .3) 2px 2px 2px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+}

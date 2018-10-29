@@ -2,9 +2,10 @@
 
 
 @section('content')
-    <ul>
+    <h2>Graines </h2>
+    <ul class="seeds">
     @foreach($seeds as $seed)
-        <li>
+        <li class="seeds__unit">
             <ul>
                 <li>{{$seed->name}}</li>
                 <li>{{$seed->latin_name}}</li>

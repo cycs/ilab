@@ -20,7 +20,7 @@ class CreateSoilTable extends Migration
             $table->string('address');
             $table->string('lat');
             $table->string('long');
-            $table->enum('granulometry', ['argile', 'limons fins', 'limons grossiers', 'sables fins', 'sables grossiers', 'calcaire', 'humifère']);
+            $table->enum('granulometry', ['argile', 'limons fins', 'limons grossiers', 'sables fins', 'sables grossiers', 'calcaire', 'humifère', 'all']);
             $table->tinyInteger('ph');
             $table->tinyInteger('humus_percent');
 
