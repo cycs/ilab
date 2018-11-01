@@ -17,9 +17,9 @@ class CreateSeedsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->string('latin_name');
-            $table->string('variety');
-            $table->string('type');
+            $table->string('latin_name')->default('');
+            $table->string('variety')->default('');
+            $table->string('type')->default('');
             $table->string('exposure')->default('ensoleillé');
             $table->string('water')->default('modéré');
             $table->string('fertilizer')->default('ne nécessite aucun engrais');

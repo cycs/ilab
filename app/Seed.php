@@ -20,8 +20,6 @@ class Seed extends Model {
         'seed_img_url',
         'price',
         'difficulty',
-        'tutorial',
-        'advices',
         'soil_ph',
         'soil_humus_percent',
         'soil_granulometry'

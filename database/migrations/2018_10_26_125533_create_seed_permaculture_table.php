@@ -19,7 +19,7 @@ class CreateSeedPermacultureTable extends Migration
             $table->integer('seed_planted_id');
             $table->integer('seed_to_plant_id');
             $table->boolean('positive_effect');
-            $table->enum('location', ['near', 'after']);
+            $table->enum('location', ['near', 'after', 'before']);
 
 
             $table->timestamps();

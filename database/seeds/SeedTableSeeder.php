@@ -566,6 +566,116 @@ class SeedTableSeeder extends Seeder
             'soil_granulometry'=> 'limons fins',
         ]);
 
+        $basilic = Seed::create([
+            'name' => 'basilic',
+            'latin_name' => '',
+            'variety' => '',
+            'type' => '',
+            'exposure' => '',
+            'water' => '',
+            'fertilizer' => '',
+            'planting_period_start' => '2018-04-01',
+            'planting_period_end' => '2018-08-01',
+            'harvest_period_start' => '2018-10-01',
+            'harvest_period_end' => '2019-02-28',
+            'harvest_within_time' => 0,
+            'grown_img_url' => '/radis_rond_ecarlate_fruit.jpg',
+            'seed_img_url' => '/radis_rond_ecarlate_seed.jpg',
+            'price' => '3.00',
+            'difficulty' => 'medium',
+            'tutorial' => "",
+            'advices' => "",
+            'soil_ph'=> 7,
+            'soil_humus_percent'=> 50,
+            'soil_granulometry'=> 'limons fins',
+        ]);
+
+        $ail = Seed::create([
+            'name' => 'ail',
+            'latin_name' => '',
+            'variety' => '',
+            'type' => '',
+            'exposure' => '',
+            'water' => '',
+            'fertilizer' => '',
+            'planting_period_start' => '2018-04-01',
+            'planting_period_end' => '2018-08-01',
+            'harvest_period_start' => '2018-10-01',
+            'harvest_period_end' => '2019-02-28',
+            'harvest_within_time' => 0,
+            'grown_img_url' => '/radis_rond_ecarlate_fruit.jpg',
+            'seed_img_url' => '/radis_rond_ecarlate_seed.jpg',
+            'price' => '3.00',
+            'difficulty' => 'medium',
+            'tutorial' => "",
+            'advices' => "",
+            'soil_ph'=> 7,
+            'soil_humus_percent'=> 50,
+            'soil_granulometry'=> 'limons fins',
+        ]);
+
+        $capucine = Seed::create([
+            'name' => 'capucine',
+            'latin_name' => '',
+            'variety' => '',
+            'type' => '',
+            'exposure' => '',
+            'water' => '',
+            'fertilizer' => '',
+            'planting_period_start' => '2018-04-01',
+            'planting_period_end' => '2018-08-01',
+            'harvest_period_start' => '2018-10-01',
+            'harvest_period_end' => '2019-02-28',
+            'harvest_within_time' => 0,
+            'grown_img_url' => '/radis_rond_ecarlate_fruit.jpg',
+            'seed_img_url' => '/radis_rond_ecarlate_seed.jpg',
+            'price' => '3.00',
+            'difficulty' => 'medium',
+            'tutorial' => "",
+            'advices' => "",
+            'soil_ph'=> 7,
+            'soil_humus_percent'=> 50,
+            'soil_granulometry'=> 'limons fins',
+        ]);
+
+        $oignon = Seed::create([
+            'name' => 'oignon',
+            'latin_name' => '',
+            'variety' => '',
+            'type' => '',
+            'exposure' => '',
+            'water' => '',
+            'fertilizer' => '',
+            'planting_period_start' => '2018-04-01',
+            'planting_period_end' => '2018-08-01',
+            'harvest_period_start' => '2018-10-01',
+            'harvest_period_end' => '2019-02-28',
+            'harvest_within_time' => 0,
+            'grown_img_url' => '/radis_rond_ecarlate_fruit.jpg',
+            'seed_img_url' => '/radis_rond_ecarlate_seed.jpg',
+            'price' => '3.00',
+            'difficulty' => 'medium',
+            'tutorial' => "",
+            'advices' => "",
+            'soil_ph'=> 7,
+            'soil_humus_percent'=> 50,
+            'soil_granulometry'=> 'limons fins',
+        ]);
+
+        $aneth = Seed::create(['name' => 'aneth', 'tutorial' => '', 'advices' => '']);
+        $mais = Seed::create(['name' => 'maïs', 'tutorial' => '', 'advices' => '']);
+        $fenouil = Seed::create(['name' => 'fenouil', 'tutorial' => '', 'advices' => '']);
+        $asperge = Seed::create(['name' => 'asperge', 'tutorial' => '', 'advices' => '']);
+        $phacelie = Seed::create(['name' => 'phacélie', 'tutorial' => '', 'advices' => '']);
+        $sauge = Seed::create(['name' => 'sauge', 'tutorial' => '', 'advices' => '']);
+        $romarin = Seed::create(['name' => 'romarin', 'tutorial' => '', 'advices' => '']);
+        $camomille = Seed::create(['name' => 'camomille', 'tutorial' => '', 'advices' => '']);
+        $chou = Seed::create(['name' => 'chou', 'tutorial' => '', 'advices' => '']);
+        $artichaud = Seed::create(['name' => 'artichaud', 'tutorial' => '', 'advices' => '']);
+        $chourave = Seed::create(['name' => 'chourave', 'tutorial' => '', 'advices' => '']);
+        $cerfeuil = Seed::create(['name' => 'cerfeuil', 'tutorial' => '', 'advices' => '']);
+        $petitpois = Seed::create(['name' => 'petits pois', 'tutorial' => '', 'advices' => '']);
+
 
         /* Illnesses */
 
@@ -579,11 +689,205 @@ class SeedTableSeeder extends Seeder
         ]);
 
         $tomatoes->illnesses()->attach($mildiou);
+        $potatoes->illnesses()->attach($mildiou);
+        $choufleur->illnesses()->attach($mildiou);
+        $eggplant->illnesses()->attach($mildiou);
+
+
+        $pucerons = Illness::create([
+            'name' => 'pucerons',
+            'description' => 'Les pucerons font partie des insectes les plus communs du potager.',
+            'cause' => 'La présence importante d\'insectes comme les fourmis ou les coccinelles.',
+            'consequence' => 'Ils affaiblissent les plantes en se nourissant de leur sèves. Les feuilles se crispent et roulent. De plus, une partie de la sève absorbée est rejetée sous forme de miellat qui est responsable de la fumagine, un champignon formant des taches noires.',
+            'prevention' => '1. Les capucines attirent les pucerons et permettent donc aux plantations d\'être préservées. 2. Ne pas abuser de l\'utilisation de compost et fumier trop frais. 3. La lavande éloigne également les pucerons.',
+            'treatment' => '1. Retirer rapidement et régulièrement les feuilles colonisées. 2. Pulvérisez un mélange de savon noir.'
+        ]);
+        $potimarron->illnesses()->attach($pucerons);
+        $choufleur->illnesses()->attach($pucerons);
+        $fraises->illnesses()->attach($pucerons);
+        $concombre->illnesses()->attach($pucerons);
+
+
+        $limaces = Illness::create([
+            'name' => 'limaces',
+            'description' => 'Les limaces se nourissent des jeunes pousses des cultures.',
+            'cause' => 'L\'humidité peut être un facteur de la présence des limaces dans le potager.',
+            'consequence' => 'Elles détruisent les cultures.',
+            'prevention' => '1. Le fenouil, le thym et la sauge sont des plantes répulsives contre les limaces. 2. Vérifier les endroits humides où elles aiment se cacher. 3. Le cerfeuil réduit également l\'invasion de limaces."',
+            'treatment' => '1. Utiliser la bière comme appat pour les noyer. 2. Les plantes comme la bourrache ou la cappucine ne sont pas attractives des limaces. 3. Maintenir la surface du sol sèche.'
+        ]);
+        $potimarron->illnesses()->attach($limaces);
+        $salade->illnesses()->attach($limaces);
+        $courgette->illnesses()->attach($limaces);
+        $chili->illnesses()->attach($limaces);
+
+
+        $oidium = Illness::create([
+            'name' => 'oïdium',
+            'description' => 'L\'oïdium est une maladie causée par des champignons. ',
+            'cause' => 'Des filaments s\'installent sur la plante et y développent des suçoirs pour se nourrir. Ils fabriquent des spores infectieuses qui se transmettent par l\'air et contaminent les autres végétaux. Les endroits confinés et l\'humidité sont également propices à son développement.',
+            'consequence' => 'Elle provoque l\'apparition de taches circulaires blanches sur les feuilles, les tiges et parfois sur les fleurs et les fruits. Ces taches deviennent brunâtres, la plante s\'affaiblit et les récoltes sont réduites.',
+            'prevention' => '1. Privilégier des variétés résistantes. 2. Favoriser l\'espace entre les plantations. 3. Arroser le pied et pas les feuilles de la plante.',
+            'treatment' => '1. Retirer rapidement et régulièrement les feuilles infectées. 2. Pulvériser au purin d\'ortie.'
+        ]);
+        $courgette->illnesses()->attach($oidium);
+        $concombre->illnesses()->attach($oidium);
+        $cassis->illnesses()->attach($oidium);
+
+
+
+        $chenilles = Illness::create([
+            'name' => 'chenilles',
+            'description' => 'Les limaces se nourissent des feuilles de choux principalement.',
+            'cause' => 'Pas de cause paticulière',
+            'consequence' => 'Elles détruisent les cultures.',
+            'prevention' => '1. Installer des filets pour que les papillons ne viennent pas aux alentours des plantes susceptibles d\'être attaquées. 2. Les branches de genets et les fougères sont des répulsifs contre les papillons. 3. Favoriser et attirer la présence des oiseaux car ils se nourissent des chenilles.',
+            'treatment' => '1. Favoriser la rotation des cultures. 2. Mettre un peu de suie sur les premières feuilles dévorées.'
+        ]);
+
+        $choufleur->illnesses()->attach($chenilles);
+        $chourouge->illnesses()->attach($chenilles);
+
+
 
         /* Permaculture */
 
+        // Tomate
+        $tomatoes->permacultures()->attach($radis, ['positive_effect' => true, 'location' => 'before']);
+        $tomatoes->permacultures()->attach($salade, ['positive_effect' => true, 'location' => 'before']);
+        $tomatoes->permacultures()->attach($epinard, ['positive_effect' => true, 'location' => 'before']);
+
         $tomatoes->permacultures()->attach($leek, ['positive_effect' => true, 'location' => 'after']);
 
+        $tomatoes->permacultures()->attach($basilic, ['positive_effect' => true, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($capucine, ['positive_effect' => true, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($ail, ['positive_effect' => true, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($oignon, ['positive_effect' => true, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($celeri, ['positive_effect' => true, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($asperge, ['positive_effect' => true, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($leek, ['positive_effect' => true, 'location' => 'near']);
+
+        $tomatoes->permacultures()->attach($potatoes, ['positive_effect' => false, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($concombre, ['positive_effect' => false, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($fenouil, ['positive_effect' => false, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($mais, ['positive_effect' => false, 'location' => 'near']);
+        $tomatoes->permacultures()->attach($haricot, ['positive_effect' => false, 'location' => 'near']);
+
+        // Ciboulette
+        $chives->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'near']);
+        $chives->permacultures()->attach($concombre, ['positive_effect' => true, 'location' => 'near']);
+
+        $chives->permacultures()->attach($eggplant, ['positive_effect' => true, 'location' => 'before']);
+        $chives->permacultures()->attach($tomatoes, ['positive_effect' => true, 'location' => 'before']);
+        $chives->permacultures()->attach($leek, ['positive_effect' => true, 'location' => 'before']);
+        $chives->permacultures()->attach($chou, ['positive_effect' => true, 'location' => 'before']);
+
+        $chives->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'after']);
+
+        // Radis
+        $radis->permacultures()->attach($eggplant, ['positive_effect' => true, 'location' => 'before']);
+        $radis->permacultures()->attach($artichaud, ['positive_effect' => true, 'location' => 'before']);
+        $radis->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'before']);
+        $radis->permacultures()->attach($chourave, ['positive_effect' => true, 'location' => 'before']);
+        $radis->permacultures()->attach($haricot, ['positive_effect' => true, 'location' => 'before']);
+        $radis->permacultures()->attach($salade, ['positive_effect' => true, 'location' => 'before']);
+        $radis->permacultures()->attach($epinard, ['positive_effect' => true, 'location' => 'before']);
+
+        $radis->permacultures()->attach($courgette, ['positive_effect' => false, 'location' => 'near']);
+        $radis->permacultures()->attach($concombre, ['positive_effect' => false, 'location' => 'near']);
+        $radis->permacultures()->attach($potatoes, ['positive_effect' => false, 'location' => 'near']);
+        $radis->permacultures()->attach($cerfeuil, ['positive_effect' => false, 'location' => 'near']);
+
+        $radis->permacultures()->attach($tomatoes, ['positive_effect' => false, 'location' => 'after']);
+        $radis->permacultures()->attach($epinard, ['positive_effect' => false, 'location' => 'after']);
+        $radis->permacultures()->attach($salade, ['positive_effect' => false, 'location' => 'after']);
+
+        // Potimarron
+        $potimarron->permacultures()->attach($mais, ['positive_effect' => true, 'location' => 'near']);
+        $potimarron->permacultures()->attach($camomille, ['positive_effect' => true, 'location' => 'near']);
+
+        $potimarron->permacultures()->attach($potatoes, ['positive_effect' => false, 'location' => 'near']);
+        $potimarron->permacultures()->attach($chou, ['positive_effect' => false, 'location' => 'near']);
+
+        // Chou-fleur
+        $choufleur->permacultures()->attach($haricot, ['positive_effect' => true, 'location' => 'near']);
+        $choufleur->permacultures()->attach($romarin, ['positive_effect' => true, 'location' => 'near']);
+        $choufleur->permacultures()->attach($sauge, ['positive_effect' => true, 'location' => 'near']);
+        $choufleur->permacultures()->attach($celeri, ['positive_effect' => true, 'location' => 'near']);
+
+        $choufleur->permacultures()->attach($chourouge, ['positive_effect' => false, 'location' => 'near']);
+        $choufleur->permacultures()->attach($chourave, ['positive_effect' => false, 'location' => 'near']);
+        $choufleur->permacultures()->attach($chou, ['positive_effect' => false, 'location' => 'near']);
+        $choufleur->permacultures()->attach($fraises, ['positive_effect' => false, 'location' => 'near']);
+
+        $choufleur->permacultures()->attach($oignon, ['positive_effect' => true, 'location' => 'before']);
+        $choufleur->permacultures()->attach($ail, ['positive_effect' => true, 'location' => 'before']);
+        $choufleur->permacultures()->attach($haricot, ['positive_effect' => true, 'location' => 'before']);
+
+        $choufleur->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'after']);
+
+        // Aubergine
+        $eggplant->permacultures()->attach($haricot, ['positive_effect' => true, 'location' => 'near']);
+
+        $eggplant->permacultures()->attach($potatoes, ['positive_effect' => false, 'location' => 'near']);
+        $eggplant->permacultures()->attach($courgette, ['positive_effect' => false, 'location' => 'near']);
+
+        $eggplant->permacultures()->attach($epinard, ['positive_effect' => true, 'location' => 'after']);
+        $eggplant->permacultures()->attach($phacelie, ['positive_effect' => true, 'location' => 'after']);
+
+        // Poireau
+        $leek->permacultures()->attach($fraises, ['positive_effect' => true, 'location' => 'near']);
+        $leek->permacultures()->attach($oignon, ['positive_effect' => true, 'location' => 'near']);
+        $leek->permacultures()->attach($tomatoes, ['positive_effect' => true, 'location' => 'near']);
+        $leek->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'near']);
+        $leek->permacultures()->attach($salade, ['positive_effect' => true, 'location' => 'near']);
+        $leek->permacultures()->attach($celeri, ['positive_effect' => true, 'location' => 'near']);
+
+        $leek->permacultures()->attach($haricot, ['positive_effect' => false, 'location' => 'near']);
+        $leek->permacultures()->attach($petitpois, ['positive_effect' => false, 'location' => 'near']);
+
+        $leek->permacultures()->attach($tomatoes, ['positive_effect' => false, 'location' => 'after']);
+        $leek->permacultures()->attach($haricot, ['positive_effect' => false, 'location' => 'after']);
+        $leek->permacultures()->attach($carotte, ['positive_effect' => false, 'location' => 'after']);
+        $leek->permacultures()->attach($concombre, ['positive_effect' => false, 'location' => 'after']);
+
+        // Salade
+        $salade->permacultures()->attach($capucine, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($fraises, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($leek, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($radis, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($romarin, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($choufleur, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($concombre, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($aneth, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'near']);
+        $salade->permacultures()->attach($courgette, ['positive_effect' => true, 'location' => 'near']);
+
+        $salade->permacultures()->attach($persil, ['positive_effect' => false, 'location' => 'near']);
+
+        $salade->permacultures()->attach($haricot, ['positive_effect' => true, 'location' => 'before']);
+
+        $salade->permacultures()->attach($radis, ['positive_effect' => true, 'location' => 'after']);
+        $salade->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'after']);
+
+        // Haricot
+        $haricot->permacultures()->attach($eggplant, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($carotte, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($concombre, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($fraises, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($mais, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($radis, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($potatoes, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($choufleur, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($celeri, ['positive_effect' => true, 'location' => 'near']);
+        $haricot->permacultures()->attach($epinard, ['positive_effect' => true, 'location' => 'near']);
+
+        $haricot->permacultures()->attach($ail, ['positive_effect' => false, 'location' => 'near']);
+        $haricot->permacultures()->attach($oignon, ['positive_effect' => false, 'location' => 'near']);
+        $haricot->permacultures()->attach($leek, ['positive_effect' => false, 'location' => 'near']);
+
+        $haricot->permacultures()->attach($salade, ['positive_effect' => true, 'location' => 'after']);
+        $haricot->permacultures()->attach($epinard, ['positive_effect' => true, 'location' => 'after']);
 
     }
 }
