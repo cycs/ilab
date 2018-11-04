@@ -10466,10 +10466,33 @@ a.text-dark:focus {
   }
 }
 
+.hamb {
+  float: right;
+  margin-right: 50px;
+  width: 65px;
+}
+
+.hamb__bar {
+  width: 52px;
+  height: 7px;
+  margin-bottom: 10px;
+  background: #3c6a48;
+  float: right;
+}
+
+.hamb__bar--small {
+  width: 33px;
+}
+
+.hamb__bar--big {
+  width: 65px;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  display: none;
 }
 
 body {

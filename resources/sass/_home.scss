@@ -1,0 +1,20 @@
+// hamburger
+
+.hamb {
+  float: right;
+  margin-right: 50px;
+  width: 65px;
+  &__bar {
+    width: 52px;
+    height: 7px;
+    margin-bottom: 10px;
+    background: #3c6a48;
+    float: right;
+  }
+  &__bar--small {
+    width: 33px;
+  }
+  &__bar--big {
+    width: 65px;
+  }
+}
