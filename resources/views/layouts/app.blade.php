@@ -68,7 +68,7 @@
                 </div>
             </div>
         </nav>
-            @yield('content')
+            @yield('header')
     </div>
 </body>
 <!-- Scripts -->
