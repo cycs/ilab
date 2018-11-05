@@ -27,5 +27,5 @@
         }*/
     </script>
     <script src="{{ asset('js/bingmap.js') }}"></script>
-    <script src="{{ asset('js/site.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection
