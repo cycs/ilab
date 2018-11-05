@@ -37,9 +37,9 @@ Route::get('eloquent', function() {
 
 });
 
-Route::get('/map', function() {
+Route::get('/site', function() {
 
-    return View::make('map')
+    return View::make('site')
         ->with('soils', Soil::all());
 
 });

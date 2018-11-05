@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
-
+@section('styleSite')
+    <link href="{{ asset('css/site.css') }}"  rel="stylesheet"></link>
+    @endsection
 @section('content')
     <div id="myMap" style='position:relative;width:1200px;height:400px;'></div>
+    <div class="hello"></div>
 @endsection
 
 @section('bingmap_script')
@@ -24,5 +27,5 @@
         }*/
     </script>
     <script src="{{ asset('js/bingmap.js') }}"></script>
-
+    <script src="{{ asset('js/site.js') }}"></script>
 @endsection

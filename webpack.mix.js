@@ -14,6 +14,7 @@ const mix = require('laravel-mix');
 mix.browserSync('localhost')
     .js('resources/js/*.js', 'public/js/app.js')
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/site.scss', 'public/css')
     .options({
         purifyCss: false,
         clearConsole: false,
