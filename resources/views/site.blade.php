@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('styleSite')
-    <link href="{{ asset('css/site.css') }}"  rel="stylesheet"></link>
+    <link href="{{ asset('css/site.css') }}"  rel="stylesheet">
     @endsection
 @section('content')
     <div id="myMap" style='position:relative;width:1200px;height:400px;'></div>
@@ -27,5 +27,4 @@
         }*/
     </script>
     <script src="{{ asset('js/bingmap.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
 @endsection

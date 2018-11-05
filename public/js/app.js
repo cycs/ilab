@@ -13940,11 +13940,10 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-__webpack_require__(43);
 __webpack_require__(3);
+__webpack_require__(43);
 __webpack_require__(44);
-__webpack_require__(45);
-module.exports = __webpack_require__(46);
+module.exports = __webpack_require__(45);
 
 
 /***/ }),
@@ -47416,32 +47415,16 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-var map;
-console.log(map);
-function GetMap() {
-    console.log("get map");
-    map = new Microsoft.Maps.Map('#myMap', {
-        credentials: 'AtubFyYmW6LqLX9baFR4eYZB61CYObCVHAaa-33fRvhwVhRwEXnsKijb_3a5yDgM',
-        center: new Microsoft.Maps.Location(41.264675, -96.041927),
-        mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-        zoom: 8
-    });
-}
+
 
 /***/ }),
 /* 44 */
 /***/ (function(module, exports) {
 
-console.log('Hello');
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

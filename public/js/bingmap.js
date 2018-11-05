@@ -2,6 +2,7 @@ var infobox, map;
 function GetMap() {
     console.log("get map");
     console.log(Microsoft.Maps.Events);
+    console.log(document.getElementById('myMap'));
 
     // Custom map --> https://msdn.microsoft.com/en-us/library/mt823636.aspx
     var bingStyle = {
