@@ -9,13 +9,13 @@ function GetMap() {
           "water": { "fillColor": "#a1e0ff" },
           "waterPoint": { "iconColor": "#a1e0ff" },
           "transportation": { "strokeColor": "#aa6de0" },
-          "road": { "fillColor": "#b892db" },
+          "road": { "fillColor": "#3e6949" },
           "railway": { "strokeColor": "#a495b2" },
           "structure": { "fillColor": "#ffffff" },
           "runway": { "fillColor": "#ff7fed" },
-          "area": { "fillColor": "#f39ebd" },
+          "area": { "fillColor": "#f39ebd", "labelVisible":false},
           "political": { "borderStrokeColor": "#fe6850", "borderOutlineColor": "#000000" },
-          "point": { "iconColor": "#ffffff", "fillColor": "#FF6FA0", "strokeColor": "#DB4680" },
+          "point": { "iconColor": "#ffffff", "fillColor": "#FF6FA0", "strokeColor": "#DB4680", "labelVisible":false },
           "transit": { "fillColor": "#AA6DE0" }
       },
       "settings": {
@@ -28,12 +28,12 @@ function GetMap() {
         credentials: 'AtubFyYmW6LqLX9baFR4eYZB61CYObCVHAaa-33fRvhwVhRwEXnsKijb_3a5yDgM',
         center: new Microsoft.Maps.Location(50.5011, 4.465),
         customMapStyle : bingStyle,
+        showDashboard: false,
         //mapTypeId: Microsoft.Maps.MapTypeId.grayscale,
-        zoom: 7,
-        showDashboard: false
+        zoom: 7
     });
 
-    map.setView({ labelOverlay: Microsoft.Maps.LabelOverlay.hidden});
+    //map.setView({ labelOverlay: Microsoft.Maps.LabelOverlay.hidden});
 
     infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
         visible: false

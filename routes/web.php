@@ -14,6 +14,10 @@ use App\Seed;
 |
 */
 
+Route::get('qrlogin', ['uses' => 'QrLoginController@index']);
+Route::post('qrLogin', ['uses' => 'QrLoginController@checkUser']);
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/', function () {
     return view('edenia');
 });
