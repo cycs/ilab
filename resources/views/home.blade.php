@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('header')
     <!-- HAMBURGER -->
     <div class="hamb">
         <div class="hamb__bar hamb__bar--big"></div>
