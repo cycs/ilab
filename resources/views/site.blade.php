@@ -17,14 +17,14 @@
             </ul>
         </nav>
 
-        <a href="#" class="toggle-nav"><img src="menu.svg"></a>
+        <a href="#" class="toggle-nav"><img src="{{ asset('svg/menu.svg') }}"></a>
 
     </header>
 
 
     <main>
         <section id="concept" class="concept">
-            <h3>Notre concept</h3>
+            <h3 class="title__section">Notre concept</h3>
 
             <p>Edenia développe une nouvelle approche de potagers collectifs via des bornes interactives. Cette société s’associe à votre commune afin de proposer aux habitants un potager collectif, local et participatif. Avant tout, une recherche de terrain
                 est nécessaire pour trouver l’emplacement idéal. Elle se base sur des critères comme l’exposition au soleil et la qualité du sol.</p>
@@ -41,8 +41,8 @@
             </ul>
         </section>
 
-        <section class="philosolie">
-            <h3>Notre philosolie en 7 points clés</h3>
+        <section class="philosophie">
+            <h3 class="title__section">Notre philosolie en 7 points clés</h3>
             <p>Chacun s’engage à respecter les principes d’Edenia pour le bien du potager mais également pour celui des autres membres.</p>
 
 
@@ -76,8 +76,8 @@
                 </div>
 
                 <div class="controls">
-                    <img src="prev.svg" class="prev">
-                    <img src="next.svg" class="next">
+                    <img src="{{ asset('svg/prev.svg') }}" class="prev">
+                    <img src="{{ asset('svg/next.svg') }}" class="next">
                     <span class="projectNumbers">1 / 7</span>
                 </div>
             </div>
@@ -97,7 +97,7 @@
         </section>
 
         <section id="membre" class="membre">
-            <h3>Devenir membre</h3>
+            <h3 class="title__section">Devenir membre</h3>
             <p>Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
         </section>
 
@@ -108,7 +108,7 @@
     </main>
 
     <footer>
-        <h3>A propos du workshop</h3>
+        <h3 class="title__section">A propos du workshop</h3>
         <ul>
             <li><a href="#" target="_blank">Semaine 1</a></li>
             <li><a href="#" target="_blank">Semaine 2</a></li>
@@ -150,4 +150,6 @@
         }*/
     </script>
     <script src="{{ asset('js/bingmap.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ asset('js/site.js') }}"></script>
 @endsection
