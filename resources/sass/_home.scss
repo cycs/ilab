@@ -38,10 +38,10 @@ body {
   height: 100vh;
   position: absolute;
   text-align: center;
-  background: url('/img/fond-nav-bottom.png') no-repeat bottom right,
-  url('/img/fond-nav-feuille-bottom.png') no-repeat bottom right,
-  url('/img/fond-nav-top.png') no-repeat top left,
-  url('/img/fond-nav-feuille-top.png') no-repeat top left;
+  background: url('../img/fond-nav-bottom.png') no-repeat bottom right,
+  url('../img/fond-nav-feuille-bottom.png') no-repeat bottom right,
+  url('../img/fond-nav-top.png') no-repeat top left,
+  url('../img/fond-nav-feuille-top.png') no-repeat top left;
   &__list {
     list-style: none;
     padding: 0;

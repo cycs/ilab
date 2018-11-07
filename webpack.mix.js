@@ -25,6 +25,7 @@ mix.browserSync('localhost')
     .options({
         purifyCss: false,
         clearConsole: false,
-        postCss: [require('postcss')()]
+        postCss: [require('postcss')()],
+        processCssUrls: false
    });
 
