@@ -15,8 +15,13 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+//Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
+/*const app = new Vue({
     el: '#app'
-});
+});*/
+
+
+console.log('coucou manon, c\'est ici que tu codes');
+console.log('PAS TOUCHE BILLY');
+console.log('Pour toi, c\'est facile Manon, app.js est déjà load sur tes pages, normalement ça fonctionne');
