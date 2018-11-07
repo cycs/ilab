@@ -2,6 +2,8 @@
 @section('styleApp')
     <link href="{{ asset('css/app.css') }}"  rel="stylesheet">
 @endsection
+@section('homeBody')
+@endsection
 @section('header')
     <!-- HAMBURGER -->
     <div class="hamb">
@@ -9,7 +11,7 @@
         <div id="bar2" class="hamb__bar--small"></div>
         <div id="bar3" class="hamb__bar"></div>
     </div>
-    <nav class="nav hide">
+    <nav class="nav">
         <ul class="nav__list">
             <li class="nav__el">
                 <a class="nav__link" href="#">Potager</a>
@@ -56,4 +58,22 @@
 
 
 
+@endsection
+@section('content')
+    <div class="meteo__container"></div>
+    <div class="potager__container">
+        <ul class="potager__list">
+            //php pour mettre les légumes qu'il faut + les liens vers les bons légumes
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+            <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+        </ul>
+        <button class="potager__btn">Planter</button> //grisé si pas d'espace dispo
+    </div>
 @endsection

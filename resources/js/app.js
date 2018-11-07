@@ -36,8 +36,9 @@ var nav = document.querySelector('.nav');
 
 
 hamb.addEventListener('click', function(e){
-    hambBar.classList.toggle('active');
-    hambBar2.classList.toggle('active');
-    hambBar3.classList.toggle('active');
-    nav.classList.toggle('hide');
+    hambBar.classList.toggle('open');
+    hambBar2.classList.toggle('open');
+    hambBar3.classList.toggle('open');
+    nav.classList.toggle('open');
+    console.log('coucou');
 });
