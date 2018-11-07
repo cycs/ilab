@@ -9509,6 +9509,7 @@ body {
   margin-top: 50px;
   margin-right: 50px;
   width: 65px;
+  z-index: 1;
 }
 
 .hamb__bar {
@@ -9519,12 +9520,115 @@ body {
   float: right;
 }
 
+.hamb__bar.active {
+  -webkit-animation: hambBar3Anim 3s ease-in-out;
+          animation: hambBar3Anim 3s ease-in-out;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
 .hamb__bar--small {
   width: 33px;
+  height: 7px;
+  margin-bottom: 10px;
+  background: #3c6a48;
+  float: right;
+}
+
+.hamb__bar--small.active {
+  -webkit-animation: hambBar2Anim 3s ease-in-out;
+          animation: hambBar2Anim 3s ease-in-out;
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
 .hamb__bar--big {
   width: 65px;
+  height: 7px;
+  margin-bottom: 10px;
+  background: #3c6a48;
+  float: right;
+}
+
+.hamb__bar--big.active {
+  -webkit-animation: hambBar1Anim 3s ease-in-out;
+          animation: hambBar1Anim 3s ease-in-out;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+@-webkit-keyframes hambBar1Anim {
+  0% {
+    background: black;
+  }
+  50% {
+    background: yellow;
+  }
+  100% {
+    background: red;
+  }
+}
+
+@keyframes hambBar1Anim {
+  0% {
+    background: black;
+  }
+  50% {
+    background: yellow;
+  }
+  100% {
+    background: red;
+  }
+}
+
+@-webkit-keyframes hambBar2Anim {
+  0% {
+    background: black;
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: yellow;
+  }
+}
+
+@keyframes hambBar2Anim {
+  0% {
+    background: black;
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: yellow;
+  }
+}
+
+@-webkit-keyframes hambBar3Anim {
+  0% {
+    background: yellow;
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: green;
+  }
+}
+
+@keyframes hambBar3Anim {
+  0% {
+    background: yellow;
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: green;
+  }
 }
 
 .nav {
@@ -9532,7 +9636,9 @@ body {
   height: 100vh;
   position: absolute;
   text-align: center;
-  background: url("../img/fond-nav-bottom.png") no-repeat bottom right, url("../img/fond-nav-feuille-bottom.png") no-repeat bottom right, url("../img/fond-nav-top.png") no-repeat top left, url("../img/fond-nav-feuille-top.png") no-repeat top left;
+  z-index: -1;
+  background: url("../img/fond-nav-feuille-bottom.png") no-repeat bottom right, url("../img/fond-nav-bottom.png") no-repeat bottom right, url("../img/fond-nav-feuille-top.png") no-repeat top left 4%, url("../img/fond-nav-top.png") no-repeat top left;
+  background-size: 20%, 72%, 17%, 81%;
 }
 
 .nav__list {
@@ -9545,8 +9651,13 @@ body {
   margin-bottom: 40px;
 }
 
+.nav__el:last-child {
+  margin-bottom: 0;
+}
+
 .nav__link {
   font-size: 60px;
+  color: #1d1d1b;
 }
 
 .navbar-laravel {

@@ -3,8 +3,8 @@
 @section('header')
     <!-- HAMBURGER -->
     <div class="hamb">
-        <div id="bar1" class="hamb__bar hamb__bar--big"></div>
-        <div id="bar2" class="hamb__bar hamb__bar--small"></div>
+        <div id="bar1" class="hamb__bar--big"></div>
+        <div id="bar2" class="hamb__bar--small"></div>
         <div id="bar3" class="hamb__bar"></div>
     </div>
     <nav class="nav hide">

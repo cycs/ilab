@@ -16,20 +16,64 @@ body {
   margin-top: 50px;
   margin-right: 50px;
   width: 65px;
+  z-index: 1;
   &__bar {
     width: 52px;
     height: 7px;
     margin-bottom: 10px;
     background: #3c6a48;
     float: right;
+    &.active {
+      animation: hambBar3Anim 3s ease-in-out;
+      transition: 3s;
+      transform: translateY(5px);
+    }
   }
   &__bar--small {
     width: 33px;
+    height: 7px;
+    margin-bottom: 10px;
+    background: #3c6a48;
+    float: right;
+    &.active {
+      animation: hambBar2Anim 3s ease-in-out;
+      transition: 3s;
+    }
   }
   &__bar--big {
     width: 65px;
+    height: 7px;
+    margin-bottom: 10px;
+    background: #3c6a48;
+    float: right;
+    &.active {
+      animation: hambBar1Anim 3s ease-in-out;
+      transition: 3s;
+    }
   }
 }
+
+// animations
+
+@keyframes hambBar1Anim {
+  0% {background: black}
+  50% {background: yellow}
+  100% {background: red}
+}
+
+@keyframes hambBar2Anim {
+  0% {background: black}
+  50% {background: red}
+  100% {background: yellow}
+}
+
+@keyframes hambBar3Anim {
+  0% {background: yellow}
+  50% {background: red}
+  100% {background: green}
+}
+
+
 
 // nav
 
@@ -38,10 +82,12 @@ body {
   height: 100vh;
   position: absolute;
   text-align: center;
-  background: url('../img/fond-nav-bottom.png') no-repeat bottom right,
-  url('../img/fond-nav-feuille-bottom.png') no-repeat bottom right,
-  url('../img/fond-nav-top.png') no-repeat top left,
-  url('../img/fond-nav-feuille-top.png') no-repeat top left;
+  z-index: -1;
+  background: url('../img/fond-nav-feuille-bottom.png') no-repeat bottom right,
+  url('../img/fond-nav-bottom.png') no-repeat bottom right,
+  url('../img/fond-nav-feuille-top.png') no-repeat top left 4%,
+  url('../img/fond-nav-top.png') no-repeat top left;
+  background-size: 20%, 72%, 17%, 81%;
   &__list {
     list-style: none;
     padding: 0;
@@ -49,9 +95,13 @@ body {
   }
   &__el {
     margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__link {
     font-size: 60px;
+    color: #1d1d1b;
 
   }
 }

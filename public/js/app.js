@@ -35960,9 +35960,15 @@ console.log('Pour toi, c\'est facile Manon, app.js est déjà load sur tes pages
 // BORNE HAMBURGER
 
 var hamb = document.querySelector(".hamb");
+var hambBar = document.querySelector('#bar1');
+var hambBar2 = document.querySelector('#bar2');
+var hambBar3 = document.querySelector('#bar3');
 var nav = document.querySelector('.nav');
 
 hamb.addEventListener('click', function (e) {
+  hambBar.classList.toggle('active');
+  hambBar2.classList.toggle('active');
+  hambBar3.classList.toggle('active');
   nav.classList.toggle('hide');
 });
 
