@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    @yield('styleSite')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styleSite')
 </head>
 <body>
     <div id="app">
