@@ -35936,10 +35936,6 @@ module.exports = __webpack_require__(42);
 /***/ (function(module, exports) {
 
 
-console.log('coucou billy, c\'est ici que tu codes');
-console.log('PAS TOUCHE MANON');
-console.log('ton site.js doit être chargé sur tes pages, n\'noublie pas de rajouter un @yield() avec ton script s\'il n\'exite pas');
-
 // ScrollTo - animation
 $(document).ready(function () {
     $('.js-scrollTo').on('click', function () {

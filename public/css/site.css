@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat:500,600);#myMap {
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat:500,600);#myMap {
   display: none;
 }
 
@@ -15,9 +15,9 @@
 }
 
 /*   FONTS  */
-.nav {
+nav {
   margin: 70px 0 40px 0;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 600;
 }
@@ -26,7 +26,7 @@ body {
   width: 375px;
   color: #3e6949;
   font-size: 18px;
-  font-family: 'Libre Baskerville';
+  font-family: 'Libre Baskerville', serif;
   font-weight: 400;
 }
 
