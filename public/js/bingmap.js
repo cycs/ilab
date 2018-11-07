@@ -15,7 +15,7 @@ function GetMap() {
           "structure": { "fillColor": "#ffffff" },
           "runway": { "fillColor": "#9effc4" },
           "area": { "visible": false, "fillColor": "#d9f3da", "labelVisible":false},
-          "political": { "borderStrokeColor": "#615754", "borderOutlineColor": "#99e086" },
+          "political": { "borderStrokeColor": "#615754", "borderOutlineColor": "#59c7e0" },
           "point": { "visible":false, "labelVisible": true },
           "transit": { "fillColor": "#50e092" },
           "forest": { "visible": false },

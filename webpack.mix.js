@@ -12,7 +12,14 @@ const mix = require('laravel-mix');
  */
 
 mix.browserSync('localhost')
-    .js('resources/js/*.js', 'public/js/app.js')
+    .js([
+        'resources/js/bootstrap.js',
+        'resources/js/app.js'
+    ], 'public/js/app.js')
+    .js([
+        'resources/js/bootstrap.js',
+        'resources/js/site.js'
+    ], 'public/js/site.js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/site.scss', 'public/css')
     .options({
