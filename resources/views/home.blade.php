@@ -3,10 +3,35 @@
 @section('header')
     <!-- HAMBURGER -->
     <div class="hamb">
-        <div class="hamb__bar hamb__bar--big"></div>
-        <div class="hamb__bar hamb__bar--small"></div>
-        <div class="hamb__bar"></div>
+        <div id="bar1" class="hamb__bar hamb__bar--big"></div>
+        <div id="bar2" class="hamb__bar hamb__bar--small"></div>
+        <div id="bar3" class="hamb__bar"></div>
     </div>
+    <nav class="nav hide">
+        <ul class="nav__list">
+            <li class="nav__el">
+                <a class="nav__link" href="#">Potager</a>
+            </li>
+            <li class="nav__el">
+                <a class="nav__link" href="#">Tâches</a>
+            </li>
+            <li class="nav__el">
+                <a class="nav__link" href="#">Nouvelle culture</a>
+            </li>
+            <li class="nav__el">
+                <a class="nav__link" href="#">Tutos et conseils</a>
+            </li>
+            <li class="nav__el">
+                <a class="nav__link" href="#">Vos envies</a>
+            </li>
+            <li class="nav__el">
+                <a class="nav__link" href="#">7 points clés</a>
+            </li>
+            <li class="nav__el">
+                <a class="nav__link" href="#">Déconnexion</a>
+            </li>
+        </ul>
+    </nav>
     <!--<div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -26,11 +51,6 @@
             </div>
         </div>
     </div> -->
-
-
-
-    <div class="container">
-    </div>
 
 
 

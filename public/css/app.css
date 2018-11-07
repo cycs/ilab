@@ -10466,6 +10466,10 @@ a.text-dark:focus {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .hamb {
   float: right;
   margin-right: 50px;
