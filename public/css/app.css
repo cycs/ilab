@@ -9500,9 +9500,16 @@ body {
   position: relative;
 }
 
-/*.hide {
-  display: none;
-}*/
+.homeBody {
+  background: url("../img/fond-potager-feuille1-bottom.png") no-repeat bottom right 2%, url("../img/fond-potager-feuille2-bottom.png") no-repeat bottom right 8.8%, url("../img/fond-potager-bottom.png") no-repeat bottom right, #fff;
+  background-size: 12.8%, 11%, 65%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .hamb {
   float: right;
   position: relative;
@@ -9772,8 +9779,17 @@ body {
 
 .nav__list {
   list-style: none;
+  display: none;
   padding: 0;
   margin: 80px auto 0;
+}
+
+.nav__list.open {
+  display: block;
+}
+
+.nav__list.close {
+  display: none;
 }
 
 .nav__el {
@@ -9787,6 +9803,31 @@ body {
 .nav__link {
   font-size: 60px;
   color: #1d1d1b;
+}
+
+.potager {
+  width: 100vw;
+  height: 100vh;
+}
+
+.potager__list {
+  display: block;
+  padding: 0;
+}
+
+.potager__el {
+  list-style: none;
+}
+
+.potager__btn {
+  margin: 0;
+  width: 180px;
+  height: 74px;
+  border-radius: 37px;
+  border: none;
+  background: #38a66a;
+  font-size: 30px;
+  color: #fff;
 }
 
 .navbar-laravel {
