@@ -35922,8 +35922,8 @@ module.exports = function spread(callback) {
 
 __webpack_require__(10);
 __webpack_require__(35);
-__webpack_require__(43);
-module.exports = __webpack_require__(44);
+__webpack_require__(39);
+module.exports = __webpack_require__(40);
 
 
 /***/ }),
@@ -35956,6 +35956,15 @@ window.Vue = __webpack_require__(36);
 console.log('coucou manon, c\'est ici que tu codes');
 console.log('PAS TOUCHE BILLY');
 console.log('Pour toi, c\'est facile Manon, app.js est déjà load sur tes pages, normalement ça fonctionne');
+
+// BORNE HAMBURGER
+
+var hamb = document.querySelector(".hamb");
+var nav = document.querySelector('.nav');
+
+hamb.addEventListener('click', function (e) {
+  nav.classList.toggle('hide');
+});
 
 /***/ }),
 /* 36 */
@@ -47187,17 +47196,13 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(11)))
 
 /***/ }),
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */
+/* 39 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 44 */
+/* 40 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

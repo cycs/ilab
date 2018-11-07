@@ -25,3 +25,12 @@ window.Vue = require('vue');
 console.log('coucou manon, c\'est ici que tu codes');
 console.log('PAS TOUCHE BILLY');
 console.log('Pour toi, c\'est facile Manon, app.js est déjà load sur tes pages, normalement ça fonctionne');
+
+// BORNE HAMBURGER
+
+var hamb = document.querySelector(".hamb");
+var nav = document.querySelector('.nav');
+
+hamb.addEventListener('click', function(e){
+    nav.classList.toggle('hide');
+});

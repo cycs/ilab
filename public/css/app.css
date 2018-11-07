@@ -10466,12 +10466,17 @@ a.text-dark:focus {
   }
 }
 
+body {
+  position: relative;
+}
+
 .hide {
   display: none;
 }
 
 .hamb {
   float: right;
+  margin-top: 50px;
   margin-right: 50px;
   width: 65px;
 }
@@ -10490,6 +10495,28 @@ a.text-dark:focus {
 
 .hamb__bar--big {
   width: 65px;
+}
+
+.nav {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  text-align: center;
+  background: url("/img/fond-nav-bottom.png") no-repeat bottom right, url("/img/fond-nav-feuille-bottom.png") no-repeat bottom right, url("/img/fond-nav-top.png") no-repeat top left, url("/img/fond-nav-feuille-top.png") no-repeat top left;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 80px auto 0;
+}
+
+.nav__el {
+  margin-bottom: 40px;
+}
+
+.nav__link {
+  font-size: 60px;
 }
 
 .navbar-laravel {
