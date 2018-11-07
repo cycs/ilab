@@ -2,8 +2,9 @@
 @section('styleApp')
     <link href="{{ asset('css/app.css') }}"  rel="stylesheet">
 @endsection
-@section('homeBody')
-@endsection
+
+@section('homeBody', 'homeBody')
+
 @section('header')
     <!-- HAMBURGER -->
     <div class="hamb">
