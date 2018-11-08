@@ -32,7 +32,7 @@ Route::get('/app', 'HomeController@index')->name('home');
 
 Route::get('/app/plantation', function () {
     return view('plantation');
-});
+})->name('plantation');
 
 Route::get('eloquent', function() {
 
