@@ -21,7 +21,7 @@
                 <a class="nav__link" href="#">Tâches</a>
             </li>
             <li class="nav__el">
-                <a class="nav__link" href="#">Nouvelle culture</a>
+                <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
             </li>
             <li class="nav__el">
                 <a class="nav__link" href="#">Tutos et conseils</a>
@@ -65,12 +65,18 @@
     <div class="potager">
         <div class="container">
             <ul class="potager__list">
-                <!--php pour mettre les légumes qu'il faut + les liens vers les bons légumes-->
+                <!--php pour mettre les légumes qu'il faut + les liens vers les bons légumes OK bon next step, récupérer les parcelle 1 à 9 pour en afficher le contenu quand on clique sur le lien-->
                 @for($i=0; $i<9; $i++)
-                    <li class="potager__el"><a class="potager__link" href="#">{{$seeds[$i]->name}}</a></li>
+                    <li class="potager__el"><a class="potager__link" href="">{{$seeds[$i]->name}}</a></li>
                 @endfor
             </ul>
-            <button class="potager__btn">Planter</button> <!--grisé si pas d'espace dispo-->
+            <button id="potBtn" class="potager__btn potager__btn--full">Planter</button> <!--grisé si pas d'espace dispo-->
         </div>
+    </div>
+    <div class="parcelle hide">
+        <button id="parcelleClose" class="parcelle__btn btn__close">X</button>
+        <ul class="parcelle__list">
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 1</a></li>
+        </ul>
     </div>
 @endsection

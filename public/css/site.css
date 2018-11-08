@@ -1,8 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat:500,600);#myMap {
-  display: none;
-}
-
-.navbar-laravel {
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat:500,600);.navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -14,12 +10,22 @@
   margin: 0;
 }
 
-/*   FONTS  */
-nav {
+/*   HEADINGS  */
+h3 {
   margin: 70px 0 40px 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 600;
+}
+
+h2 {
+  position: absolute;
+  top: 460px;
+  left: 190px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  z-index: 0;
 }
 
 body {
@@ -30,16 +36,41 @@ body {
   font-weight: 400;
 }
 
-header {
-  width: 100%;
+.site__header {
   height: 100vh;
-  background-color: lightblue;
 }
 
-header a img {
-  position: absolute;
-  top: 0;
-  right: 0;
+.site__header a {
+  padding: 0 10px;
+  width: 50px;
+  height: 30px;
+}
+
+.site__header .button__header {
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+}
+
+.site__header .button__menu img {
+  width: 100%;
+}
+
+.site__header .logo img {
+  top: 20px;
+  left: 10px;
 }
 
 nav {
@@ -47,9 +78,6 @@ nav {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -59,8 +87,12 @@ nav {
           justify-content: center;
   text-align: center;
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  z-index: 2;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  display: none;
+  position: absolute;
 }
 
 nav ul li {
@@ -75,7 +107,7 @@ nav a {
 }
 
 nav.open {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: white;
   opacity: 1;
 }
 
@@ -83,14 +115,63 @@ nav.close {
   opacity: 0;
 }
 
-main {
+h2 .hide {
+  display: none;
+}
+
+section {
   padding: 0 20px 0 20px;
+}
+
+.landing {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  background-image: url("../img/landing_banner.jpg");
+  background-position-x: -415px;
+  width: 100%;
+  height: 100vh;
+}
+
+.concept:after {
+  content: '';
+  background: url("../img/seeds.jpg");
+  background-size: cover;
+  display: block;
+  height: 300px;
+  width: 100vw;
+  left: -20px;
+  position: relative;
+}
+
+.membre:after {
+  content: '';
+  background: url("../img/hand_seed.jpg");
+  background-size: cover;
+  background-position-x: -150px;
+  display: block;
+  height: 300px;
+  width: 100vw;
+  left: -20px;
+  position: relative;
+}
+
+.concept ul li {
+  list-style: none;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+
+.concept ul li:before {
+  content: '_';
+  margin-left: -15px;
 }
 
 .slider {
   position: relative;
-  height: 400px;
+  height: 500px;
   background-color: #7fc490;
+  margin: 35px 0;
 }
 
 .slider .slide {
@@ -100,7 +181,7 @@ main {
 .slider .controls {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,5 +196,32 @@ main {
 
 .slider .projectNumbers {
   position: absolute;
-  right: 0;
+  right: 20px;
+}
+
+/* IMAGES */
+/* MAP */
+.carte {
+  width: 100vw;
+  height: 250px;
+  padding: 0;
+}
+
+.myMap {
+  position: relative;
+  width: 100vw;
+  height: 250px;
+}
+
+footer {
+  padding: 0 20px 0 20px;
+}
+
+footer ul li {
+  list-style: none;
+  text-align: center;
+}
+
+footer .profil li {
+  margin-bottom: 20px;
 }

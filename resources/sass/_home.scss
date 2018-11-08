@@ -24,10 +24,10 @@ $duration : .7s;
 .hamb {
   float: right;
   position: relative;
-  height: 50px;
   margin-top: 50px;
   margin-right: 50px;
   width: 65px;
+  height: 50px;
   z-index: 2;
   &__bar {
     width: 52px;
@@ -40,9 +40,9 @@ $duration : .7s;
     &.open {
       animation: hambBar3Anim $duration linear forwards;
     }
-    &.close {
+/*    &.close {
       animation: hambBar3Anim $duration linear reverse forwards;
-    }
+    }*/
   }
   &__bar--small {
     width: 33px;
@@ -55,9 +55,9 @@ $duration : .7s;
     &.open {
       animation: hambBar2Anim $duration linear forwards;
     }
-    &.close {
+/*    &.close {
       animation: hambBar2Anim $duration linear reverse forwards;
-    }
+    }*/
   }
   &__bar--big {
     width: 65px;
@@ -70,15 +70,15 @@ $duration : .7s;
     &.open {
       animation: hambBar1Anim $duration linear forwards;
     }
-    &.close {
+/*    &.close {
       animation: hambBar1Anim $duration linear reverse forwards;
-    }
+    }*/
   }
 }
 
 // animations
 
-@keyframes hambBar1Anim {
+/*@keyframes hambBar1Anim {
   0% {width: 65px}
   25% {width: 7px; transform: translateX(-25px)}
   50% {width: 7px; transform: translate(-25px, 17px)}
@@ -105,35 +105,32 @@ $duration : .7s;
 @keyframes navAnimation {
   0% {width: 0; height: 0}
   100% {width: 100vw; height: 100vh}
-}
+}*/
 
 
 
 // nav
 .nav {
-  width: 0;
-  height: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
   &.open {
-    animation: navAnimation $duration/2 linear forwards;
-    animation-delay: $duration/2;
+    display: block;
   }
-  &.close {
+  /*&.close {
     animation: navAnimation 0.750s linear reverse forwards;
-  }
+  }*/
   position: absolute;
   right: 0;
   top: 0;
   text-align: center;
-  z-index: -1;
+  z-index: 1;
   background: url('../img/fond-nav-feuille-bottom.png') no-repeat bottom right,
   url('../img/fond-nav-bottom.png') no-repeat bottom right,
   url('../img/fond-nav-feuille-top.png') no-repeat top left 4%,
   url('../img/fond-nav-top.png') no-repeat top left, #fff;
   background-size: 20%, 72%, 17%, 81%;
   &__list {
-    list-style: none;
-    //display: none;
-    padding: 0;
     margin: 80px auto 0;
     &.open {
       display: block;
@@ -151,8 +148,21 @@ $duration : .7s;
   &__link {
     font-size: 60px;
     color: #1d1d1b;
+    text-decoration: none;
 
   }
+}
+
+// météo
+
+.meteo__container {
+  position: absolute;
+  left: 136px;
+  top: 0;
+  width: 500px;
+  height: 200px;
+  padding: 20px 40px;
+  background: red;
 }
 
 // potager
@@ -160,25 +170,112 @@ $duration : .7s;
 .potager {
   width: 100vw;
   height: 100vh;
+  z-index: -1;
   &__list {
     display: block;
-    padding: 0;
-    margin: 0;
+    position: absolute;
+    top: 227px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1094px;
+    height: 668px;
+    background: url('../img/potager-parcelle-fond.png') no-repeat;
+    background-size: cover;
   }
   &__el {
-    list-style: none;
+    position: absolute;
+    padding: 25px 35px;
+    &:first-child {
+      top:3px;
+      right: 359px;
+    }
+    &:nth-child(2) {
+      top: 83px;
+      right: 174px;
+      transform: rotate(14deg);
+    }
+    &:nth-child(3) {
+      top: 178px;
+      right: 92px;
+    }
+    &:nth-child(4){
+      top: 145px;
+      left: 347px;
+      transform: rotate(-5deg);
+    }
+    &:nth-child(5) {
+      top: 226px;
+      left: 476px;
+    }
+    &:nth-child(6) {
+      top: 292px;
+      right: 327px;
+      transform: rotate(14deg);
+    }
+    &:nth-child(7) {
+      top: 321px;
+      left: 57px;
+      transform: rotate(-6.5deg);
+    }
+    &:nth-child(8) {
+      top: 331px;
+      left: 233px;
+    }
+    &:last-child {
+      bottom: 162px;
+      left: 340px;
+      transform: rotate(5deg);
+    }
+  }
+  &__link {
+    color: #000;
+
+  }
+  &__btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 30px;
+    border-radius: 37px;
+    background: #38a66a;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    &--full {
+      background: gray;
+    }
+  }
+}
+
+.parcelle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,.6);
+  &__list {
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 8px 8px 12px rgba(0,0,0, .4);
+  }
+  &__el {
+
   }
   &__link {
 
   }
   &__btn {
-    margin: 0;
-    width: 180px;
-    height: 74px;
-    border-radius: 37px;
-    border: none;
-    background: #38a66a;
-    font-size: 30px;
-    color: #fff;
+    position: absolute;
+    top: 127px;
+    left: 157px;
+    z-index: 2;
   }
 }

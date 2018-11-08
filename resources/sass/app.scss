@@ -12,6 +12,25 @@
 
 @import 'home';
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  //color: white;
+}
+
+.title {
+  font-size: 30px;
+  &--small {}
+  &--big {
+    font-size: 60px;
+  }
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -26,6 +45,10 @@
 body {
     //background: rgba(255, 255, 255, .8);
     //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.hide {
+  display: none;
 }
 
 td {
@@ -54,4 +77,10 @@ td {
       padding: 0;
     }
   }
+}
+
+.btn__close {
+  border: none;
+  background: none;
+  font-size: 30px;
 }
