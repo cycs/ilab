@@ -30,6 +30,10 @@ Auth::routes();
 
 Route::get('/app', 'HomeController@index')->name('home');
 
+Route::get('/app/plantation', function () {
+    return view('plantation');
+});
+
 Route::get('eloquent', function() {
 
     return View::make('eloquent')

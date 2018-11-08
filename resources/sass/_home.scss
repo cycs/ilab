@@ -2,6 +2,7 @@
 
 body {
   position: relative;
+  margin: 0;
 }
 
 .homeBody {
@@ -9,6 +10,7 @@ body {
   url('../img/fond-potager-feuille2-bottom.png') no-repeat bottom right 8.8%,
   url('../img/fond-potager-bottom.png') no-repeat bottom right, #fff;
   background-size: 12.8%, 11%, 65%;
+  overflow: hidden;
 }
 
 .container {
@@ -18,10 +20,11 @@ body {
 
 
 // hamburger
-
+$duration : .7s;
 .hamb {
   float: right;
   position: relative;
+  height: 50px;
   margin-top: 50px;
   margin-right: 50px;
   width: 65px;
@@ -35,10 +38,10 @@ body {
     top: 34px;
     right: 0;
     &.open {
-      animation: hambBar3Anim 1.5s linear forwards;
+      animation: hambBar3Anim $duration linear forwards;
     }
     &.close {
-      animation: hambBar3Anim 1.5s linear reverse forwards;
+      animation: hambBar3Anim $duration linear reverse forwards;
     }
   }
   &__bar--small {
@@ -50,10 +53,10 @@ body {
     top: 17px;
     right: 0;
     &.open {
-      animation: hambBar2Anim 1.5s linear forwards;
+      animation: hambBar2Anim $duration linear forwards;
     }
     &.close {
-      animation: hambBar2Anim 1.5s linear reverse forwards;
+      animation: hambBar2Anim $duration linear reverse forwards;
     }
   }
   &__bar--big {
@@ -65,10 +68,10 @@ body {
     top: 0;
     right: 0;
     &.open {
-      animation: hambBar1Anim 1.5s linear forwards;
+      animation: hambBar1Anim $duration linear forwards;
     }
     &.close {
-      animation: hambBar1Anim 1.5s linear reverse forwards;
+      animation: hambBar1Anim $duration linear reverse forwards;
     }
   }
 }
@@ -107,13 +110,12 @@ body {
 
 
 // nav
-
 .nav {
   width: 0;
   height: 0;
   &.open {
-    animation: navAnimation 0.750s linear forwards;
-    animation-delay: 0.750s;
+    animation: navAnimation $duration/2 linear forwards;
+    animation-delay: $duration/2;
   }
   &.close {
     animation: navAnimation 0.750s linear reverse forwards;
@@ -130,7 +132,7 @@ body {
   background-size: 20%, 72%, 17%, 81%;
   &__list {
     list-style: none;
-    display: none;
+    //display: none;
     padding: 0;
     margin: 80px auto 0;
     &.open {
@@ -161,6 +163,7 @@ body {
   &__list {
     display: block;
     padding: 0;
+    margin: 0;
   }
   &__el {
     list-style: none;

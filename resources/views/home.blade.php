@@ -66,15 +66,9 @@
         <div class="container">
             <ul class="potager__list">
                 <!--php pour mettre les légumes qu'il faut + les liens vers les bons légumes-->
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
-                <li class="potager__el"><a class="potager__link" href="#">Legume</a></li>
+                @for($i=0; $i<9; $i++)
+                    <li class="potager__el"><a class="potager__link" href="#">{{$seeds[$i]->name}}</a></li>
+                @endfor
             </ul>
             <button class="potager__btn">Planter</button> <!--grisé si pas d'espace dispo-->
         </div>
