@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('homeBody', 'homeBody')
+
 @section('header')
     <!-- HAMBURGER -->
     <div class="hamb">
@@ -47,8 +49,40 @@
                 <p class="text--italic">Persil commun</p>
                 <p class="text">Difficulté</p>
             </li>
+            <li class="plantation__el">
+                <h2 class="title">Choux-fleur</h2>
+                <img class="plantation__img" src="" alt="légume-edenia" />
+                <p class="text--italic">Persil commun</p>
+                <p class="text">Difficulté</p>
+            </li>
+            <li class="plantation__el">
+                <h2 class="title">Potimarron</h2>
+                <img class="plantation__img" src="" alt="légume-edenia" />
+                <p class="text--italic">Persil commun</p>
+                <p class="text">Difficulté</p>
+            </li>
+            <li class="plantation__el">
+                <h2 class="title">Tomate</h2>
+                <img class="plantation__img" src="" alt="légume-edenia" />
+                <p class="text--italic">Persil commun</p>
+                <p class="text">Difficulté</p>
+            </li>
+            <li class="plantation__el">
+                <h2 class="title">Persil</h2>
+                <img class="plantation__img" src="" alt="légume-edenia" />
+                <p class="text--italic">Persil commun</p>
+                <p class="text">Difficulté</p>
+            </li>
+            <li class="plantation__el">
+                <h2 class="title">Persil</h2>
+                <img class="plantation__img" src="" alt="légume-edenia" />
+                <p class="text--italic">Persil commun</p>
+                <p class="text">Difficulté</p>
+            </li>
         </ul>
     </div>
-    <a class="plantation__link" href="#">Suggérer un nouveau végétal</a>
-    <a class="plantation__link" href="#">Planter</a>
+    <div class="container">
+        <a class="btn--light plantation__link" href="#">Suggérer un nouveau végétal</a>
+        <a class="btn__planter" href="#">Planter</a>
+    </div>
 @endsection

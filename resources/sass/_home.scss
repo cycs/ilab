@@ -11,6 +11,7 @@ body {
   url('../img/fond-potager-bottom.png') no-repeat bottom right, #fff;
   background-size: 12.8%, 11%, 65%;
   overflow: hidden;
+  height: 100vh;
 }
 
 .container {
@@ -231,21 +232,6 @@ $duration : .7s;
     color: #000;
 
   }
-  &__btn {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px 30px;
-    border-radius: 37px;
-    background: #38a66a;
-    font-size: 30px;
-    color: #fff;
-    border: none;
-    &--full {
-      background: gray;
-    }
-  }
 }
 
 .parcelle {
@@ -265,9 +251,16 @@ $duration : .7s;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 8px 8px 12px rgba(0,0,0, .4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   &__el {
-
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    background: #9c7367;
+    margin: 50px 50px 0 50px;
   }
   &__link {
 

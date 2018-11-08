@@ -70,13 +70,21 @@
                     <li class="potager__el"><a class="potager__link" href="">{{$seeds[$i]->name}}</a></li>
                 @endfor
             </ul>
-            <button id="potBtn" class="potager__btn potager__btn--full">Planter</button> <!--grisé si pas d'espace dispo-->
+            <button id="potBtn" class="btn__planter">Planter</button> <!--grisé si pas d'espace dispo-->
         </div>
     </div>
     <div class="parcelle hide">
         <button id="parcelleClose" class="parcelle__btn btn__close">X</button>
         <ul class="parcelle__list">
             <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 1</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 2</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 3</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 4</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 5</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 6</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 7</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 8</a></li>
+            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 9</a></li>
         </ul>
     </div>
 @endsection
