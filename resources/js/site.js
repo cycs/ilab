@@ -11,23 +11,26 @@ $(document).ready(function() {
 
 
 //MENU Hamburger
-const toggleTag = document.querySelector("a.toggle-nav");
-const mainTag = document.querySelector("nav");
-const menuTag = document.querySelector("nav ul a");
+const toggleTag = document.querySelector(".site__header a.toggle-nav");
+const mainTag = document.querySelector(".site__header nav");
+const menuTag = document.querySelector(".site__header nav ul a");
 
-//when i click the toggle tag, toggle a class of open on the main tag
-// and if it's open, make the toggle tag say closed
-// and not, make the toggle tag say open
 toggleTag.addEventListener("click", function() {
     mainTag.classList.toggle("open");
+    let open = mainTag.classList.contains('open') ? true : false;
+    function hide(){
+        let displayNav = open ? 'flex' : 'none';
+        mainTag.style.display = displayNav;
+    }
+    setTimeout(hide, 150);
 
     if (mainTag.classList.contains("open")) {
-        toggleTag.innerHTML = `<img src="svg/close.svg">`
+        toggleTag.innerHTML = `<img src="svg/close.svg">`;
     } else {
-        toggleTag.innerHTML = `<img src="svg/menu.svg">`
+        toggleTag.innerHTML = `<img src="svg/menu.svg">`;
     }
 });
 
 menuTag.addEventListener("click", function() {
-    mainTag.classList.toggle("close")
+    mainTag.classList.toggle("close");
 });

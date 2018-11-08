@@ -35948,15 +35948,18 @@ $(document).ready(function () {
 });
 
 //MENU Hamburger
-var toggleTag = document.querySelector("a.toggle-nav");
-var mainTag = document.querySelector("nav");
-var menuTag = document.querySelector("nav ul a");
+var toggleTag = document.querySelector(".site__header a.toggle-nav");
+var mainTag = document.querySelector(".site__header nav");
+var menuTag = document.querySelector(".site__header nav ul a");
 
-//when i click the toggle tag, toggle a class of open on the main tag
-// and if it's open, make the toggle tag say closed
-// and not, make the toggle tag say open
 toggleTag.addEventListener("click", function () {
     mainTag.classList.toggle("open");
+    var open = mainTag.classList.contains('open') ? true : false;
+    function hide() {
+        var displayNav = open ? 'flex' : 'none';
+        mainTag.style.display = displayNav;
+    }
+    setTimeout(hide, 150);
 
     if (mainTag.classList.contains("open")) {
         toggleTag.innerHTML = '<img src="svg/close.svg">';

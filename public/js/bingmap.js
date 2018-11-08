@@ -7,16 +7,16 @@ function GetMap() {
     // Custom map --> https://msdn.microsoft.com/en-us/library/mt823636.aspx
     var bingStyle = {
       "elements": {
-          "water": { "fillColor": "#a1e0ff" },
-          "waterPoint": { "iconColor": "#a1e0ff" },
-          "transportation": { "strokeColor": "#e0d6a1" },
-          "road": { "fillColor": "#a1b3ac" },
-          "railway": { "strokeColor": "#7ab252" },
+          "water": { "fillColor": "#c7ecff" },
+          "waterPoint": { "iconColor": "#7fc490" },
+          "transportation": { "visible": false, "strokeColor": "#ddb99f" },
+          "road": { "fillColor": "#d6f2df" },
+          "railway": { "strokeColor": "#3e6949" },
           "structure": { "fillColor": "#ffffff" },
           "runway": { "fillColor": "#9effc4" },
-          "area": { "visible": false, "fillColor": "#d9f3da", "labelVisible":false},
-          "political": { "borderStrokeColor": "#615754", "borderOutlineColor": "#59c7e0" },
-          "point": { "visible":false, "labelVisible": true },
+          "area": { "visible": false, "fillColor": "#ffffff", "labelVisible":false},
+          "political": { "borderStrokeColor": "#90cd92", "borderOutlineColor": "transparent" },
+          "point": { "visible":false, "labelVisible": false },
           "transit": { "fillColor": "#50e092" },
           "forest": { "visible": false },
           "naturalPoint": { "visible": false },
@@ -27,9 +27,10 @@ function GetMap() {
           "educationBuilding": { "visible": false },
           "education": { "visible": false },
           "waterPoint": { "visible": false },
+          "point": { "visible": false },
       },
       "settings": {
-          "landColor": "#e2fde9",
+          "landColor": "#e0ffdb",
           "shadedReliefVisible":  true
       },
     };

@@ -4,10 +4,7 @@
     <link href="{{ asset('css/site.css') }}"  rel="stylesheet">
     @endsection
 @section('content')
-    <header>
-
-        <h1>Edenia</h1>
-        <h2>Les potagers collectifs.</h2>
+    <header class="site__header">
         <nav>
             <ul>
                 <li><a class="js-scrollTo" href="#concept">Concept</a></li>
@@ -16,13 +13,18 @@
                 <li><a class="js-scrollTo" href="#contact">Contact</a></li>
             </ul>
         </nav>
-
-        <a href="#" class="toggle-nav"><img src="{{ asset('svg/menu.svg') }}"></a>
-
+        <div class="button__header">
+            <a href="#" class="logo"><img src="{{ asset('svg/logo.svg') }}"></a>
+            <a href="#" class="toggle-nav button__menu"><img src="{{ asset('svg/menu.svg') }}"></a>
+        </div>
     </header>
 
-
     <main>
+        <section class="landing">
+            <h2>Les potagers collectifs.</h2>
+        </section>
+
+
         <section id="concept" class="concept">
             <h3 class="title__section">Notre concept</h3>
 
@@ -93,7 +95,7 @@
         </section>
 
         <section id="potager" class="carte">
-
+            <div id="myMap" class="myMap"></div>
         </section>
 
         <section id="membre" class="membre">
@@ -108,7 +110,7 @@
     </main>
 
     <footer>
-        <h3 class="title__section">A propos du workshop</h3>
+        <h3>A propos du workshop</h3>
         <ul>
             <li><a href="#" target="_blank">Semaine 1</a></li>
             <li><a href="#" target="_blank">Semaine 2</a></li>
@@ -117,16 +119,14 @@
             <li><a href="#" target="_blank">Making off</a></li>
         </ul>
         <h3>Participants</h3>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <ul class="profil">
+            <li><a href="http://manonmirguet.be/" target="_blank"><img src="{{ asset('img/photo_profile_manon.jpg') }}"></a></li>
+            <li><a href="http://louiselepoivre.be/" target="_blank"><img src="{{ asset('img/photo_profile_louise.jpg') }}"></a></li>
+            <li><a href="http://emiliehabets.be/" target="_blank"><img src="{{ asset('img/photo_profile_emilie.jpg') }}"></a></li>
+            <li><a href="http://billy.marcotty.eu/" target="_blank"><img src="{{ asset('img/photo_profile_billy.jpg') }}"></a></li>
+            <li><a href="http://christophersaenen.be/" target="_blank"><img src="{{ asset('img/photo_profile_chris.jpg') }}"></li>
         </ul>
     </footer>
-
-    <div id="myMap" style='position:relative;width:1200px;height:400px;'></div>
 
 
 @endsection
