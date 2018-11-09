@@ -16,7 +16,7 @@
     <nav class="nav">
         <ul class="nav__list">
             <li class="nav__el">
-                <a class="nav__link" href={{ route('home') }}">Potager</a>
+                <a class="nav__link" href="{{ route('home') }}">Potager</a>
             </li>
             <li class="nav__el">
                 <a class="nav__link" href="#">Tâches</a>
