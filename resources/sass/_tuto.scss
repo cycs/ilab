@@ -20,7 +20,6 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 2;
     height: 402px;
     width: 499px;
     background: url('../img/fond-info-feuille3.png') no-repeat bottom right;
@@ -74,7 +73,6 @@
       position: absolute;
       top: -18px;
       left: -26px;
-      z-index: 1;
     }
   }
   &__link {
