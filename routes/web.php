@@ -46,6 +46,10 @@ Route::get('/app/info', function () {
     return view('info')->with('seeds', Seed::all());
 })->name('info');
 
+Route::get('/app/tuyaux', function () {
+    return view('tuyaux');
+})->name('tuyaux');
+
 Route::get('eloquent', function() {
 
     return View::make('eloquent')
