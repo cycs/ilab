@@ -18,11 +18,12 @@
   }
   &__el {
     float: left;
-    //width: 300px;
+    width: 250px;
+    padding: 15px;
     height: 100%;
     margin: auto;
-    .active {
-      background: #9c7367;
+    &.active {
+      background: red;
     }
   }
   &__img {

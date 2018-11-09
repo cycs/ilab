@@ -34,6 +34,10 @@ Route::get('/app/plantation', function () {
     return view('plantation');
 })->name('plantation');
 
+Route::get('/app/tuto', function () {
+    return view('tuto');
+})->name('tuto');
+
 Route::get('eloquent', function() {
 
     return View::make('eloquent')

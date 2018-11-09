@@ -15,7 +15,7 @@
     <nav class="nav">
         <ul class="nav__list">
             <li class="nav__el">
-                <a class="nav__link" href="#">Potager</a>
+                <a class="nav__link" href="{{ route('home') }}">Potager</a>
             </li>
             <li class="nav__el">
                 <a class="nav__link" href="#">Tâches</a>
@@ -24,7 +24,7 @@
                 <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
             </li>
             <li class="nav__el">
-                <a class="nav__link" href="#">Tutos et conseils</a>
+                <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
             </li>
             <li class="nav__el">
                 <a class="nav__link" href="#">Vos envies</a>
