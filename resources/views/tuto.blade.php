@@ -54,7 +54,7 @@
                     <img class="plantation__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="légume-edenia" />
                     <p class="text text--italic">{{ $seed->variety }}</p>
                     <p class="text">Difficulté</p>
-                    <a class="btn__tuto" href="{{ route('info') }}">En savoir +</a>
+                    <a class="btn__tuto" href="{{ route('info') }}?legume={{ $seed->name }}">En savoir +</a>
                 </li>
             @endforeach
         </ul>
