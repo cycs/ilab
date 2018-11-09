@@ -1,0 +1,27 @@
+// tuto et conseils
+
+.tutoBody {
+  background: url('../img/fond-tuto-feuille2.png') no-repeat bottom left 2%,
+  url('../img/fond-tuto-feuille.png') no-repeat bottom left 8.8%,
+  url('../img/fond-tuto.png') no-repeat bottom left, #fff;
+  background-size: 12.8%, 11%, 80%;
+  height: 100vh;
+  position: relative;
+}
+
+.infoBody {
+  background: url('../img/fond-info-leg.png') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.tuto {
+  &__link {
+    position: absolute;
+    bottom: 65px;
+    right: 82px;
+    color: #3c6a48;
+    font-size: $font-size-medium;
+    font-family: 'Montserrat';
+  }
+}

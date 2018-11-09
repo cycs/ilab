@@ -26,4 +26,12 @@
       background: gray;
     }
   }
+  &__tuto {
+    background: #38a66a;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-family: 'Montserrat';
+    font-size: $font-size-small;
+  }
 }

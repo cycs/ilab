@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('styleApp')
+    <link href="{{ asset('css/app.css') }}"  rel="stylesheet">
+@endsection
+
 @section('homeBody', 'homeBody')
 
 @section('header')
@@ -21,7 +25,7 @@
                 <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
             </li>
             <li class="nav__el">
-                <a class="nav__link" href="#">Trucs et astuces</a>
+                <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
             </li>
             <li class="nav__el">
                 <a class="nav__link" href="#">Vos envies</a>
@@ -81,10 +85,8 @@
             </li>
         </ul>
     </div>
-    <div class="container">
-        <a class="btn--light plantation__link" href="#">Suggérer un nouveau végétal</a>
-        <a class="btn__planter" href="#">Planter</a>
-    </div>
+    <a class="btn--light plantation__link" href="#">Suggérer un nouveau végétal</a>
+    <a class="btn__planter" href="#">Planter</a>
 @endsection
 @section('scripts')
     <script src="{{ asset('js/plantation.js') }}"></script>
