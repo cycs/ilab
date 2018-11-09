@@ -57,9 +57,6 @@ $duration : .7s;
     &.open {
       animation: hambBar2Anim $duration linear forwards;
     }
-/*    &.close {
-      animation: hambBar2Anim $duration linear reverse forwards;
-    }*/
   }
   &__bar--big {
     width: 65px;
@@ -72,9 +69,6 @@ $duration : .7s;
     &.open {
       animation: hambBar1Anim $duration linear forwards;
     }
-/*    &.close {
-      animation: hambBar1Anim $duration linear reverse forwards;
-    }*/
   }
 }
 

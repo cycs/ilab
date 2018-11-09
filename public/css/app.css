@@ -121,9 +121,6 @@ body {
   position: absolute;
   top: 17px;
   right: 0;
-  /*    &.close {
-      animation: hambBar2Anim $duration linear reverse forwards;
-    }*/
 }
 
 .hamb__bar--small.open {
@@ -139,9 +136,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  /*    &.close {
-      animation: hambBar1Anim $duration linear reverse forwards;
-    }*/
 }
 
 .hamb__bar--big.open {
