@@ -43,7 +43,7 @@ Route::get('/meteo', function () {
 })->name('meteo');
 
 Route::get('/app/info', function () {
-    return view('info');
+    return view('info')->with('seeds', Seed::all());
 })->name('info');
 
 Route::get('eloquent', function() {

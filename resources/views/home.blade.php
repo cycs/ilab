@@ -61,7 +61,12 @@
 
 @endsection
 @section('content')
-    <div class="meteo__container"></div>
+    <div class="meteo__container">
+        <img src="{{ asset('img/icon/meteo.png') }}" alt="icon weather">
+        <span class="meteo--temp"></span>
+        <span class="meteo--time"></span>
+        <span class="meteo--date"></span>
+    </div>
     <div class="potager">
         <div class="container">
             <ul class="potager__list">
@@ -90,4 +95,5 @@
 @endsection
 @section('scripts')
     <script src="{{ asset('js/homeBorne.js') }}"></script>
+    <script src="{{ asset('js/meteo.js') }}"></script>
 @endsection
