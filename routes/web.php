@@ -31,7 +31,7 @@ Auth::routes();
 Route::get('/app', 'HomeController@index')->name('home');
 
 Route::get('/app/plantation', function () {
-    return view('plantation');
+    return view('plantation')->with('seeds', Seed::all());
 })->name('plantation');
 
 Route::get('/app/tuto', function () {
