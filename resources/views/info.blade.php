@@ -19,16 +19,10 @@
                 <a class="nav__link" href="{{ route('home') }}">Potager</a>
             </li>
             <li class="nav__el">
-                <a class="nav__link" href="#">Tâches</a>
-            </li>
-            <li class="nav__el">
                 <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
             </li>
             <li class="nav__el">
                 <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
-            </li>
-            <li class="nav__el">
-                <a class="nav__link" href="#">Vos envies</a>
             </li>
             <li class="nav__el">
                 <a class="nav__link" href="#">7 points clés</a>
