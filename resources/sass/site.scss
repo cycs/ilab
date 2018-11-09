@@ -52,7 +52,7 @@ body {
 
   a {
     padding: 0 10px;
-    width: 50px;
+    width: 35px;
     height: 30px;
   }
 }
@@ -95,10 +95,10 @@ nav {
   text-align: center;
   opacity: 0;
   z-index: 2;
-  transition: opacity 0.5s ease-in-out;
   font-family: 'Montserrat', sans-serif;
   display: none;
   position: absolute;
+  transition: opacity 0.5;
 }
 
 nav ul li {
