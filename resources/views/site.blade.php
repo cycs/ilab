@@ -21,7 +21,7 @@
 
     <main>
         <section class="landing">
-            <!--<h2>Les potagers collectifs.</h2>-->
+            <h2>Les potagers collectifs.</h2>
         </section>
 
 

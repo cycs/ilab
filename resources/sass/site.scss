@@ -48,7 +48,6 @@ body {
 }
 
 .site__header {
-  height: 100vh;
 
   a {
     padding: 0 10px;
@@ -63,7 +62,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   z-index: 2;
   position: fixed;
   width: 100vw;
@@ -133,11 +131,9 @@ section {
 
 .landing{
   z-index: -1;
-  position: absolute;
-  top:0;
   background-image: url('../img/landing_banner.jpg');
   background-position-x: -415px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
