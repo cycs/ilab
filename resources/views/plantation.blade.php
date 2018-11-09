@@ -37,8 +37,8 @@
 @endsection
 @section('content')
     <div class="container">
-        <h2 class="title title--big">Lancer une nouvelle culture</h2>
-        <h3 class="title">Choisissez un végétal parmi cette liste</h3>
+        <h2 class="title title--big title__plantation">Lancer une nouvelle culture</h2>
+        <h3 class="title title--light">Choisissez un végétal parmi cette liste</h3>
     </div>
     <!-- champ de recherche -->
     <div class="plantation">

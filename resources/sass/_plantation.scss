@@ -4,11 +4,11 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 527px;
+  height: 424px;
   width: 100%;
   overflow: scroll;
   &__list {
-    margin: 0 30px;
+    //margin: 0 30px;
     height: 100%;
     width: 2260px;
     display: flex;
@@ -27,6 +27,14 @@
   }
   &__img {
     height: 247px;
+  }
+  &__link {
+    position: absolute;
+    bottom: 45px;
+    left: 82px;
+    color: #3c6a48;
+    font-size: $font-size-medium;
+    font-family: 'Montserrat';
   }
 
 }

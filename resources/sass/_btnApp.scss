@@ -2,7 +2,9 @@
 
 .btn {
   &--light {
-    border: solid 1px #38a66a;
+    border: solid 2px #38a66a;
+    padding: 15px 30px;
+    border-radius: 30px;
   }
   &__close {
     border: none;
