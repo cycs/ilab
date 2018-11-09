@@ -14,7 +14,7 @@ function GetMap() {
           "railway": { "strokeColor": "#3e6949" },
           "structure": { "fillColor": "#ffffff" },
           "runway": { "fillColor": "#9effc4" },
-          "area": { "visible": false, "fillColor": "#ffffff", "labelVisible":false},
+          "area": { "visible": false, "fillColor": "#ffffff", "labelVisible": false},
           "political": { "borderStrokeColor": "#90cd92", "borderOutlineColor": "transparent" },
           "point": { "visible":false, "labelVisible": false },
           "transit": { "fillColor": "#50e092" },
@@ -27,7 +27,10 @@ function GetMap() {
           "educationBuilding": { "visible": false },
           "education": { "visible": false },
           "waterPoint": { "visible": false },
-          "point": { "visible": false },
+
+          "mapElement": {
+              "labelVisible": false,
+          }
       },
       "settings": {
           "landColor": "#e0ffdb",
@@ -40,8 +43,9 @@ function GetMap() {
         center: new Microsoft.Maps.Location(50.5011, 4.465),
         customMapStyle : bingStyle,
         showDashboard: false,
+        allowHidingLabelsOfRoad: true,
         //mapTypeId: Microsoft.Maps.MapTypeId.grayscale,
-        zoom: 7
+        zoom: 7,
     });
 
     //map.setView({ labelOverlay: Microsoft.Maps.LabelOverlay.hidden});
@@ -59,6 +63,7 @@ function GetMap() {
         edenias.forEach(edenia => {
             let location = new Microsoft.Maps.Location(edenia.lat, edenia.long);
             let pin = new Microsoft.Maps.Pushpin(location, {
+                icon: './svg/logo_aplat.svg',
                 title: edenia.name
             });
 
