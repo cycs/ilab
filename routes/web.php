@@ -35,7 +35,7 @@ Route::get('/app/plantation', function () {
 })->name('plantation');
 
 Route::get('/app/tuto', function () {
-    return view('tuto');
+    return view('tuto')->with('seeds', Seed::all());
 })->name('tuto');
 
 Route::get('/meteo', function () {
