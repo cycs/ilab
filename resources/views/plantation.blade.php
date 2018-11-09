@@ -44,39 +44,39 @@
     <div class="plantation">
         <ul class="plantation__list">
             <li class="plantation__el">
-                <h2 class="title">Persil</h2>
+                <h2 class="title title--center">Persil</h2>
                 <img class="plantation__img" src="{{ asset('img/legumes/persil.png') }}" alt="légume-edenia" />
-                <p class="text--italic">Persil commun</p>
+                <p class="text text--italic">Persil commun</p>
                 <p class="text">Difficulté</p>
             </li>
             <li class="plantation__el">
-                <h2 class="title">Choux-fleur</h2>
+                <h2 class="title title--center">Choux-fleur</h2>
                 <img class="plantation__img" src="{{ asset('img/legumes/choufleur.png') }}" alt="légume-edenia" />
-                <p class="text--italic">Persil commun</p>
+                <p class="text text--italic">Persil commun</p>
                 <p class="text">Difficulté</p>
             </li>
             <li class="plantation__el">
-                <h2 class="title">Potimarron</h2>
+                <h2 class="title title--center">Potimarron</h2>
                 <img class="plantation__img" src="{{ asset('img/legumes/potimaron.png') }}" alt="légume-edenia" />
-                <p class="text--italic">Persil commun</p>
+                <p class="text text--italic">Persil commun</p>
                 <p class="text">Difficulté</p>
             </li>
             <li class="plantation__el">
-                <h2 class="title">Tomate</h2>
+                <h2 class="title title--center">Tomate</h2>
                 <img class="plantation__img" src="{{ asset('img/legumes/tomate.png') }}" alt="légume-edenia" />
-                <p class="text--italic">Persil commun</p>
+                <p class="text text--italic">Persil commun</p>
                 <p class="text">Difficulté</p>
             </li>
             <li class="plantation__el">
-                <h2 class="title">Epinard</h2>
+                <h2 class="title title--center">Epinard</h2>
                 <img class="plantation__img" src="{{ asset('img/legumes/epinard.png') }}" alt="légume-edenia" />
-                <p class="text--italic">Persil commun</p>
+                <p class="text text--italic">Persil commun</p>
                 <p class="text">Difficulté</p>
             </li>
             <li class="plantation__el">
-                <h2 class="title">Fraise</h2>
+                <h2 class="title title--center">Fraise</h2>
                 <img class="plantation__img" src="{{ asset('img/legumes/fraise.png') }}" alt="légume-edenia" />
-                <p class="text--italic">Persil commun</p>
+                <p class="text text--italic">Persil commun</p>
                 <p class="text">Difficulté</p>
             </li>
         </ul>
@@ -85,4 +85,7 @@
         <a class="btn--light plantation__link" href="#">Suggérer un nouveau végétal</a>
         <a class="btn__planter" href="#">Planter</a>
     </div>
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/plantation.js') }}"></script>
 @endsection

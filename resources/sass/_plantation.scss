@@ -18,7 +18,7 @@
   }
   &__el {
     float: left;
-    width: 300px;
+    //width: 300px;
     height: 100%;
     margin: auto;
     .active {
@@ -26,9 +26,7 @@
     }
   }
   &__img {
-    width: 495px;
-    height: 495px;
-    background: red;
+    height: 247px;
   }
 
 }

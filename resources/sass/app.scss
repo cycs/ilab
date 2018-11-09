@@ -2,6 +2,23 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url('../fonts/LibreBaskerville-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url('../fonts/LibreBaskerville-Italic.ttf');
+  font-style: italic;
+}
+
 // Variables
 @import 'variables';
 
@@ -10,6 +27,8 @@
 
 // Page d'accueil
 
+@import 'configBorne';
+
 @import 'home';
 
 @import 'plantation';
@@ -17,25 +36,7 @@
 @import 'btnApp';
 
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-a {
-  text-decoration: none;
-  //color: white;
-}
-
-.title {
-  margin: 0;
-  font-size: 30px;
-  &--small {}
-  &--big {
-    font-size: 60px;
-  }
-}
 
 .navbar-laravel {
   background-color: #fff;

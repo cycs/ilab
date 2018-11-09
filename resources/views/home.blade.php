@@ -88,3 +88,6 @@
         </ul>
     </div>
 @endsection
+@section('scripts')
+    <script src="{{ asset('js/homeBorne.js') }}"></script>
+@endsection

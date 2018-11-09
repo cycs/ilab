@@ -1,0 +1,42 @@
+// configuration
+
+// titres
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: $title-base;
+  &--small {}
+  &--big {
+    font-size: $title-big;
+  }
+  &--small {
+    font-size: $title-small;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+// textes
+
+.text {
+  font-family: 'Libre Baskerville';
+  font-size: $font-size-medium;
+  &--italic {
+    font-style: italic;
+  }
+}
+
+// normalize
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  //color: white;
+}

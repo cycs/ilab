@@ -35967,27 +35967,12 @@ var nav = document.querySelector('.nav');
 var navList = document.querySelector('.nav__list');
 
 hamb.addEventListener('click', function (e) {
-    hambBar.classList.toggle('open');
-    hambBar2.classList.toggle('open');
-    hambBar3.classList.toggle('open');
-    nav.classList.toggle('open');
-    navList.classList.toggle('open');
+  hambBar.classList.toggle('open');
+  hambBar2.classList.toggle('open');
+  hambBar3.classList.toggle('open');
+  nav.classList.toggle('open');
+  navList.classList.toggle('open');
 });
-
-// POPUP POTAGER
-
-/*var btnPot = document.querySelector('#potBtn');
-var btnPotClose = document.querySelector('#parcelleClose');
-
-
-btnPot.addEventListener('click', function(e){
-    console.log('hello');
-    document.querySelector('.parcelle').classList.remove('hide');
-});
-
-btnPotClose.addEventListener('click', function(e){
-    document.querySelector('.parcelle').classList.add('hide');
-})*/
 
 /***/ }),
 /* 36 */
