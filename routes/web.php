@@ -38,6 +38,10 @@ Route::get('/app/tuto', function () {
     return view('tuto');
 })->name('tuto');
 
+Route::get('/meteo', function () {
+    return view('meteo');
+})->name('meteo');
+
 Route::get('/app/info', function () {
     return view('info');
 })->name('info');
