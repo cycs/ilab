@@ -41,7 +41,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container container--center">
         <div class="info">
             <div class="col col--left">
                 <img class="info__img" src="{{ asset('img/legumes/persil.png') }}" alt="legume Edenia" />

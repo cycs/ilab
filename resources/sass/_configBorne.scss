@@ -53,3 +53,30 @@ a {
   text-decoration: none;
   //color: white;
 }
+
+// layout
+
+.col {
+  width: 45%;
+  &--left {
+    float: left;
+  }
+  &--right {
+    float: right;
+  }
+  &--center {
+    margin: 0 auto;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  &--center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
