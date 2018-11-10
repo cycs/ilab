@@ -8,10 +8,16 @@
 
 @section('header')
     <!-- HAMBURGER -->
-    <div class="hamb">
-        <div id="bar1" class="hamb__bar--big"></div>
-        <div id="bar2" class="hamb__bar--small"></div>
-        <div id="bar3" class="hamb__bar"></div>
+    <div class="menu">
+        <div class="hamb">
+            <span id="bar1" ></span>
+            <span id="bar2" ></span>
+            <span id="bar3" ></span>
+        </div>
+        <div class="cross">
+            <span id="bar4" ></span>
+            <span id="bar5" ></span>
+        </div>
     </div>
     <nav class="nav">
         <ul class="nav__list">

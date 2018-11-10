@@ -20,15 +20,99 @@ body {
 
 // hamburger
 $duration : .7s;
+
 .hamb {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  & span {
+    background: #3c6a48;
+    height: 7px;
+    position: absolute;
+    right: 0;
+    transition: .25s ease-in-out;
+    &:first-child {
+      width: 65px;
+      top: 0;
+      transition-delay: .5s;
+      &.open {
+        width: 0%;
+        transition-delay: 0s;
+      }
+    }
+    &:nth-child(2) {
+      width: 33px;
+      top: 17px;
+      transition-delay: .625s;
+      &.open {
+        width: 0%;
+        transition-delay: .125s;
+      }
+    }
+    &:nth-child(3) {
+      width: 52px;
+      top: 34px;
+      transition-delay: .75s;
+      &.open {
+        width: 0%;
+        transition-delay: 0.25s;
+      }
+    }
+  }
+}
+
+.cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotate(45deg);
+  z-index: 2;
+  span {
+    &:nth-child(1) {
+      background: #3c6a48;
+      height: 0%;
+      width: 7px;
+      position: absolute;
+      top: -14px;
+      right: 23px;
+      transition: .25s ease-in-out;
+      transition-delay: 0s;
+      &.open {
+        height: 52px;
+        transition-delay: .625s;
+      }
+    }
+    &:nth-child(2) {
+      background: #3c6a48;
+      width: 0%;
+      height: 7px;
+      position: absolute;
+      right: 0;
+      top: 8px;
+      transition: .25s ease-in-out;
+      transition-delay: .25s;
+      z-index: 1;
+      &.open {
+        width: 52px;
+        transition-delay: .375s;
+      }
+    }
+  }
+}
+
+.menu {
   position: absolute;
   top: 50px;
   right: 50px;
   width: 65px;
   height: 50px;
-  z-index: 2;
-  &__bar {
+
+  /*&__bar {
     width: 52px;
     height: 7px;
     margin-bottom: 10px;
@@ -36,12 +120,14 @@ $duration : .7s;
     position: absolute;
     top: 34px;
     right: 0;
+
+    transition-delay: .75s;
+    transition: .25s ease-in-out;
+
     &.open {
-      animation: hambBar3Anim $duration linear forwards;
+      width: 0%;
+      transition-delay: 0.25s;
     }
-/*    &.close {
-      animation: hambBar3Anim $duration linear reverse forwards;
-    }*/
   }
   &__bar--small {
     width: 33px;
@@ -51,22 +137,64 @@ $duration : .7s;
     position: absolute;
     top: 17px;
     right: 0;
+
+    transition-delay: .625s;
+    transition: .25s ease-in-out;
+
     &.open {
-      animation: hambBar2Anim $duration linear forwards;
+      width: 0%;
+      transition-delay: .125s;
     }
   }
   &__bar--big {
     width: 65px;
     height: 7px;
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
     background: #3c6a48;
     position: absolute;
     top: 0;
     right: 0;
+
+    transition: .25s ease-in-out;
+    transition-delay: .5s;
+
+
     &.open {
-      animation: hambBar1Anim $duration linear forwards;
+      width: 0%;
+      transition-delay: 0s;
     }
   }
+  &__close {
+    background: #3c6a48;
+    width: 7px;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(45deg);
+    transition: .25s ease-in-out;
+    transition-delay: 0s;
+
+    &.open {
+      height: 52px;
+      transition-delay: .625s;
+    }
+    &--right {
+      background: #3c6a48;
+      width: 7px;
+      height: 0%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(-45deg);
+      transition: .25s ease-in-out;
+      transition-delay: .25s;
+      &.open {
+        height: 52px;
+        transition-delay: .375s;
+      }
+    }
+  }*/
 }
 
 // animations
@@ -176,37 +304,39 @@ $duration : .7s;
   }
   &__el {
     position: absolute;
-    padding: 25px 35px;
+    box-sizing: border-box;
+    padding: 10px 30px;
     &:first-child {
-      top:3px;
-      right: 359px;
+      top:2px;
+      right: 360px;
+
     }
     &:nth-child(2) {
-      top: 83px;
-      right: 174px;
+      top: 80px;
+      right: 206px;
       transform: rotate(14deg);
     }
     &:nth-child(3) {
-      top: 178px;
-      right: 92px;
+      top: 175px;
+      right: 105px;
     }
     &:nth-child(4){
-      top: 145px;
-      left: 347px;
+      top: 143px;
+      left: 350px;
       transform: rotate(-5deg);
     }
     &:nth-child(5) {
       top: 226px;
-      left: 476px;
+      left: 472px;
     }
     &:nth-child(6) {
-      top: 292px;
-      right: 327px;
+      top: 289px;
+      right: 331px;
       transform: rotate(14deg);
     }
     &:nth-child(7) {
-      top: 321px;
-      left: 57px;
+      top: 318px;
+      left: 55px;
       transform: rotate(-6.5deg);
     }
     &:nth-child(8) {
@@ -214,8 +344,9 @@ $duration : .7s;
       left: 233px;
     }
     &:last-child {
-      bottom: 162px;
+      bottom: 159px;
       left: 340px;
+      padding: 0 30px 20px 30px;
       transform: rotate(5deg);
     }
   }
