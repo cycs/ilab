@@ -59,7 +59,7 @@
             @endforeach
         </ul>
     </div>
-    <a class="btn--light tuto__link" href="#">Découvrir et traiter les maladies</a>
+    <a class="btn--light tuto__link" href="{{ route('maladie') }}">Découvrir et traiter les maladies</a>
 @endsection
 @section('scripts')
     <script src="{{ asset('js/tuto.js') }}"></script>

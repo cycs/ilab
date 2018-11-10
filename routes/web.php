@@ -47,6 +47,10 @@ Route::get('/app/info', function () {
     return view('info')->with('seeds', Seed::all());
 })->name('info');
 
+Route::get('/app/maladie', function () {
+    return view('maladie')->with('seeds', Seed::all());
+})->name('maladie');
+
 Route::get('app/info/seed/{id}', function ($id) {
     setlocale(LC_TIME, 'french');
     setlocale(LC_ALL, 'fr_FR.UTF-8');
