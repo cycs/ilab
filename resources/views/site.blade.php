@@ -14,8 +14,8 @@
             </ul>
         </nav>
         <div class="button__header">
-            <a href="#" class="logo"><img src="{{ asset('svg/logo.svg') }}"></a>
-            <a href="#" class="toggle-nav button__menu"><img src="{{ asset('svg/menu.svg') }}"></a>
+            <a href="#" class="logo"><img src="{{ asset('svg/logo_aplat.svg') }}"></a>
+            <button type="button" class="toggle-nav button__menu"><img src="{{ asset('svg/menu.svg') }}"></button>
         </div>
     </header>
 
@@ -110,21 +110,9 @@
     </main>
 
     <footer>
-        <h3>A propos du workshop</h3>
         <ul>
-            <li><a href="#" target="_blank">Semaine 1</a></li>
-            <li><a href="#" target="_blank">Semaine 2</a></li>
-            <li><a href="#" target="_blank">Semaine 3</a></li>
-            <li><a href="#" target="_blank">Semaine 4</a></li>
-            <li><a href="#" target="_blank">Making off</a></li>
-        </ul>
-        <h3>Participants</h3>
-        <ul class="profil">
-            <li><a href="http://manonmirguet.be/" target="_blank"><img src="{{ asset('img/photo_profile_manon.jpg') }}"></a></li>
-            <li><a href="http://louiselepoivre.be/" target="_blank"><img src="{{ asset('img/photo_profile_louise.jpg') }}"></a></li>
-            <li><a href="http://emiliehabets.be/" target="_blank"><img src="{{ asset('img/photo_profile_emilie.jpg') }}"></a></li>
-            <li><a href="http://billy.marcotty.eu/" target="_blank"><img src="{{ asset('img/photo_profile_billy.jpg') }}"></a></li>
-            <li><a href="http://christophersaenen.be/" target="_blank"><img src="{{ asset('img/photo_profile_chris.jpg') }}"></li>
+            <li><a href="#" target="_blank">À propos</a></li>
+            <li>Made for <a href="#" target="_blank">DWM</a></li>
         </ul>
     </footer>
 
