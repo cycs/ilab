@@ -66,7 +66,10 @@
             <ul class="potager__list">
                 <!--php pour mettre les légumes qu'il faut + les liens vers les bons légumes OK bon next step, récupérer les parcelle 1 à 9 pour en afficher le contenu quand on clique sur le lien-->
                 @for($i=0; $i<9; $i++)
-                    <li class="potager__el"><a class="potager__link" href="">{{$seeds[$i]->name}}</a></li>
+                    <li class="potager__el">
+                        <a class="potager__link" href="">
+                            <img src="{{ asset('img'.$seeds[$i]->grown_img_url) }}" alt="legume image">
+                        </a></li>
                 @endfor
             </ul>
             <button id="potBtn" class="btn__planter">Planter</button> <!--grisé si pas d'espace dispo-->
