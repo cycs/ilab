@@ -13,6 +13,22 @@ var currentFetch = fetch(currentMeteo).then(blob => blob.json()).then(data => {
     console.log(data);
     document.querySelector('.meteo--temp').innerHTML = `${data.main.temp}°C`;
 });
+
+var average_rain = [
+    76.1,
+    63.1,
+    70,
+    51.3,
+    66.5,
+    71.8,
+    73.5,
+    79.3,
+    68.9,
+    74.5,
+    76.4,
+    81,
+];
+
 var forecastFetch = fetch(forecastMeteo).then(blob => blob.json()).then(data => {
     let list = data.list;
     console.log(data);
@@ -20,40 +36,40 @@ var forecastFetch = fetch(forecastMeteo).then(blob => blob.json()).then(data => 
         return b.rain && b.rain['3h'] ? a + b.rain['3h'] : a + 0;
     }, 0));
 
+    let howDry = drought(rain);
+    document.querySelector('.meteo--alert').innerHTML = howDry;
 
-    console.log(`Il y a eu ${rain} millimètres de précipitations sur les 5 derniers jours.`);
+    //console.log(`Il y a eu ${rain} millimètres de précipitations sur les 5 derniers jours.`);
 });
+
+function drought(rain){
+    let time = new Date();
+    let month = time.getMonth();
+    let diff = parseFloat(((rain*6/average_rain[month])).toFixed(2));
+    let result;
+
+    if(diff < 0.2) {
+        result = 'Extrêmement sec'
+    } else if(diff < 0.5) {
+        result = 'Très sec'
+    } else if(diff < 0.8) {
+        result = 'Modérément sec'
+    } else if(diff < 1.2 ) {
+        result = 'Proche de la normale'
+    } else if(diff < 1.5) {
+        result = 'Modérément humide'
+    } else if(diff < 1.8) {
+        result = 'Très humide'
+    } else {
+        result = 'Extrêmement humide'
+    }
+    return result;
+}
 
 function timeOut(){
     var month;
     var time = new Date();
 
-    /*switch(time.getMonth()){
-        case 1: month = 'Janvier';
-            break;
-        case 2: month = 'Février';
-            break;
-        case 3: month = 'Mars';
-            break;
-        case 4: month = 'Avril';
-            break;
-        case 5: month = 'Mai';
-            break;
-        case 6: month = 'Juin';
-            break;
-        case 7: month = 'Juillet';
-            break;
-        case 8: month = 'Août';
-            break;
-        case 9: month = 'Septembre';
-            break;
-        case 10: month = 'Octobre';
-            break;
-        case 11: month = 'Novembre';
-            break;
-        case 12: month = 'Décembre';
-            break;
-    }*/
     document.querySelector('.meteo--time').innerHTML = `${time.getHours()}:${time.getMinutes() < 10 ? '0'+(time.getMinutes()) : time.getMinutes()}`;
     document.querySelector('.meteo--date').innerHTML = `${time.getDate()}.${time.getMonth()}.${time.getFullYear()}`;
     setTimeout(timeOut, 3600);

@@ -280,7 +280,7 @@ $duration : .7s;
   position: absolute;
   left: 136px;
   top: 0;
-  width: 500px;
+  //width: 500px;
   height: 200px;
   padding: 20px 0;
   display: flex;
@@ -300,6 +300,18 @@ $duration : .7s;
     img {
       height: 55px;
       padding-right: 30px;
+    }
+  }
+  &--howdry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .meteo--howdry {
+      font-size: 18px;
+    }
+    .meteo--alert {
+     // font-size: 30px;
     }
   }
   &--time {

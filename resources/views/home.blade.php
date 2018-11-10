@@ -70,6 +70,10 @@
             <span class="meteo--time bold"></span>
             <span class="meteo--date"></span>
         </div>
+        <div class="meteo__container--howdry">
+            <span class="meteo--howdry">Pluviométrie moyenne sur 7 jours</span>
+            <span class="meteo--alert"></span>
+        </div>
     </div>
     <div class="potager">
         <div class="container">
