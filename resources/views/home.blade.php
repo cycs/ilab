@@ -62,10 +62,14 @@
 @endsection
 @section('content')
     <div class="meteo__container">
-        <img src="{{ asset('img/icon/meteo.png') }}" alt="icon weather">
-        <span class="meteo--temp"></span>
-        <span class="meteo--time"></span>
-        <span class="meteo--date"></span>
+        <div class="meteo__container--weather">
+            <img src="{{ asset('img/icon/meteo.png') }}" alt="icon weather">
+            <span class="meteo--temp bold"></span>
+        </div>
+        <div class="meteo__container--time">
+            <span class="meteo--time bold"></span>
+            <span class="meteo--date"></span>
+        </div>
     </div>
     <div class="potager">
         <div class="container">

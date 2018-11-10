@@ -54,8 +54,8 @@ function timeOut(){
         case 12: month = 'Décembre';
             break;
     }*/
-    document.querySelector('.meteo--time').innerHTML = `${time.getHours()}:${time.getMinutes()}`;
-    document.querySelector('.meteo--date').innerHTML = `${time.getDay()}.${time.getMonth()}.${time.getFullYear()}`;
+    document.querySelector('.meteo--time').innerHTML = `${time.getHours()}:${time.getMinutes() < 10 ? '0'+(time.getMinutes()) : time.getMinutes()}`;
+    document.querySelector('.meteo--date').innerHTML = `${time.getDate()}.${time.getMonth()}.${time.getFullYear()}`;
     setTimeout(timeOut, 3600);
 };
 timeOut();
