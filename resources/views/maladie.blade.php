@@ -39,5 +39,18 @@
 @endsection
 
 @section('content')
+    <div class="container">
+        <a class="" href="{{ route('tuto') }}">retour</a>
+        <h2 class="title title--big">Les maladies</h2>
+        <h3 class="title title--light">Apprends-en plus sur les différentes maladies</h3>
+        <ul class="maladie__list">
+            <li class="maladie__el"><a href="#">Le mildiou</a></li>
+            <li class="maladie__el"><a href="#">Le mildiou</a></li>
+            <li class="maladie__el"><a href="#">Le mildiou</a></li>
+            <li class="maladie__el"><a href="#">Le mildiou</a></li>
+            <li class="maladie__el"><a href="#">Le mildiou</a></li>
+        </ul>
+    </div>
+
 
 @endsection
