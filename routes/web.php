@@ -74,7 +74,7 @@ Route::get('app/info/seed/{id}', function ($id) {
 
     return view('info')->with($data);
 
-})->where('id', '[0-9]+');
+})->where('id', '[0-9]+')->name('info');
 
 Route::get('/app/tuyaux', function () {
     return view('tuyaux');
