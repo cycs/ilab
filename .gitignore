@@ -14,3 +14,6 @@ yarn-error.log
 .phpunit.result.cache
 /public/css/app.css
 /public/js/app.js
+public/css/site.css
+public/css/app.css
+public/js/site.js
