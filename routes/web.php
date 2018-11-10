@@ -2,6 +2,7 @@
 
 use App\Soil;
 use App\Seed;
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,31 @@ Route::get('/meteo', function () {
 Route::get('/app/info', function () {
     return view('info')->with('seeds', Seed::all());
 })->name('info');
+
+Route::get('app/info/seed/{id}', function ($id) {
+    setlocale(LC_TIME, 'french');
+    setlocale(LC_ALL, 'fr_FR.UTF-8');
+
+    $seed = Seed::find($id);
+
+//    Carbon::setUtf8(true);
+
+    $plant_start = Carbon::parse($seed->planting_period_start, 'UTC')->localeMonth;
+    $plant_end = Carbon::parse($seed->planting_period_end, 'UTC')->localeMonth;
+    $harvest_start = Carbon::parse($seed->harvest_period_start, 'UTC')->localeMonth;
+    $harvest_end = Carbon::parse($seed->harvest_period_end, 'UTC')->localeMonth;
+
+    $data = array(
+        'seed' => $seed,
+        'start_plant' => $plant_start,
+        'end_plant' => $plant_end,
+        'start_harvest' =>  $harvest_start,
+        'end_harvest' => $harvest_end
+    );
+
+    return view('info')->with($data);
+
+})->where('id', '[0-9]+');
 
 Route::get('/app/tuyaux', function () {
     return view('tuyaux');
