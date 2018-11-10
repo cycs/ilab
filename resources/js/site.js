@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 
 //MENU Hamburger
-const toggleTag = document.querySelector(".site__header a.toggle-nav");
+const toggleTag = document.querySelector(".site__header button.toggle-nav");
 const mainTag = document.querySelector(".site__header nav");
 const menuTag = document.querySelector(".site__header nav ul a");
 
