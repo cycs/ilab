@@ -43,7 +43,7 @@
 @endsection
 
 @section('content')
-    <h2>Coucou la maladie</h2>
+    <h2 class="title">Coucou la maladie</h2>
     <p>{{$illness->name}}</p>
     <p>{{$illness->description}}</p>
     <p>{{$illness->cause}}</p>
