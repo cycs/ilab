@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder {
         $this->command->info('Seeds are planted');
         $this->call('IllnessTableSeeder');
         $this->command->info('Beware of illnesses');
+        $this->call('ParcelTableSeeder');
+        $this->command->info('Parcels not passerelles');
         $this->call('SoilTableSeeder');
         $this->command->info('Perfect Soils');
     }

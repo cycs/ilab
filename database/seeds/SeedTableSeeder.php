@@ -871,6 +871,5 @@ class SeedTableSeeder extends Seeder
 
         $haricot->permacultures()->attach($salade, ['positive_effect' => true, 'location' => 'after']);
         $haricot->permacultures()->attach($epinard, ['positive_effect' => true, 'location' => 'after']);
-
     }
 }

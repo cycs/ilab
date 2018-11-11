@@ -78,7 +78,14 @@
         </div>
     </div>
     <div class="potager">
-            <ul class="potager__list">
+    @foreach($parcels as $parcel)
+        {{$parcel->name}}
+        @foreach($parcel->parcels as $seed)
+            <li>{{$seed->name}}</li>
+        @endforeach
+    @endforeach
+
+        <ul class="potager__list">
                 @for($i=0; $i<9; $i++)
                     <li class="potager__el">
                         <a class="potager__link" href="">

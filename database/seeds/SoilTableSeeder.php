@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Seed;
 use App\Illness;
 use App\Soil;
+use App\Parcel;
 
 class SoilTableSeeder extends Seeder
 {
@@ -16,7 +17,7 @@ class SoilTableSeeder extends Seeder
     {
         DB::table('soils')->delete();
 
-        Soil::create([
+        $namur = Soil::create([
             'name' => 'Edenia Namur',
             'address' => 'Avenue du Bon Air',
             'lat' => '50.478047',
@@ -26,7 +27,7 @@ class SoilTableSeeder extends Seeder
             'granulometry' => 'limons fins'
         ]);
 
-        Soil::create([
+        $liege = Soil::create([
             'name' => 'Edenia Liège',
             'address' => 'Boulevard de la constitution',
             'lat' => '50.644344',
@@ -95,6 +96,10 @@ class SoilTableSeeder extends Seeder
             'humus_percent' => 10,
             'granulometry' => 'calcaire'
         ]);
+
+        $a1 = Parcel::all();
+
+        $namur->parcels()->attach($a1);
 
     }
 }

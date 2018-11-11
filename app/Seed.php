@@ -33,6 +33,10 @@ class Seed extends Model {
         return $this->belongsToMany('App\Seed', 'seeds_permacultures', 'seed_planted_id', 'seed_to_plant_id');
     }
 
+    public function parcel_seeded(){
+        return $this->belongsToMany('App\Parcel', 'seeds_parcels', 'seed_id', 'parcel_id');
+    }
+
     public function positive_permaculture(){
 //        return $this->where('positive_effect', true);
     }

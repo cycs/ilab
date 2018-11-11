@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Parcel;
+use App\Soil;
 use Illuminate\Http\Request;
 use App\Seed;
 
@@ -24,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home')->with('seeds', Seed::all());
+        return view('home')
+            ->with('seeds', Seed::all())
+            ->with('parcels', Parcel::all());
     }
 }
