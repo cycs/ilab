@@ -29,7 +29,7 @@
                     <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="#">7 points clés</a>
+                    <a class="nav__link" href="{{ route('chart') }}">7 points clés</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="#">Déconnexion</a>
