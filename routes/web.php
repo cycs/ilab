@@ -51,6 +51,10 @@ Route::get('/app/maladie', function () {
     return view('maladie')->with('seeds', Seed::all());
 })->name('maladie');
 
+Route::get('/app/maladieInfo', function () {
+    return view('maladieInfo')->with('seeds', Seed::all());
+})->name('maladieInfo');
+
 Route::get('/app/chart', function () {
     return view('chart')->with('seeds', Seed::all());
 })->name('chart');
