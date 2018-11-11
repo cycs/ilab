@@ -44,4 +44,10 @@
 
 @section('content')
     <h2>Coucou la maladie</h2>
+    <p>{{$illness->name}}</p>
+    <p>{{$illness->description}}</p>
+    <p>{{$illness->cause}}</p>
+    <p>{{$illness->consequence}}</p>
+    <p>{{$illness->treatment}}</p>
+    <p>{{$illness->prevention}}</p>
 @endsection

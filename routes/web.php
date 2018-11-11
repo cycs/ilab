@@ -2,6 +2,7 @@
 
 use App\Soil;
 use App\Seed;
+use App\Illness;
 use Carbon\Carbon;
 
 /*
@@ -48,12 +49,15 @@ Route::get('/app/info', function () {
 })->name('info');
 
 Route::get('/app/maladie', function () {
-    return view('maladie')->with('seeds', Seed::all());
+    return view('maladie')->with('illnesses', Illness::all());
 })->name('maladie');
 
-Route::get('/app/maladieInfo', function () {
-    return view('maladieInfo')->with('seeds', Seed::all());
-})->name('maladieInfo');
+Route::get('/app/info/illness/{id}', function ($id) {
+    $data = Illness::find($id);
+
+    return view('maladieInfo')->with('illness', $data);
+
+})->where('id', '[0-9]+')->name('maladieInfo');
 
 Route::get('/app/chart', function () {
     return view('chart')->with('seeds', Seed::all());

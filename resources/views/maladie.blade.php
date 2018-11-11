@@ -50,12 +50,10 @@
             <h3 class="title title--small title--light">Apprends-en plus sur les différentes maladies</h3>
         </div>
             <ul class="maladie__list">
-            <li class="maladie__el"><a href="{{ route('maladieInfo') }}">Le mildiou</a></li>
-            <li class="maladie__el"><a href="{{ route('maladieInfo') }}">Les pucerons</a></li>
-            <li class="maladie__el"><a href="{{ route('maladieInfo') }}">Les limaces</a></li>
-            <li class="maladie__el"><a href="{{ route('maladieInfo') }}">Les chenilles</a></li>
-            <li class="maladie__el"><a href="{{ route('maladieInfo') }}">L'oïdium</a></li>
-        </ul>
+                @foreach($illnesses as $illness)
+                    <li class="maladie__el"><a href="{{ route('maladieInfo', ['id' => $illness->id]) }}">{{ $illness->name }}</a></li>
+                @endforeach
+            </ul>
     </div>
 
 
