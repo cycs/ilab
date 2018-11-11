@@ -28,7 +28,7 @@ class CreateSeedsTable extends Migration
             $table->date('harvest_period_start')->default('2018-05-01');
             $table->date('harvest_period_end')->default('2018-09-30');
             $table->integer('harvest_within_time')->default(0);
-            $table->string('grown_img_url')->default('/legumes/tomate.png');
+            $table->string('grown_img_url')->default('/legumes/generique.png');
             $table->string('seed_img_url')->default('/tomate_seeds.jpg');
             $table->integer('price')->default('3.00');
             $table->enum('difficulty', ['super easy', 'easy', 'medium', 'hard', 'very hard']);
