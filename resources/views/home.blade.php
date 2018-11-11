@@ -76,9 +76,7 @@
         </div>
     </div>
     <div class="potager">
-        <div class="container">
             <ul class="potager__list">
-                <!--php pour mettre les légumes qu'il faut + les liens vers les bons légumes OK bon next step, récupérer les parcelle 1 à 9 pour en afficher le contenu quand on clique sur le lien-->
                 @for($i=0; $i<9; $i++)
                     <li class="potager__el">
                         <a class="potager__link" href="">
@@ -87,7 +85,6 @@
                 @endfor
             </ul>
             <button id="potBtn" class="btn__planter">Planter</button> <!--grisé si pas d'espace dispo-->
-        </div>
     </div>
     <div class="parcelle hide">
         <button id="parcelleClose" class="parcelle__btn btn__close">X</button>

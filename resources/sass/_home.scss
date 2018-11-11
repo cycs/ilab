@@ -111,123 +111,7 @@ $duration : .7s;
   right: 50px;
   width: 65px;
   height: 50px;
-
-  /*&__bar {
-    width: 52px;
-    height: 7px;
-    margin-bottom: 10px;
-    background: #3c6a48;
-    position: absolute;
-    top: 34px;
-    right: 0;
-
-    transition-delay: .75s;
-    transition: .25s ease-in-out;
-
-    &.open {
-      width: 0%;
-      transition-delay: 0.25s;
-    }
-  }
-  &__bar--small {
-    width: 33px;
-    height: 7px;
-    margin-bottom: 10px;
-    background: #3c6a48;
-    position: absolute;
-    top: 17px;
-    right: 0;
-
-    transition-delay: .625s;
-    transition: .25s ease-in-out;
-
-    &.open {
-      width: 0%;
-      transition-delay: .125s;
-    }
-  }
-  &__bar--big {
-    width: 65px;
-    height: 7px;
-    //margin-bottom: 10px;
-    background: #3c6a48;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    transition: .25s ease-in-out;
-    transition-delay: .5s;
-
-
-    &.open {
-      width: 0%;
-      transition-delay: 0s;
-    }
-  }
-  &__close {
-    background: #3c6a48;
-    width: 7px;
-    height: 0%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotate(45deg);
-    transition: .25s ease-in-out;
-    transition-delay: 0s;
-
-    &.open {
-      height: 52px;
-      transition-delay: .625s;
-    }
-    &--right {
-      background: #3c6a48;
-      width: 7px;
-      height: 0%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: rotate(-45deg);
-      transition: .25s ease-in-out;
-      transition-delay: .25s;
-      &.open {
-        height: 52px;
-        transition-delay: .375s;
-      }
-    }
-  }*/
 }
-
-// animations
-
-/*@keyframes hambBar1Anim {
-  0% {width: 65px}
-  25% {width: 7px; transform: translateX(-25px)}
-  50% {width: 7px; transform: translate(-25px, 17px)}
-  75% {width: 65px; transform: translateY(17px)}
-  100% {width: 65px; transform: translateY(17px) rotate(45deg)}
-}
-
-@keyframes hambBar2Anim {
-  0% {width: 33px}
-  25% {width: 7px; transform: translateX(-25px)}
-  50% {width: 7px; transform: translateX(-25px)}
-  75% {width: 65px; transform: translateX(0)}
-  100% {width: 65px; transform: translateX(0) rotate(135deg)}
-}
-
-@keyframes hambBar3Anim {
-  0% {width: 52px}
-  25% {width: 7px; transform: translateX(-25px)}
-  50% {width: 7px; transform: translate(-25px, -17px)}
-  75% {width: 65px; transform: translateY(-17px)}
-  100% {width: 65px; transform: translateY(-17px) rotate(45deg)}
-}
-
-@keyframes navAnimation {
-  0% {width: 0; height: 0}
-  100% {width: 100vw; height: 100vh}
-}*/
-
 
 
 // nav
@@ -238,9 +122,6 @@ $duration : .7s;
   &.open {
     display: block;
   }
-  /*&.close {
-    animation: navAnimation 0.750s linear reverse forwards;
-  }*/
   position: absolute;
   right: 0;
   top: 0;
@@ -280,12 +161,14 @@ $duration : .7s;
   position: absolute;
   left: 136px;
   top: 0;
-  //width: 500px;
+  //width: 700px;
   height: 200px;
   padding: 20px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  //align-content: space-around;
+  //flex-wrap: wrap;
   font-family: 'Montserrat';
   font-size: 48px;
   

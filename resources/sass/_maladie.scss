@@ -1,0 +1,37 @@
+// maladies
+
+.maladieBody {
+  background: url('../img/feuille.png') no-repeat bottom left -6%,
+  url('../img/fond-info-feuille2.png') no-repeat bottom left, #fff;
+  background-size: 15%, 15%;
+  height: 100vh;
+}
+
+.maladie {
+  padding: 40px 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
+
+  &__btn {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+  }
+
+  &__list {
+    height: 380px;
+    padding: 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__el a {
+    color: #28453c;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+  }
+}

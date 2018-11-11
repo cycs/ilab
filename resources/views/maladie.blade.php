@@ -4,6 +4,8 @@
     <link href="{{ asset('css/app.css') }}"  rel="stylesheet">
 @endsection
 
+@section('homeBody', 'maladieBody')
+
 @section('header')
     <!-- HAMBURGER -->
     <div class="menu">
@@ -40,15 +42,17 @@
 
 @section('content')
     <div class="container">
-        <a class="" href="{{ route('tuto') }}">retour</a>
-        <h2 class="title title--big">Les maladies</h2>
-        <h3 class="title title--light">Apprends-en plus sur les différentes maladies</h3>
-        <ul class="maladie__list">
+        <div class="maladie">
+            <a class="maladie__btn" href="{{ route('tuto') }}">retour</a>
+            <h2 class="title title--big">Les maladies</h2>
+            <h3 class="title title--small title--light">Apprends-en plus sur les différentes maladies</h3>
+        </div>
+            <ul class="maladie__list">
             <li class="maladie__el"><a href="#">Le mildiou</a></li>
-            <li class="maladie__el"><a href="#">Le mildiou</a></li>
-            <li class="maladie__el"><a href="#">Le mildiou</a></li>
-            <li class="maladie__el"><a href="#">Le mildiou</a></li>
-            <li class="maladie__el"><a href="#">Le mildiou</a></li>
+            <li class="maladie__el"><a href="#">Les pucerons</a></li>
+            <li class="maladie__el"><a href="#">Les limaces</a></li>
+            <li class="maladie__el"><a href="#">Les chenilles</a></li>
+            <li class="maladie__el"><a href="#">L'oïdium</a></li>
         </ul>
     </div>
 

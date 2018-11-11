@@ -42,7 +42,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="title title--big title__plantation">Lancer une nouvelle culture</h2>
+        <h2 class="title title--big title__plantation">Les bonnes pratiques</h2>
         <h3 class="title title--light">Choisissez un végétal parmi cette liste</h3>
     </div>
     <!-- champ de recherche -->
