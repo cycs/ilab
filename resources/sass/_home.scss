@@ -123,8 +123,8 @@ $duration : .7s;
     display: block;
   }
   position: absolute;
-  right: 0;
-  top: 0;
+  //right: 0;
+  //top: 0;
   text-align: center;
   z-index: 1;
   background: url('../img/fond-nav-feuille-bottom.png') no-repeat bottom right,
@@ -132,15 +132,6 @@ $duration : .7s;
   url('../img/fond-nav-feuille-top.png') no-repeat top left 4%,
   url('../img/fond-nav-top.png') no-repeat top left, #fff;
   background-size: 20%, 72%, 17%, 81%;
-  &__list {
-    margin: 80px auto 0;
-    &.open {
-      display: block;
-    }
-    &.close {
-      display:none;
-    }
-  }
   &__el {
     margin-bottom: 40px;
     &:last-child {
@@ -148,6 +139,7 @@ $duration : .7s;
     }
   }
   &__link {
+    font-family: 'Montserrat';
     font-size: 60px;
     color: #1d1d1b;
     text-decoration: none;

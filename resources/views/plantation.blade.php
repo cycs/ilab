@@ -20,23 +20,25 @@
         </div>
     </div>
     <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__el">
-                <a class="nav__link" href="{{ route('home') }}">Potager</a>
-            </li>
-            <li class="nav__el">
-                <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
-            </li>
-            <li class="nav__el">
-                <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
-            </li>
-            <li class="nav__el">
-                <a class="nav__link" href="#">7 points clés</a>
-            </li>
-            <li class="nav__el">
-                <a class="nav__link" href="#">Déconnexion</a>
-            </li>
-        </ul>
+        <div class="container container--center">
+            <ul class="nav__list">
+                <li class="nav__el">
+                    <a class="nav__link" href="{{ route('home') }}">Potager</a>
+                </li>
+                <li class="nav__el">
+                    <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
+                </li>
+                <li class="nav__el">
+                    <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
+                </li>
+                <li class="nav__el">
+                    <a class="nav__link" href="#">7 points clés</a>
+                </li>
+                <li class="nav__el">
+                    <a class="nav__link" href="#">Déconnexion</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 @endsection
 @section('content')

@@ -34,4 +34,9 @@
     font-family: 'Montserrat';
     font-size: $font-size-small;
   }
+  &__return {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+  }
 }
