@@ -104,30 +104,54 @@
             <h3 class="title__section">Comment devenir membre Edenia ?</h3>
             <p>Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
 
-            <form>
-                <label>
-                    Nom :<input type="text" name="lastname">
-                    Prénom :<input type="text" name="firstname">
-                    Adresse : <input type="text" name="addess">
-                    Mail :<input type="email" name="email">
-                    Téléphone :<input type="tel" name="tel">
-                </label>
-                <button name="valider">Valider</button>
+            <form id="contact-form" class="form" action="#" method="POST" role="form">
+                <div class="form-group">
+                    <label class="form-label" for="name">Votre nom</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" tabindex="1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="name">Votre prénom</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre prénom" tabindex="2" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="adress">Votre adresse</label>
+                    <input type="text" class="form-control" id="adress" name="adress" placeholder="Votre adresse" tabindex="3" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Votre email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" tabindex="4" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="tel">Votre téléphone</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="Votre téléphone" tabindex="5" required>
+                </div>
 
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-start-order">Valider</button>
+                </div>
             </form>
 
         </section>
 
         <section id="contact" class="contact">
-            <p>Contacter le formateur:</p>
+            <h3>Contacter le formateur:</h3>
             <p>0032 (0) 498 23 29 21</p>
+        </section>
+
+        <section id="dwl_app" class="dwl_app">
+            <h3>Télécharger l'application</h3>
+            <p>Téléchargez l’application ! Elle permet de visualiser l’état de votre potager en temps réel et vous avez accès facilement à votre carte de membre. Vous pouvez également avoir accès au solde du pot commun ou consulter l’agenda des réunions.</p>
+            <div class="button">
+            <button class="btn_edenia">Edenia app</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <ul>
             <li><a href="#" target="_blank">À propos</a></li>
-            <li>Made for <a href="#" target="_blank">DWM</a></li>
+            <li>Made for <a href="http://dwm.re/" target="_blank">DWM</a></li>
         </ul>
     </footer>
 

@@ -111,7 +111,7 @@ nav {
   font-family: 'Montserrat', sans-serif;
   display: none;
   position: fixed;
-  transition: opacity 0.5;
+  transition: opacity 0.5s;
 }
 
 nav ul li {
@@ -226,8 +226,89 @@ section {
   right: 20px;
 }
 
-/* IMAGES */
+form{
+  width: 100%;
+}
 
+.form-group{
+  margin-top: 20px;
+}
+
+.form-group input{
+  width: 200px;
+  outline: none;
+}
+
+.form-label {
+  font-size: 12px;
+  color: #3e6949;
+  margin: 0;
+  display: block;
+  opacity: 1;
+  -webkit-transition: .333s ease top, .333s ease opacity;
+  transition: .333s ease top, .333s ease opacity;
+}
+.form-control {
+  border-radius: 0;
+  border-color: #ccc;
+  border-width: 0 0 2px 0;
+  border-style: none none solid none;
+  box-shadow: none;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #3e6949;
+}
+.js-hide-label {
+  opacity: 0;
+}
+.js-unhighlight-label {
+  color: #999;
+}
+.btn-start-order {
+  background: 0 0 #ffffff;
+  border: 1px solid #2f323a;
+  border-radius: 3px;
+  color: #2f323a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: inherit;
+  margin: 30px 0;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  transition: all 0.25s ease 0s;
+}
+.btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
+  border-color: #3e6949;
+  color: #3e6949;
+}
+
+
+
+
+
+.button{
+  width: 100%;
+  text-align: center;
+}
+
+.btn_edenia{
+  width: 150px;
+  margin: 20px 0;
+  border-radius: 50px;
+  border: 1.5px solid #3e6949;
+  color: #3e6949;
+  padding: 7px;
+  background-color: transparent;
+  outline: none;
+  transition: color 0.5s;
+  font-size: 18px;
+}
+
+.btn_edenia:hover{
+  color: #ffffff;
+  background-color: #3e6949;
+}
 
 
 /* MAP */
@@ -245,14 +326,22 @@ section {
 }
 
 footer{
-  padding: 0 20px 0 20px;
-}
+  background-color: #3e6949;
+  color: #ffffff;
+  height: 100px;
 
-footer ul li{
-  list-style: none;
+  margin-top: 40px;
+  padding: 30px 20px;
+
   text-align: center;
 }
 
-footer .profil li{
-  margin-bottom: 20px;
+footer ul li {
+  margin-bottom: 30px;
 }
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
