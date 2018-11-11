@@ -11,7 +11,8 @@ console.log(forecastMeteo);
 
 var currentFetch = fetch(currentMeteo).then(blob => blob.json()).then(data => {
     console.log(data);
-    document.querySelector('.meteo--temp').innerHTML = `${data.main.temp}°C`;
+    let currentTemp = Math.round(data.main.temp);
+    document.querySelector('.meteo--temp').innerHTML = `${currentTemp}°C`;
 });
 
 var average_rain = [
