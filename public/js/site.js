@@ -35948,7 +35948,7 @@ $(document).ready(function () {
 });
 
 //MENU Hamburger
-var toggleTag = document.querySelector(".site__header a.toggle-nav");
+var toggleTag = document.querySelector(".site__header button.toggle-nav");
 var mainTag = document.querySelector(".site__header nav");
 var menuTag = document.querySelector(".site__header nav ul a");
 

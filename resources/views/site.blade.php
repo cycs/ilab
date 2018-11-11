@@ -26,26 +26,26 @@
 
 
         <section id="concept" class="concept">
-            <h3 class="title__section">Notre concept</h3>
+            <h3 class="title__section">Potagez ensemble !</h3>
 
-            <p>Edenia développe une nouvelle approche de potagers collectifs via des bornes interactives. Cette société s’associe à votre commune afin de proposer aux habitants un potager collectif, local et participatif. Avant tout, une recherche de terrain
-                est nécessaire pour trouver l’emplacement idéal. Elle se base sur des critères comme l’exposition au soleil et la qualité du sol.</p>
+            <p>Edenia développe une nouvelle approche de potagers collectifs via des bornes interactives. Nous nous associons à votre commune afin de vous proposer un potager collectif, local et participatif. </p>
 
-            <p>Ces potagers sont destinés à cultiver des légumes, des plantes, des fruits dans une optique de respect de l’environnement et de développement durable. Ceux-ci se basent sur un système exclusivement écologique: sans pesticide, ni engrais chimique,
-                ni organisme génétiquement modifié.</p>
+            <p>Avant tout, une recherche de terrain est nécessaire pour trouver l’emplacement idéal. Elle se base sur des critères comme l’exposition au soleil et la qualité du sol.</p>
 
-            <h3>Nos objectifs</h3>
+            <p>Ces potagers sont destinés à cultiver des légumes, des plantes, des fruits dans une optique de respect de l’environnement et de développement durable. Ceux-ci se basent sur un système exclusivement écologique: sans pesticide, ni engrais chimique, ni organisme génétiquement modifié.</p>
+
+            <h3>Les objectifs</h3>
             <ul>
-                <li>Cultiver et consommer des produits sains et frais.</li>
+                <li>Cultiver des produits sains et frais que vous consommerez.</li>
                 <li>Favoriser les échanges et le savoir.</li>
                 <li>Donner la possibilité aux personnes ne disposant pas de potager de passer du temps libre à jardiner.</li>
-                <li>Dynamiser la vie au sein de la commune.</li>
+                <li>Dynamiser la vie au sein de votre commune en renforcant les liens sociaux.</li>
             </ul>
         </section>
 
         <section class="philosophie">
-            <h3 class="title__section">Notre philosolie en 7 points clés</h3>
-            <p>Chacun s’engage à respecter les principes d’Edenia pour le bien du potager mais également pour celui des autres membres.</p>
+            <h3 class="title__section">7 points clés</h3>
+            <p>En prenant part à ce projet, vous vous engagez à respecter le fonctionnement d’Edenia pour le bien du potager mais également pour celui des autres membres.</p>
 
 
             <div class="slider">
@@ -87,20 +87,35 @@
         </section>
 
         <section class="borne">
-            <p>Il est grandement conseillé d’utiliser la borne. Les membres jardinent pour leur plaisir mais la borne les guide de façon optimale.</p>
+            <h3>L'utilité de la borne</h3>
+            <p>Les membres jardinent pour leur plaisir mais la borne les guide de façon optimale.</p>
             <p>Pour organiser l’espace et la production, le potager est divisé en parcelles de mêmes dimensions. La borne affiche une représentation du potager qui illustre son état et les tâches à réaliser. Par exemple, l’arrosage ou la période de récolte.</p>
-            <p>En fonction des paramètres propres à l’emplacement et des plantations actuelles, elle propose une liste de graines adaptée et intéressante pour les prochaines cultures.</p>
+            <p>En fonction des paramètres propres à l’emplacement et des plantations actuelles, elle propose une liste de graines adaptée et intéressante pour les prochaines cultures. </p>
             <p>Enfin, elle propose une série de tutoriels et de conseils spécifiques à chaque semence.</p>
-            <p>Toute cette organisation permet de maintenir l’équilibre et l’harmonie du potager.</p>
+            <p>Enfin, elle propose une série de «trucs et astuces» spécifiques à chaque semence.Toute cette organisation permet de maintenir l’équilibre et l’harmonie du potager.</p>
         </section>
 
         <section id="potager" class="carte">
+            <h3>Où trouver un potager Edenia ?</h3>
             <div id="myMap" class="myMap"></div>
         </section>
 
         <section id="membre" class="membre">
-            <h3 class="title__section">Devenir membre</h3>
+            <h3 class="title__section">Comment devenir membre Edenia ?</h3>
             <p>Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
+
+            <form>
+                <label>
+                    Nom :<input type="text" name="lastname">
+                    Prénom :<input type="text" name="firstname">
+                    Adresse : <input type="text" name="addess">
+                    Mail :<input type="email" name="email">
+                    Téléphone :<input type="tel" name="tel">
+                </label>
+                <button name="valider">Valider</button>
+
+            </form>
+
         </section>
 
         <section id="contact" class="contact">
