@@ -38,3 +38,6 @@
         </div>
     </nav>
 @endsection
+@section('content')
+    <h2 class="title">Coucou la charte</h2>
+@endsection
