@@ -14,7 +14,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @if(!Request::is('site'))
+
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @endif
     @yield('styleSite')
     @yield('styleApp')
 </head>

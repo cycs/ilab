@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 
 //MENU Hamburger
-const toggleTag = document.querySelector(".site__header button.toggle-nav");
+const toggleTag = document.querySelector(".menu");
 const mainTag = document.querySelector(".site__header nav");
 const menuTag = document.querySelector(".site__header nav ul a");
 
@@ -24,11 +24,11 @@ toggleTag.addEventListener("click", function() {
     }
     setTimeout(hide, 150);
 
-    if (mainTag.classList.contains("open")) {
+  /*  if (mainTag.classList.contains("open")) {
         toggleTag.innerHTML = `<img src="svg/close.svg">`;
     } else {
         toggleTag.innerHTML = `<img src="svg/menu.svg">`;
-    }
+    }*/
 });
 
 menuTag.addEventListener("click", function() {

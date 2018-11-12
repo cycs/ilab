@@ -5,6 +5,7 @@
     @endsection
 @section('content')
     <header class="site__header">
+
         <nav>
             <ul>
                 <li><a class="js-scrollTo" href="#concept">Concept</a></li>
@@ -15,7 +16,17 @@
         </nav>
         <div class="button__header">
             <a href="#" class="logo"><img src="{{ asset('svg/logo_aplat.svg') }}"></a>
-            <button type="button" class="toggle-nav button__menu"><img src="{{ asset('svg/menu.svg') }}"></button>
+            <div class="menu">
+                <div class="hamb">
+                    <span id="bar1" ></span>
+                    <span id="bar2" ></span>
+                    <span id="bar3" ></span>
+                </div>
+                <div class="cross">
+                    <span id="bar4" ></span>
+                    <span id="bar5" ></span>
+                </div>
+            </div>
         </div>
     </header>
 

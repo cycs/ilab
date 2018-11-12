@@ -4,8 +4,131 @@
 
 // Variables
 @import 'variables';
+$duration : .7s;
+
+// hamburger
+.hamb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  & span {
+    background: #3c6a48;
+    height: 7px;
+    position: absolute;
+    right: 0;
+    transition: .25s ease-in-out;
+    &:first-child {
+      width: 65px;
+      top: 0;
+      transition-delay: .5s;
+      &.open {
+        width: 0%;
+        transition-delay: 0s;
+      }
+    }
+    &:nth-child(2) {
+      width: 33px;
+      top: 17px;
+      transition-delay: .625s;
+      &.open {
+        width: 0%;
+        transition-delay: .125s;
+      }
+    }
+    &:nth-child(3) {
+      width: 52px;
+      top: 34px;
+      transition-delay: .75s;
+      &.open {
+        width: 0%;
+        transition-delay: 0.25s;
+      }
+    }
+  }
+}
+
+.cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotate(45deg);
+  z-index: 2;
+  span {
+    &:nth-child(1) {
+      background: #3c6a48;
+      height: 0%;
+      width: 7px;
+      position: absolute;
+      top: -14px;
+      right: 23px;
+      transition: .25s ease-in-out;
+      transition-delay: 0s;
+      &.open {
+        height: 52px;
+        transition-delay: .625s;
+      }
+    }
+    &:nth-child(2) {
+      background: #3c6a48;
+      width: 0%;
+      height: 7px;
+      position: absolute;
+      right: 0;
+      top: 8px;
+      transition: .25s ease-in-out;
+      transition-delay: .25s;
+      z-index: 1;
+      &.open {
+        width: 52px;
+        transition-delay: .375s;
+      }
+    }
+  }
+}
+.menu {
+  position: relative;
+  width: 45px;
+  height: 30px;
+}
 
 
+// nav
+.nav {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  &.open {
+    display: block;
+  }
+  position: absolute;
+  //right: 0;
+  //top: 0;
+  text-align: center;
+  z-index: 1;
+  background: url('../img/fond-nav-feuille-bottom.png') no-repeat bottom right,
+  url('../img/fond-nav-bottom.png') no-repeat bottom right,
+  url('../img/fond-nav-feuille-top.png') no-repeat top left 4%,
+  url('../img/fond-nav-top.png') no-repeat top left, #fff;
+  background-size: 20%, 72%, 17%, 81%;
+  &__el {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    font-family: 'Montserrat';
+    font-size: 60px;
+    color: #1d1d1b;
+    text-decoration: none;
+
+  }
+}
 
 .navbar-laravel {
   background-color: #fff;
