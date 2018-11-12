@@ -78,20 +78,27 @@
         </div>
     </div>
     <div class="potager">
-    @foreach($parcels as $parcel)
-        {{$parcel->name}}
-        @foreach($parcel->parcels as $seed)
-            <li>{{$seed->name}}</li>
-        @endforeach
-    @endforeach
+
 
         <ul class="potager__list">
-                @for($i=0; $i<9; $i++)
+               {{-- @for($i=0; $i<9; $i++)
                     <li class="potager__el">
                         <a class="potager__link" href="">
                             <img src="{{ asset('img'.$seeds[$i]->grown_img_url) }}" alt="legume image">
-                        </a></li>
-                @endfor
+                        </a>
+                    </li>
+                @endfor--}}
+                    @foreach($parcels as $parcel)
+                        {{$parcel->name}}
+                        @foreach($parcel->parcels as $seed)
+                            {{--<li>{{$seed->name}}</li>--}}
+                            <li class="potager__el">
+                                <a class="potager__link" href="{{ route('plantation') }}">
+                                    <img src="{{ asset('img'.$seed->grown_img_url) }}" alt="legume image">
+                                </a>
+                            </li>
+                        @endforeach
+                    @endforeach
             </ul>
             <button id="potBtn" class="btn__planter">Planter</button> <!--grisé si pas d'espace dispo-->
     </div>
