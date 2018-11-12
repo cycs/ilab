@@ -106,7 +106,7 @@
             <p>Pour organiser l’espace et la production, le potager est divisé en parcelles de mêmes dimensions. La borne affiche une représentation du potager qui illustre son état et les tâches à réaliser. Par exemple, l’arrosage ou la période de récolte.</p>
             <p>En fonction des paramètres propres à l’emplacement et des plantations actuelles, elle propose une liste de graines adaptée et intéressante pour les prochaines cultures. </p>
             <p>Enfin, elle propose une série de tutoriels et de conseils spécifiques à chaque semence.</p>
-            <p>Enfin, elle propose une série de «trucs et astuces» spécifiques à chaque semence.Toute cette organisation permet de maintenir l’équilibre et l’harmonie du potager.</p>
+            <p>Enfin, elle propose une série de «trucs et astuces» spécifiques à chaque semence. Toute cette organisation permet de maintenir l’équilibre et l’harmonie du potager.</p>
         </section>
 
         <section id="potager" class="carte clear">
@@ -114,11 +114,11 @@
             <div id="myMap" class="myMap"></div>
         </section>
 
-        <section id="membre" class="membre col--small">
-            <h3 class="title__section">Comment devenir membre Edenia&nbsp;?</h3>
-            <p>Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
+        <section id="membre" class="membre">
+            <h3 class="col--small">Comment devenir membre Edenia&nbsp;?</h3>
+            <p class="col--small">Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
 
-            <form id="contact-form" class="form" action="#" method="POST" role="form">
+            <form id="contact-form" class="form col--small" action="#" method="POST" role="form">
                 <div class="form-group">
                     <label class="form-label" for="name">Nom</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Nom" tabindex="1" required>

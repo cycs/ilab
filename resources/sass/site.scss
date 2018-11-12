@@ -285,7 +285,6 @@ section {
   position: relative;
 }
 
-
 .membre:after{
   content: '';
   background: url('../img/hand_seed.jpg');
@@ -562,9 +561,19 @@ footer ul li a {
   }
 
     .membre:after{
-      left: -300px;
+      left: -20px;
       background-position-y: -125px;
       height: 500px;
+
+      .membre h3{
+        margin: 0 auto;
+      }
+      .membre p{
+        margin: 0 auto;
+      }
+      .membre form{
+        margin: 0 auto;
+      }
   }
 
   .col--small{
