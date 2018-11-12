@@ -205,25 +205,49 @@ $duration : .7s;
 
 // potager
 
+.cls-1, .cls-3 {
+  fill: #422918;
+}
+
+.cls-2 {
+  fill: #683b11;
+}
+
+.cls-3 {
+  opacity: 0.4;
+}
+
+.cls-4 {
+  fill: none;
+  stroke: #422918;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cls-5 {
+  fill: #eab070;
+}
+
 .potager {
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
+  position: absolute;
+  top: 227px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1094px;
+  height: 542px;
+  //z-index: -1;
   &__list {
     display: block;
     position: absolute;
-    top: 227px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1094px;
-    height: 668px;
-    background: url('../img/potager-parcelle-fond.png') no-repeat;
-    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   &__el {
     position: absolute;
     box-sizing: border-box;
-    padding: 10px 30px;
+
     &:first-child {
       top:2px;
       right: 360px;
@@ -273,10 +297,12 @@ $duration : .7s;
     width: 50px;
     height: 50px;
     display: block;
+    padding: 10px 30px;
 
-    img {
-      width: 100%;
-    }
+  }
+  &__img {
+    //width: 100%;
+    height: 100%;
   }
 }
 
