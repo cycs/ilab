@@ -26,13 +26,16 @@
                     <a class="nav__link" href="{{ route('home') }}">Potager</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
+                    <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
+                    <a class="nav__link" href="{{ route('home') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('chart') }}">7 points clés</a>
+                    <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>
+                </li>
+                <li class="nav__el">
+                    <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('logout') }}">Déconnexion</a>
@@ -42,6 +45,7 @@
     </nav>
 @endsection
 @section('content')
+    <a class="btn__return" href="{{ route('tuto') }}">retour</a>
     <div class="container">
         <h2 class="title title--big title__plantation">Lancer une nouvelle culture</h2>
         <h3 class="title title--light">Choisissez un végétal parmi cette liste</h3>

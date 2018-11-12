@@ -1,0 +1,32 @@
+// seeds
+
+.seeds {
+
+}
+
+.graine {
+  padding-top: 40px;
+  margin-bottom: 90px;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    justify-content: space-between;
+    grid-row-gap: 90px;
+  }
+  &__el {
+    height: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    & p {
+      margin: 0;
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    height: 220px;
+  }
+}

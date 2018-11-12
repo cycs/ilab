@@ -286,9 +286,9 @@ $duration : .7s;
       left: 233px;
     }
     &:last-child {
-      bottom: 145px;
-      left: 235px;
-      transform: rotate(-1deg);
+      bottom: 35px;
+      left: 338px;
+      transform: rotate(5deg);
     }
   }
   &__link {
@@ -326,41 +326,4 @@ $duration : .7s;
   }
 }
 
-.parcelle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0,0,0,.6);
-  &__list {
-    width: 80%;
-    height: 80%;
-    border-radius: 30px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 8px 8px 12px rgba(0,0,0, .4);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  &__el {
-    width: 200px;
-    height: 200px;
-    border-radius: 25px;
-    background: #9c7367;
-    margin: 50px 50px 0 50px;
-  }
-  &__link {
 
-  }
-  &__btn {
-    position: absolute;
-    top: 127px;
-    left: 157px;
-    z-index: 2;
-  }
-}

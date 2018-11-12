@@ -25,13 +25,16 @@
                     <a class="nav__link" href="{{ route('home') }}">Potager</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('plantation') }}">Nouvelle culture</a>
+                    <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('tuto') }}">Trucs et astuces</a>
+                    <a class="nav__link" href="{{ route('home') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('chart') }}">7 points clés</a>
+                    <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>
+                </li>
+                <li class="nav__el">
+                    <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('logout') }}">Déconnexion</a>
@@ -184,22 +187,14 @@
                                 </a>
                             </li>
                         @endforeach
+
                     @endforeach
+            <li class="potager__el">
+                <a class="potager__link" href="{{ route('plantation') }}">
+                    <img class="potager__img" src="" alt="parcelle vide" />
+                </a>
+            </li>
             </ul>
-    </div>
-    <div class="parcelle hide">
-        <button id="parcelleClose" class="parcelle__btn btn__close">X</button>
-        <ul class="parcelle__list">
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 1</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 2</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 3</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 4</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 5</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 6</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 7</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 8</a></li>
-            <li class="parcelle__el"><a class="parcelle__link" href="{{ route('plantation') }}">parcelle 9</a></li>
-        </ul>
     </div>
 @endsection
 @section('scripts')

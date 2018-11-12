@@ -33,10 +33,25 @@
     padding: 10px 30px;
     font-family: 'Montserrat';
     font-size: $font-size-small;
+    &--center {
+      //position: absolute;
+      width: 103px;
+      //bottom: 0;
+      //left: 50%;
+      //transform: translate(-50%);
+    }
   }
   &__return {
     position: absolute;
     top: 50px;
     left: 60px;
+    height: 67px;
+    width: 67px;
+    background: url('../img/icon/return.png')no-repeat;
+    background-size: contain;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
