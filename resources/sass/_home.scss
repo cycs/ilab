@@ -286,10 +286,9 @@ $duration : .7s;
       left: 233px;
     }
     &:last-child {
-      bottom: 159px;
-      left: 340px;
-      padding: 0 30px 20px 30px;
-      transform: rotate(5deg);
+      bottom: 145px;
+      left: 235px;
+      transform: rotate(-1deg);
     }
   }
   &__link {
@@ -298,11 +297,32 @@ $duration : .7s;
     height: 50px;
     display: block;
     padding: 10px 30px;
+    text-align: center;
 
   }
   &__img {
     //width: 100%;
     height: 100%;
+    &--carotte {
+      height: 75px;
+      transform: rotate(-51deg) translate(8px, -8px);
+    }
+    &--framboise {
+      height: 60px;
+      transform: translate(-2px, -8px);
+    }
+    &--cassis {
+      height: 75px;
+      transform: rotate(-51deg) translate(11px, -11px);
+    }
+    &--ciboulette {
+      height: 75px;
+      transform: rotate(-51deg) translate(5px, -12px);
+    }
+    &--épinard {
+      height: 60px;
+      transform: translate(-4px, -7px);
+    }
   }
 }
 
