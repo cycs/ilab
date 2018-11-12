@@ -536,6 +536,10 @@ footer ul li a {
 }
 
 @media (min-width: 1200px) {
+  section{
+    padding: 0;
+  }
+
   .landing{
     background-position-x: 0;
     background-size: cover;
