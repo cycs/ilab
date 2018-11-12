@@ -75,27 +75,6 @@ $(document).ready(function() {
                 } break;
                 default: break;
             }
-            // previous implementation with ifs
-            /*if (e.type == 'keyup') {
-                if( $this.val() == '' ) {
-                    $parent.addClass('js-hide-label');
-                } else {
-                    $parent.removeClass('js-hide-label');
-                }
-            }
-            else if (e.type == 'blur') {
-                if( $this.val() == '' ) {
-                    $parent.addClass('js-hide-label');
-                }
-                else {
-                    $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
-                }
-            }
-            else if (e.type == 'focus') {
-                if( $this.val() !== '' ) {
-                    $parent.removeClass('js-unhighlight-label');
-                }
-            }*/
         });
     }
 });

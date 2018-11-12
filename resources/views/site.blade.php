@@ -21,30 +21,33 @@
 
     <main>
         <section class="landing">
-            <h2>Les potagers collectifs.</h2>
+            <h2>Les potagers</br>collectifs.</h2>
         </section>
 
 
         <section id="concept" class="concept">
-            <h3 class="title__section">Potagez ensemble !</h3>
+            <div class="potager_ensemble col--small">
+            <h3>Potagez ensemble !</h3>
 
             <p>Edenia développe une nouvelle approche de potagers collectifs via des bornes interactives. Nous nous associons à votre commune afin de vous proposer un potager collectif, local et participatif. </p>
 
             <p>Avant tout, une recherche de terrain est nécessaire pour trouver l’emplacement idéal. Elle se base sur des critères comme l’exposition au soleil et la qualité du sol.</p>
 
             <p>Ces potagers sont destinés à cultiver des légumes, des plantes, des fruits dans une optique de respect de l’environnement et de développement durable. Ceux-ci se basent sur un système exclusivement écologique: sans pesticide, ni engrais chimique, ni organisme génétiquement modifié.</p>
-
-            <h3>Les objectifs</h3>
-            <ul>
-                <li>Cultiver des produits sains et frais que vous consommerez.</li>
-                <li>Favoriser les échanges et le savoir.</li>
-                <li>Donner la possibilité aux personnes ne disposant pas de potager de passer du temps libre à jardiner.</li>
-                <li>Dynamiser la vie au sein de votre commune en renforcant les liens sociaux.</li>
-            </ul>
+            </div>
+            <div class="objectifs col--small">
+                <h3>Les objectifs</h3>
+                    <ul>
+                        <li>Cultiver des produits sains et frais que vous consommerez.</li>
+                        <li>Favoriser les échanges et le savoir.</li>
+                        <li>Donner la possibilité aux personnes ne disposant pas de potager de passer du temps libre à jardiner.</li>
+                        <li>Dynamiser la vie au sein de votre commune en renforcant les liens sociaux.</li>
+                    </ul>
+            </div>
         </section>
 
-        <section class="philosophie">
-            <h3 class="title__section">7 points clés</h3>
+        <section class="philosophie clear col--small">
+            <h3>7 points clés</h3>
             <p>En prenant part à ce projet, vous vous engagez à respecter le fonctionnement d’Edenia pour le bien du potager mais également pour celui des autres membres.</p>
 
 
@@ -86,7 +89,7 @@
 
         </section>
 
-        <section class="borne">
+        <section class="borne col--small">
             <h3>L'utilité de la borne</h3>
             <p>Les membres jardinent pour leur plaisir mais la borne les guide de façon optimale.</p>
             <p>Pour organiser l’espace et la production, le potager est divisé en parcelles de mêmes dimensions. La borne affiche une représentation du potager qui illustre son état et les tâches à réaliser. Par exemple, l’arrosage ou la période de récolte.</p>
@@ -95,51 +98,46 @@
             <p>Enfin, elle propose une série de «trucs et astuces» spécifiques à chaque semence.Toute cette organisation permet de maintenir l’équilibre et l’harmonie du potager.</p>
         </section>
 
-        <section id="potager" class="carte">
+        <section id="potager" class="carte clear">
             <h3>Où trouver un potager Edenia ?</h3>
             <div id="myMap" class="myMap"></div>
         </section>
 
-        <section id="membre" class="membre">
-            <h3 class="title__section">Comment devenir membre Edenia ?</h3>
+        <section id="membre" class="membre col--small">
+            <h3 class="title__section">Comment devenir membre Edenia&nbsp;?</h3>
             <p>Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
 
             <form id="contact-form" class="form" action="#" method="POST" role="form">
                 <div class="form-group">
-                    <label class="form-label" for="name">Votre nom</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" tabindex="1" required>
+                    <label class="form-label" for="name">Nom</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nom" tabindex="1" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="name">Votre prénom</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre prénom" tabindex="2" required>
+                    <label class="form-label" for="name">Prénom</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Prénom" tabindex="2" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="adress">Votre adresse</label>
-                    <input type="text" class="form-control" id="adress" name="adress" placeholder="Votre adresse" tabindex="3" required>
+                    <label class="form-label" for="adress">Adresse</label>
+                    <input type="text" class="form-control" id="adress" name="adress" placeholder="Adresse" tabindex="3" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="email">Votre email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" tabindex="4" required>
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="4" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="tel">Votre téléphone</label>
-                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="Votre téléphone" tabindex="5" required>
+                    <label class="form-label" for="tel">Téléphone</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="Téléphone" tabindex="5" required>
                 </div>
 
 
-                <div class="text-center">
-                    <button type="submit" class="btn btn-start-order">Valider</button>
+                <div class="button">
+                    <button type="submit" class="btn btn-start-order">Ok</button>
                 </div>
             </form>
 
         </section>
 
-        <section id="contact" class="contact">
-            <h3>Contacter le formateur:</h3>
-            <p>0032 (0) 498 23 29 21</p>
-        </section>
-
-        <section id="dwl_app" class="dwl_app">
+        <section id="dwl_app" class="dwl_app col--small">
             <h3>Télécharger l'application</h3>
             <p>Téléchargez l’application ! Elle permet de visualiser l’état de votre potager en temps réel et vous avez accès facilement à votre carte de membre. Vous pouvez également avoir accès au solde du pot commun ou consulter l’agenda des réunions.</p>
             <div class="button">

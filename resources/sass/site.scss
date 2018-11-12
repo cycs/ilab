@@ -151,7 +151,7 @@ section {
   height: 100vh;
 }
 
-.concept:after{
+.concept .objectifs:after{
   content: '';
   background: url('../img/seeds.jpg');
   background-size: cover;
@@ -232,6 +232,7 @@ form{
 
 .form-group{
   margin-top: 20px;
+  text-align: center;
 }
 
 .form-group input{
@@ -265,16 +266,18 @@ form{
 .js-unhighlight-label {
   color: #999;
 }
+
 .btn-start-order {
+  width: 70px;
   background: 0 0 #ffffff;
-  border: 1px solid #2f323a;
-  border-radius: 3px;
-  color: #2f323a;
+  border: 1px solid #3e6949;
+  border-radius: 50px;
+  color: #3e6949;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: inherit;
   margin: 30px 0;
-  padding: 10px 10px;
+  padding: 7px 7px;
   text-transform: uppercase;
   transition: all 0.25s ease 0s;
 }
@@ -282,10 +285,6 @@ form{
   border-color: #3e6949;
   color: #3e6949;
 }
-
-
-
-
 
 .button{
   width: 100%;
@@ -343,5 +342,116 @@ footer ul li {
 footer ul li a {
   color: #ffffff;
   text-decoration: underline;
+}
+
+
+@media (min-width: 768px) {
+  .landing{
+    background-size: cover;
+  }
+
+  h2 {
+    top: 600px;
+    left: 365px;
+    font-size: 26px;
+  }
+
+  .col--small{
+    width: 62%;
+  }
+
+  .objectifs{
+    float: right;
+  }
+
+  .clear{
+    clear: both;
+  }
+
+  .concept .objectifs:after{
+    left: -295px;
+    margin-bottom: 70px;
+  }
+
+  .philosophie{
+    margin: 0 auto;
+  }
+
+  .slider{
+    border-radius: 20px;
+  }
+
+  .borne{
+
+    margin: 0 auto 70px auto;
+  }
+
+  .myMap{
+    height: 300px;
+  }
+
+  .membre{
+    margin: 0 auto;
+  }
+
+  .membre:after{
+    left: -145px;
+  }
+
+  .form .form-group input{
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .form .form-group input::placeholder{
+    font-size: 18px;
+  }
+
+  .dwl_app{
+    margin:0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .landing{
+    background-position-x: 0;
+    background-size: cover;
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 54px;
+    top: 510px;
+    left: 580px;
+  }
+
+  .concept{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+
+  .concept .objectifs:after{
+    left: -603px;
+    background-position-y: -215px;
+    height: 500px;
+  }
+
+    .membre:after{
+      left: -300px;
+      background-position-y: -125px;
+      height: 500px;
+  }
+
+  .col--small{
+    width: 50%;
+  }
+
+  .philosophie, .borne{
+    width: 40%;
+  }
+
+
 }
 
