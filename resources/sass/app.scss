@@ -68,27 +68,43 @@ td {
   width: 200px;
 }
 
-/*
-.seeds {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-
-  &__unit {
-    display: flex;
-    height: 300px;
-    width: 300px;
-    border: 1px solid rgba(0, 0, 0, .5);
-    flex: 1 300px;
-    margin: 2%;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, .3) 2px 2px 2px;
-
-    ul {
-      list-style: none;
+.search {
+  &__container {
+    position: absolute;
+    top: 111px;
+    right: 69px;
+    &--lower {
+      top: 140px;
+    }
+    form {
+      display: inline-block;
+      background: #edebe1;
+    }
+    input {
+      height: 50px;
       padding: 0;
+      padding-left: 10px;
+      box-sizing: border-box;
+      border: 0;
+      background: none;
+      font-family: 'Montserrat';
+      font-size: 15px;
+
     }
   }
-}*/
+  &__btn {
+
+    height: 50px;
+    width: 50px;
+    background: url('../img/icon/search.png') no-repeat center;
+    background-size: 60%;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+  }
+  &__icon {
+
+  }
+}

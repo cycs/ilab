@@ -29,7 +29,7 @@
                     <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('home') }}">Vos envies</a>
+                    <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>
@@ -47,10 +47,17 @@
 
 @section('content')
     <div class="container">
-        <h2 class="title title--big title__plantation">Les bonnes pratiques</h2>
-        <h3 class="title title--light">Choisissez un végétal parmi cette liste</h3>
+        <div class="maladie">
+            <h2 class="title title--big title__plantation">Les bonnes pratiques</h2>
+            <h3 class="title title--light">Choisissez un végétal parmi cette liste</h3>
+        </div>
     </div>
-    <!-- champ de recherche -->
+    <div class="search__container search__container--lower"><!-- mettre le php -->
+        <form>
+            <input type="text" placeholder="search.." name="search" />
+            <button class="btn search__btn" type="submit">search</button>
+        </form>
+    </div>
     <div class="plantation plantation--big">
         <ul class="plantation__list">
             @foreach($seeds as $seed)

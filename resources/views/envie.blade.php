@@ -1,7 +1,10 @@
 @extends('layouts.app')
+
 @section('styleApp')
     <link href="{{ asset('css/app.css') }}"  rel="stylesheet">
 @endsection
+
+@section('homeBody', 'homeBody')
 
 @section('header')
     <!-- HAMBURGER -->
@@ -41,15 +44,31 @@
         </div>
     </nav>
 @endsection
-
 @section('content')
-    <h2 class="title title--big">En pratique</h2>
-    <div class="slider">
-        <h3 class="title">Comment pincer les tomates</h3>
-        <div id="slide1" class="slide">
-            <div class="col">
-                <p class="text"><span>1.</span> Environ 1 mois après la plantation, identifier et conserver la ramification principale du plant de tomates.</p>
-            </div>
+    <a class="btn__return" href="{{ route('home') }}">retour</a>
+    <div class="container">
+        <div class="maladie">
+            <h2 class="title title--big title__plantation">Lancer une nouvelle culture</h2>
+            <h3 class="title title--light">Choisissez un végétal parmi cette liste</h3>
         </div>
     </div>
+    <div class="search__container search__container--lower"><!-- mettre le php -->
+        <form>
+            <input type="text" placeholder="search.." name="search" />
+            <button class="btn search__btn" type="submit">search</button>
+        </form>
+    </div>
+    <div class="plantation">
+        <ul class="plantation__list">
+            @foreach($seeds as $seed)
+                <li class="plantation__el">
+                    <h2 class="title title--center">{{$seed->name}}</h2>
+                    <img class="plantation__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="légume-edenia" />
+                    <p class="text text--italic">{{$seed->name}}</p>
+                    <p class="text">Difficulté</p>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+    <a class="btn__planter" href="#">Planter</a>
 @endsection

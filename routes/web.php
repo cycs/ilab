@@ -44,6 +44,10 @@ Route::get('/app/tuto', function () {
     return view('tuto')->with('seeds', Seed::all());
 })->name('tuto');
 
+Route::get('/app/envie', function () {
+    return view('envie')->with('seeds', Seed::all());
+})->name('envie');
+
 Route::get('/meteo', function () {
     return view('meteo');
 })->name('meteo');

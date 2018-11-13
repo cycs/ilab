@@ -1,6 +1,9 @@
 // Button
 
 .btn {
+  border: none;
+  background: none;
+  padding: 0;
   &--light {
     border: solid 2px #38a66a;
     padding: 15px 30px;
@@ -13,7 +16,7 @@
   }
   &__planter {
     position: absolute;
-    bottom: 40px;
+    bottom: 90px;
     left: 50%;
     transform: translateX(-50%);
     padding: 20px 30px;
@@ -43,8 +46,8 @@
   }
   &__return {
     position: absolute;
-    top: 50px;
-    left: 60px;
+    top: 45px;
+    left: 44px;
     height: 67px;
     width: 67px;
     background: url('../img/icon/return.png')no-repeat;

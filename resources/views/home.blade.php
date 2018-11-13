@@ -28,7 +28,7 @@
                     <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('home') }}">Vos envies</a>
+                    <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>
@@ -191,7 +191,7 @@
                     @endforeach
             <li class="potager__el">
                 <a class="potager__link" href="{{ route('plantation') }}">
-                    <img class="potager__img" src="" alt="parcelle vide" />
+                    <img class="potager__img" src="{{ asset('img/icon/cross.png') }}" alt="parcelle vide" />
                 </a>
             </li>
             </ul>

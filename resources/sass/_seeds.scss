@@ -1,17 +1,21 @@
 // seeds
 
 .seeds {
-
+  height: 811px;
+  overflow-y: scroll;
 }
 
 .graine {
   padding-top: 40px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 20%);
     justify-content: space-between;
     grid-row-gap: 90px;
+    margin-bottom: 90px;
+    margin-top: 30px;
   }
   &__el {
     height: 450px;

@@ -29,7 +29,7 @@
                     <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('home') }}">Vos envies</a>
+                    <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>

@@ -9,15 +9,16 @@
 }
 
 .maladie {
-  padding: 40px 0 0 50px;
+  padding: 40px 0 0;
+  margin-left: 50px;
   display: flex;
   flex-direction: column;
-  height: 120px;
+  height: 150px;
   justify-content: space-between;
 
   &__list {
     height: 380px;
-    padding: 175px 0 0;
+    margin: 175px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
