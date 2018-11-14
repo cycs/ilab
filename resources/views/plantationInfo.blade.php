@@ -90,12 +90,12 @@
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/feuille.png') }}" alt="icon edenia" />
                         <h3 class="title title--small">Plantation</h3>
-                        <h3 class="title title--small title--light">date plantation</h3>
+                        <h3 class="title title--small title--light">{{$plantation}}</h3>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/panier.png') }}" alt="icon de panier" />
                         <h3 class="title title--small">Récolte</h3>
-                        <h3 class="title title--small title--light">date recolte</h3>
+                        <h3 class="title title--small title--light">Vers le {{$harvest}}</h3>
                     </li>
                 </ul>
             </div>

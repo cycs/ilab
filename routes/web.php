@@ -2,6 +2,7 @@
 
 use App\Soil;
 use App\Seed;
+use App\Parcel;
 use App\Illness;
 use Carbon\Carbon;
 
@@ -15,6 +16,9 @@ use Carbon\Carbon;
 | contains the "web" middleware group. Now create something great!
 |
 */
+setlocale(LC_TIME, 'french');
+setlocale(LC_ALL, 'fr_FR.UTF-8');
+
 
 Route::get('qrlogin', ['uses' => 'QrLoginController@index']);
 Route::post('qrLogin', ['uses' => 'QrLoginController@checkUser']);
@@ -36,10 +40,25 @@ Route::get('/app/plantation', function () {
     return view('plantation')->with('seeds', Seed::all());
 })->name('plantation');
 
-Route::get('/app/info/plantation/{id}', function ($id) {
+Route::get('/app/info/plantation/{parcel}/{id}', function ($id, $parcel) {
     $seed = Seed::find($id);
+    $parcel = Parcel::find($parcel);
 
-    return view('plantationInfo')->with('seed', $seed);
+    $current = $seed->parcel_seeded->where('name', $parcel->name)->first();
+    $plantation_day = Carbon::parse($current->created_at, 'UTC')->day;
+    $plantation_month = Carbon::parse($current->created_at, 'UTC')->shortLocaleMonth;
+    $plantation_year = Carbon::parse($current->created_at, 'UTC')->year;
+    $plantation_date = $plantation_day.' '.$plantation_month.' '.$plantation_year;
+
+
+    $harvest = $current->created_at->addDays($seed->harvest_within_time);
+    $harvest_day = Carbon::parse($harvest, 'UTC')->day;
+    $harvest_month = Carbon::parse($harvest, 'UTC')->shortLocaleMonth;
+    $harvest_year = Carbon::parse($harvest, 'UTC')->year;
+    $harvest_date = $harvest_day.' '.$harvest_month.' '.$harvest_year;
+
+
+    return view('plantationInfo')->with('seed', $seed)->with('plantation', $plantation_date)->with('harvest', $harvest_date);
 })->where('id', '[0-9]+')->name('plantationInfo');
 
 Route::get('/app/tuto', function () {
@@ -74,9 +93,6 @@ Route::get('/app/chart', function () {
 })->name('chart');
 
 Route::get('app/info/seed/{id}', function ($id) {
-    setlocale(LC_TIME, 'french');
-    setlocale(LC_ALL, 'fr_FR.UTF-8');
-
     $seed = Seed::find($id);
 
 //    Carbon::setUtf8(true);
