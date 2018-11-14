@@ -40,9 +40,11 @@ Route::get('/app/plantation', function () {
     return view('plantation')->with('seeds', Seed::all());
 })->name('plantation');
 
-Route::get('/app/info/plantation/{parcel}/{id}', function ($id, $parcel) {
+Route::get('/app/info/plantation/{parcel}/{id}', function ($parcelId, $id) {
     $seed = Seed::find($id);
-    $parcel = Parcel::find($parcel);
+    $parcel = Parcel::find($parcelId);
+
+    //var_dump($seed, $parcel);
 
     $current = $seed->parcel_seeded->where('name', $parcel->name)->first();
     $plantation_day = Carbon::parse($current->created_at, 'UTC')->day;
