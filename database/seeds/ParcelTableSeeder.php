@@ -64,7 +64,6 @@ class ParcelTableSeeder extends Seeder
         $epinard = Seed::find(12);
 
         $tomate->parcel_seeded()->attach($a1);
-        $tomate->parcel_seeded()->attach($a2);
         $fraise->parcel_seeded()->attach($a2);
         $carotte->parcel_seeded()->attach($a3);
         $framboise->parcel_seeded()->attach($b1);
