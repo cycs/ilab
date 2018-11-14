@@ -182,7 +182,7 @@
                         @foreach($parcel->parcels as $seed)
                             {{--<li>{{$seed->name}}</li>--}}
                             <li class="potager__el">
-                                <a class="potager__link" href="{{ route('plantationInfo') }}">
+                                <a class="potager__link" href="{{ route('plantationInfo', ['id' => $seed->id]) }}">
                                     <img class="potager__img potager__img--{{$seed->name}} " src="{{ asset('img'.$seed->grown_img_url) }}" alt="legume image">
                                 </a>
                             </li>

@@ -68,14 +68,14 @@
     <div class="container container--center">
         <div class="info">
             <div class="col col--left">
-                <img class="info__img" src="" alt="legume Edenia" />
+                <img class="info__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="legume Edenia" />
                 <a class="info__link btn__tuto" href="#">En pratique</a>
                 <a class="info__link btn__tuto" href="#">Les bons tuyaux</a>
             </div>
             <div class="col col--right">
-                <h2 class="title title--big">nom</h2>
-                <p class="text text--italic">nom latin</p>
-                <p class="text">variété</p>
+                <h2 class="title title--big">{{$seed->name}}</h2>
+                <p class="text text--italic">{{$seed->latin_name}}</p>
+                <p class="text">{{$seed->variety}}</p>
                 <ul class="info__list">
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/arrosoir.png') }}" alt="icon d'arrosoir" />

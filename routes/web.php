@@ -36,9 +36,11 @@ Route::get('/app/plantation', function () {
     return view('plantation')->with('seeds', Seed::all());
 })->name('plantation');
 
-Route::get('/app/plantationInfo', function () {
-    return view('plantationInfo')->with('seeds', Seed::all());
-})->name('plantationInfo');
+Route::get('/app/info/plantation/{id}', function ($id) {
+    $seed = Seed::find($id);
+
+    return view('plantationInfo')->with('seed', $seed);
+})->where('id', '[0-9]+')->name('plantationInfo');
 
 Route::get('/app/tuto', function () {
     return view('tuto')->with('seeds', Seed::all());
