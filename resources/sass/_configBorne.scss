@@ -36,6 +36,13 @@
   &--center {
     text-align: center;
   }
+  &--big {
+    font-size: $font-size-big;
+  }
+
+  &__slider {
+    font-family: 'Montserrat';
+  }
 }
 
 // normalize

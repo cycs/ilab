@@ -51,10 +51,30 @@
         <div class="maladie">
             <h2 class="title title--big">{{$illness->name}}</h2>
         </div>
+        <div class="slider">
+            <button id="prev" class="slider__btn"><</button>
+            <ul class="slider__list">
+                <li class="slider__el active">
+                    <p class="text text--big text__slider">{{$illness->description}}</p>
+                </li>
+                <li class="slider__el">
+                    <p class="text text--big text__slider">{{$illness->cause}}</p>
+                </li>
+                <li class="slider__el">
+                    <p class="text text--big text__slider">{{$illness->consequence}}</p>
+                </li>
+                <li class="slider__el">
+                    <p class="text text--big text__slider">{{$illness->treatment}}</p>
+                </li>
+                <li class="slider__el">
+                    <p class="text text--big text__slider">{{$illness->prevention}}</p>
+                </li>
+            </ul>
+            <button id="next" class="slider__btn slider__btn--right">></button>
+        </div>
     </div>
-    <p>{{$illness->description}}</p>
-    <p>{{$illness->cause}}</p>
-    <p>{{$illness->consequence}}</p>
-    <p>{{$illness->treatment}}</p>
-    <p>{{$illness->prevention}}</p>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/slider.js') }}"></script>
 @endsection

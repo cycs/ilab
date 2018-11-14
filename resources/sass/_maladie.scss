@@ -9,13 +9,15 @@
 }
 
 .maladie {
-  padding: 40px 0 0;
-  margin-left: 50px;
+  padding: 37px 0 0;
+  margin-left: 75px;
   display: flex;
   flex-direction: column;
   height: 150px;
   justify-content: space-between;
-
+  &--left {
+    margin-left: 0;
+  }
   &__list {
     height: 380px;
     margin: 175px 0 0;

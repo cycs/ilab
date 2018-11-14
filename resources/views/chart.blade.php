@@ -46,11 +46,10 @@
         <div class="maladie">
             <h2 class="title title--big">Notre philosophie</h2>
         </div>
-    </div>
-    <div class="slider">
-        <div class="container">
+        <div class="slider">
+            <button id="prev" class="slider__btn"><</button>
             <ul class="slider__list">
-                <li class="slider__el">
+                <li class="slider__el active">
                     <p class="text">
                         En prenant part à ce projet, vous vous engagez à respecter le fonctionnement d'Edenia pour le bien du potager mais également pour celui des autres membres.
                     </p>
@@ -93,7 +92,12 @@
                     </p>
                 </li>
             </ul>
+            <button id="next" class="slider__btn slider__btn--right">></button>
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/slider.js') }}"></script>
 @endsection

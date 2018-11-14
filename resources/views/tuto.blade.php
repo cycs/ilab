@@ -47,7 +47,7 @@
 
 @section('content')
     <div class="container">
-        <div class="maladie">
+        <div class="maladie maladie--left">
             <h2 class="title title--big title__plantation">Les bonnes pratiques</h2>
             <h3 class="title title--light">Choisissez un végétal parmi cette liste</h3>
         </div>
