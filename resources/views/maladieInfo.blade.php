@@ -46,8 +46,12 @@
 @endsection
 
 @section('content')
-    <h2 class="title">Coucou la maladie</h2>
-    <p>{{$illness->name}}</p>
+    <a class="btn__return" href="{{ route('maladie') }}">retour</a>
+    <div class="container">
+        <div class="maladie">
+            <h2 class="title title--big">{{$illness->name}}</h2>
+        </div>
+    </div>
     <p>{{$illness->description}}</p>
     <p>{{$illness->cause}}</p>
     <p>{{$illness->consequence}}</p>

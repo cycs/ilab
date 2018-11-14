@@ -663,12 +663,12 @@ class SeedTableSeeder extends Seeder
         /* Illnesses */
 
         $mildiou = Illness::create([
-            'name' => 'mildiou',
+            'name' => 'Le mildiou',
             'description' => 'Le mildiou est un champignon qui se propage très facilement dans des conditions humides.',
             'cause' => 'Cette maladie est due à un champignon pathogène, le Phytophtora infestans, se développant principalement par temps humide lorsque la température oscille entre 17 et 20°C. Les alternances d\'épisodes pluvieux et d\'épisodes de chaleur orageuse correspondent aux conditions idéales pour que le mildiou se développe. Par contre, la canicule le stoppe.',
             'consequence' => 'C\'est en atteignant la plante de l’intérieur que le mildiou s’en prend aux végétaux, les faisant alors dépérir. Le mildiou se reconnaît aux petites taches noirâtres et au feutrage blanchâtre qu’il provoque respectivement sur le dessus et le dessous des feuilles. Très vite, les taches vont commencer à brunir, s’étendre aux fruits et à les faire pourrir.',
-            'prevention' => 'Sur la vigne, retirer les gourmands pour aérer le feuillage. Dès l\'apparition des premières tâches sur les feuilles de tomates, couper les feuilles atteintes et retirer celles qui traînent au sol. Faites en sorte que vos pieds de tomates soient bien aérés. Les feuilles doivent pouvoir sécher facilement. Dès les premiers signes il est possible de pulvériser de la bouillie bordelaise afin de limiter la dissémination du champignon aux plantes voisines. Poser une toiture au dessus de vos pieds de tomates pour éviter qu\'un excès d\'humidité ne se dépose sur le feuillage.',
-            'treatment' => 'Dès l’apparition des premiers symptômes, coupez les parties infectées qui peuvent aller sur le tas de compost, Au tout début de l\'apparition du mildiou, vous pouvez pulvériser une infusion de tanaisie (Tanacetum vulgare) à raison de 100g de fleurs pour 1 litre d\'eau que vous aurez laissé infuser jusqu\'à ce quelle soit froide avant de l\'utiliser pure. Si ce n\'est pas assez puissant, pulvérisez un purin de bardane (feuilles et racines) à raison d\'1kg de plante pour 10 litres d\'eau que vous aurez laissé fermenter 5 à 6 jours avant de le filtrer et de l\'utiliser dilué à 5%. Si la saison est particulièrement pluvieuse, vous pouvez couvrir vos tomates en installant une sorte d\'abri en film plastique.'
+            'prevention' => '1. Sur la vigne, retirer les gourmands pour aérer le feuillage. 2. Dès l\'apparition des premières tâches sur les feuilles de tomates, couper les feuilles atteintes et retirer celles qui traînent au sol. 3. Faites en sorte que vos pieds de tomates soient bien aérés. Les feuilles doivent pouvoir sécher facilement. 4. Dès les premiers signes il est possible de pulvériser de la bouillie bordelaise afin de limiter la dissémination du champignon aux plantes voisines. 5. Poser une toiture au dessus de vos pieds de tomates pour éviter qu\'un excès d\'humidité ne se dépose sur le feuillage.',
+            'treatment' => '1. Dès l’apparition des premiers symptômes, coupez les parties infectées qui peuvent aller sur le tas de compost, Au tout début de l\'apparition du mildiou, vous pouvez pulvériser une infusion de tanaisie (Tanacetum vulgare) à raison de 100g de fleurs pour 1 litre d\'eau que vous aurez laissé infuser jusqu\'à ce quelle soit froide avant de l\'utiliser pure. 2. Si ce n\'est pas assez puissant, pulvérisez un purin de bardane (feuilles et racines) à raison d\'1kg de plante pour 10 litres d\'eau que vous aurez laissé fermenter 5 à 6 jours avant de le filtrer et de l\'utiliser dilué à 5%. 3. Si la saison est particulièrement pluvieuse, vous pouvez couvrir vos tomates en installant une sorte d\'abri en film plastique.'
         ]);
 
         $tomatoes->illnesses()->attach($mildiou);
@@ -678,7 +678,7 @@ class SeedTableSeeder extends Seeder
 
 
         $pucerons = Illness::create([
-            'name' => 'pucerons',
+            'name' => 'Les pucerons',
             'description' => 'Les pucerons font partie des insectes les plus communs du potager.',
             'cause' => 'La présence importante d\'insectes comme les fourmis ou les coccinelles.',
             'consequence' => 'Ils affaiblissent les plantes en se nourissant de leur sèves. Les feuilles se crispent et roulent. De plus, une partie de la sève absorbée est rejetée sous forme de miellat qui est responsable de la fumagine, un champignon formant des taches noires.',
@@ -692,7 +692,7 @@ class SeedTableSeeder extends Seeder
 
 
         $limaces = Illness::create([
-            'name' => 'limaces',
+            'name' => 'Les limaces',
             'description' => 'Les limaces se nourissent des jeunes pousses des cultures.',
             'cause' => 'L\'humidité peut être un facteur de la présence des limaces dans le potager.',
             'consequence' => 'Elles détruisent les cultures.',
@@ -706,7 +706,7 @@ class SeedTableSeeder extends Seeder
 
 
         $oidium = Illness::create([
-            'name' => 'oïdium',
+            'name' => 'L\'oïdium',
             'description' => 'L\'oïdium est une maladie causée par des champignons. ',
             'cause' => 'Des filaments s\'installent sur la plante et y développent des suçoirs pour se nourrir. Ils fabriquent des spores infectieuses qui se transmettent par l\'air et contaminent les autres végétaux. Les endroits confinés et l\'humidité sont également propices à son développement.',
             'consequence' => 'Elle provoque l\'apparition de taches circulaires blanches sur les feuilles, les tiges et parfois sur les fleurs et les fruits. Ces taches deviennent brunâtres, la plante s\'affaiblit et les récoltes sont réduites.',
@@ -720,7 +720,7 @@ class SeedTableSeeder extends Seeder
 
 
         $chenilles = Illness::create([
-            'name' => 'chenilles',
+            'name' => 'Les chenilles',
             'description' => 'Les limaces se nourissent des feuilles de choux principalement.',
             'cause' => 'Pas de cause paticulière',
             'consequence' => 'Elles détruisent les cultures.',
