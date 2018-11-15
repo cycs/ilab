@@ -66,6 +66,7 @@
                         <div class="difficult">
                             <p class="text difficult__txt">Difficulté</p>
                             <img class="difficult__img" src="{{ asset('img/icon/difficulte.png') }} " />
+                            <img class="difficult__img" src="{{ asset('img/icon/difficulte.png') }} " />
                         </div>
                         <a class="btn__tuto btn__tuto--center" href="{{ route('info', ['id' => $seed->id]) }}">En savoir +</a>
                     </li>
