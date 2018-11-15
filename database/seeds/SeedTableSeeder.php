@@ -667,8 +667,8 @@ class SeedTableSeeder extends Seeder
             'description' => 'Le mildiou est un champignon qui se propage très facilement dans des conditions humides.',
             'cause' => 'Cette maladie est due à un champignon pathogène, le Phytophtora infestans, se développant principalement par temps humide lorsque la température oscille entre 17 et 20°C. Les alternances d\'épisodes pluvieux et d\'épisodes de chaleur orageuse correspondent aux conditions idéales pour que le mildiou se développe. Par contre, la canicule le stoppe.',
             'consequence' => 'C\'est en atteignant la plante de l’intérieur que le mildiou s’en prend aux végétaux, les faisant alors dépérir. Le mildiou se reconnaît aux petites taches noirâtres et au feutrage blanchâtre qu’il provoque respectivement sur le dessus et le dessous des feuilles. Très vite, les taches vont commencer à brunir, s’étendre aux fruits et à les faire pourrir.',
-            'prevention' => '1. Sur la vigne, retirer les gourmands pour aérer le feuillage. 2. Dès l\'apparition des premières tâches sur les feuilles de tomates, couper les feuilles atteintes et retirer celles qui traînent au sol. 3. Faites en sorte que vos pieds de tomates soient bien aérés. Les feuilles doivent pouvoir sécher facilement. 4. Dès les premiers signes il est possible de pulvériser de la bouillie bordelaise afin de limiter la dissémination du champignon aux plantes voisines. 5. Poser une toiture au dessus de vos pieds de tomates pour éviter qu\'un excès d\'humidité ne se dépose sur le feuillage.',
-            'treatment' => '1. Dès l’apparition des premiers symptômes, coupez les parties infectées qui peuvent aller sur le tas de compost, Au tout début de l\'apparition du mildiou, vous pouvez pulvériser une infusion de tanaisie (Tanacetum vulgare) à raison de 100g de fleurs pour 1 litre d\'eau que vous aurez laissé infuser jusqu\'à ce quelle soit froide avant de l\'utiliser pure. 2. Si ce n\'est pas assez puissant, pulvérisez un purin de bardane (feuilles et racines) à raison d\'1kg de plante pour 10 litres d\'eau que vous aurez laissé fermenter 5 à 6 jours avant de le filtrer et de l\'utiliser dilué à 5%. 3. Si la saison est particulièrement pluvieuse, vous pouvez couvrir vos tomates en installant une sorte d\'abri en film plastique.'
+            'prevention' => '1. Sur la vigne, retirer les gourmands pour aérer le feuillage.%2. Dès l\'apparition des premières tâches sur les feuilles de tomates, couper les feuilles atteintes et retirer celles qui traînent au sol.%3. Faites en sorte que vos pieds de tomates soient bien aérés. Les feuilles doivent pouvoir sécher facilement.%4. Dès les premiers signes il est possible de pulvériser de la bouillie bordelaise afin de limiter la dissémination du champignon aux plantes voisines.%5. Poser une toiture au dessus de vos pieds de tomates pour éviter qu\'un excès d\'humidité ne se dépose sur le feuillage.',
+            'treatment' => '1. Dès l’apparition des premiers symptômes, coupez les parties infectées qui peuvent aller sur le tas de compost, Au tout début de l\'apparition du mildiou, vous pouvez pulvériser une infusion de tanaisie (Tanacetum vulgare) à raison de 100g de fleurs pour 1 litre d\'eau que vous aurez laissé infuser jusqu\'à ce quelle soit froide avant de l\'utiliser pure.%2. Si ce n\'est pas assez puissant, pulvérisez un purin de bardane (feuilles et racines) à raison d\'1kg de plante pour 10 litres d\'eau que vous aurez laissé fermenter 5 à 6 jours avant de le filtrer et de l\'utiliser dilué à 5.%3. Si la saison est particulièrement pluvieuse, vous pouvez couvrir vos tomates en installant une sorte d\'abri en film plastique.'
         ]);
 
         $tomatoes->illnesses()->attach($mildiou);
@@ -682,8 +682,8 @@ class SeedTableSeeder extends Seeder
             'description' => 'Les pucerons font partie des insectes les plus communs du potager.',
             'cause' => 'La présence importante d\'insectes comme les fourmis ou les coccinelles.',
             'consequence' => 'Ils affaiblissent les plantes en se nourissant de leur sèves. Les feuilles se crispent et roulent. De plus, une partie de la sève absorbée est rejetée sous forme de miellat qui est responsable de la fumagine, un champignon formant des taches noires.',
-            'prevention' => '1. Les capucines attirent les pucerons et permettent donc aux plantations d\'être préservées. 2. Ne pas abuser de l\'utilisation de compost et fumier trop frais. 3. La lavande éloigne également les pucerons.',
-            'treatment' => '1. Retirer rapidement et régulièrement les feuilles colonisées. 2. Pulvérisez un mélange de savon noir.'
+            'prevention' => '1. Les capucines attirent les pucerons et permettent donc aux plantations d\'être préservées.%2. Ne pas abuser de l\'utilisation de compost et fumier trop frais. 3. La lavande éloigne également les pucerons.',
+            'treatment' => '1. Retirer rapidement et régulièrement les feuilles colonisées.%2. Pulvérisez un mélange de savon noir.'
         ]);
         $potimarron->illnesses()->attach($pucerons);
         $choufleur->illnesses()->attach($pucerons);
@@ -696,8 +696,8 @@ class SeedTableSeeder extends Seeder
             'description' => 'Les limaces se nourissent des jeunes pousses des cultures.',
             'cause' => 'L\'humidité peut être un facteur de la présence des limaces dans le potager.',
             'consequence' => 'Elles détruisent les cultures.',
-            'prevention' => '1. Le fenouil, le thym et la sauge sont des plantes répulsives contre les limaces. 2. Vérifier les endroits humides où elles aiment se cacher. 3. Le cerfeuil réduit également l\'invasion de limaces."',
-            'treatment' => '1. Utiliser la bière comme appat pour les noyer. 2. Les plantes comme la bourrache ou la cappucine ne sont pas attractives des limaces. 3. Maintenir la surface du sol sèche.'
+            'prevention' => '1. Le fenouil, le thym et la sauge sont des plantes répulsives contre les limaces.%2. Vérifier les endroits humides où elles aiment se cacher.%3. Le cerfeuil réduit également l\'invasion de limaces."',
+            'treatment' => '1. Utiliser la bière comme appat pour les noyer.%2. Les plantes comme la bourrache ou la cappucine ne sont pas attractives des limaces.%3. Maintenir la surface du sol sèche.'
         ]);
         $potimarron->illnesses()->attach($limaces);
         $salade->illnesses()->attach($limaces);
@@ -710,8 +710,8 @@ class SeedTableSeeder extends Seeder
             'description' => 'L\'oïdium est une maladie causée par des champignons. ',
             'cause' => 'Des filaments s\'installent sur la plante et y développent des suçoirs pour se nourrir. Ils fabriquent des spores infectieuses qui se transmettent par l\'air et contaminent les autres végétaux. Les endroits confinés et l\'humidité sont également propices à son développement.',
             'consequence' => 'Elle provoque l\'apparition de taches circulaires blanches sur les feuilles, les tiges et parfois sur les fleurs et les fruits. Ces taches deviennent brunâtres, la plante s\'affaiblit et les récoltes sont réduites.',
-            'prevention' => '1. Privilégier des variétés résistantes. 2. Favoriser l\'espace entre les plantations. 3. Arroser le pied et pas les feuilles de la plante.',
-            'treatment' => '1. Retirer rapidement et régulièrement les feuilles infectées. 2. Pulvériser au purin d\'ortie.'
+            'prevention' => '1. Privilégier des variétés résistantes.%2. Favoriser l\'espace entre les plantations.%3. Arroser le pied et pas les feuilles de la plante.',
+            'treatment' => '1. Retirer rapidement et régulièrement les feuilles infectées.%2. Pulvériser au purin d\'ortie.'
         ]);
         $courgette->illnesses()->attach($oidium);
         $concombre->illnesses()->attach($oidium);
@@ -724,8 +724,8 @@ class SeedTableSeeder extends Seeder
             'description' => 'Les limaces se nourissent des feuilles de choux principalement.',
             'cause' => 'Pas de cause paticulière',
             'consequence' => 'Elles détruisent les cultures.',
-            'prevention' => '1. Installer des filets pour que les papillons ne viennent pas aux alentours des plantes susceptibles d\'être attaquées. 2. Les branches de genets et les fougères sont des répulsifs contre les papillons. 3. Favoriser et attirer la présence des oiseaux car ils se nourissent des chenilles.',
-            'treatment' => '1. Favoriser la rotation des cultures. 2. Mettre un peu de suie sur les premières feuilles dévorées.'
+            'prevention' => '1. Installer des filets pour que les papillons ne viennent pas aux alentours des plantes susceptibles d\'être attaquées.%2. Les branches de genets et les fougères sont des répulsifs contre les papillons.%3. Favoriser et attirer la présence des oiseaux car ils se nourissent des chenilles.',
+            'treatment' => '1. Favoriser la rotation des cultures.%2. Mettre un peu de suie sur les premières feuilles dévorées.'
         ]);
 
         $choufleur->illnesses()->attach($chenilles);

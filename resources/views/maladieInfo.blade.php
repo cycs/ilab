@@ -46,7 +46,7 @@
 @endsection
 
 @section('content')
-    <a class="btn__return" href="{{ route('home') }}">retour</a>
+    <a class="btn__return" href="{{ route('maladie') }}">retour</a>
     <div class="container">
         <div class="maladie">
             <h2 class="title title--big">{{$illness->name}}</h2>
@@ -55,20 +55,31 @@
             <button id="prev" class="slider__btn"><</button>
             <ul class="slider__list">
                 <li class="slider__el active">
+                    <h3 class="title bold">Description</h3>
                     <p class="text text--big text__slider">{{$illness->description}}</p>
                 </li>
                 <li class="slider__el">
+                    <h3 class="title bold">Cause</h3>
                     <p class="text text--big text__slider">{{$illness->cause}}</p>
                 </li>
                 <li class="slider__el">
+                    <h3 class="title bold">Conséquences</h3>
                     <p class="text text--big text__slider">{{$illness->consequence}}</p>
                 </li>
+                @foreach(explode('%', $illness->treatment) as $treatment)
                 <li class="slider__el">
-                    <p class="text text--big text__slider">{{$illness->treatment}}</p>
+                    <h3 class="title bold">Traitement</h3>
+
+                    <p class="text text--big text__slider">{{$treatment}}</p>
+
                 </li>
+                @endforeach
+                @foreach(explode('%', $illness->prevention) as $prevention)
                 <li class="slider__el">
-                    <p class="text text--big text__slider">{{$illness->prevention}}</p>
+                    <h3 class="title bold">Prévention</h3>
+                    <p class="text text--big text__slider">{{$prevention}}</p>
                 </li>
+                @endforeach
             </ul>
             <button id="next" class="slider__btn slider__btn--right">></button>
         </div>
