@@ -65,7 +65,7 @@
                 </div>
                 <div class="info__btn">
                     <a class="info__link btn__tuto" href="{{ route('tutoSeed', ['id' => $seed->id]) }}">En pratique</a>
-                    <a class="info__link btn__tuto" href="#">Les bons tuyaux</a>
+                    <a class="info__link btn__tuto" href="{{ route('advicesSeed', ['id' => $seed->id]) }}">Les bons tuyaux</a>
                 </div>
             </div>
             <div class="info--right">
