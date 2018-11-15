@@ -8,8 +8,39 @@
 
 @section('content')
 
-
     <div class="container container--center">
+        <div class="form__container">
+            <div>
+                <img class="form__img" src="{{ asset('img/logo.png') }}" alt="logo Edenia" />
+            </div>
+            <form method="post" action="{{ route('login') }}" class="form">
+                @csrf
+                <div class="form__box">
+                    <label for="email" class="form__label">Adresse E-mail</label>
+                    <input id="email" type="email" class="form__text form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"  required autofocus />
+                    @if ($errors->has('email'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <div class="form__box">
+                    <label for="password" class="form__label">Mot de passe</label>
+                    <input id="password" type="password" class="form__text form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required />
+                    @if ($errors->has('password'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <button type="submit" class="form__btn">{{ __('Login') }}</button>
+
+            </form>
+        </div>
+    </div>
+
+
+    {{--<div class="container container--center">
         <div class="info">
             <h2 class="title title--small">Login</h2>
 
@@ -69,6 +100,6 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div>--}}
 
 @endsection
