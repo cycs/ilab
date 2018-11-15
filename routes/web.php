@@ -52,13 +52,11 @@ Route::get('/app/info/plantation/{parcel}/{id}', function ($parcelId, $id) {
     $plantation_year = Carbon::parse($current->created_at, 'UTC')->year;
     $plantation_date = $plantation_day.' '.$plantation_month.' '.$plantation_year;
 
-
     $harvest = $current->created_at->addDays($seed->harvest_within_time);
     $harvest_day = Carbon::parse($harvest, 'UTC')->day;
     $harvest_month = Carbon::parse($harvest, 'UTC')->shortLocaleMonth;
     $harvest_year = Carbon::parse($harvest, 'UTC')->year;
     $harvest_date = $harvest_day.' '.$harvest_month.' '.$harvest_year;
-
 
     return view('plantationInfo')->with('seed', $seed)->with('plantation', $plantation_date)->with('harvest', $harvest_date);
 })->where('id', '[0-9]+')->name('plantationInfo');

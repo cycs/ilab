@@ -18,11 +18,11 @@
   &__list {
     //margin: 0 30px;
     height: 100%;
-    width: 15710px;
+    //width: 15710px;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    overflow: hidden;
+    //justify-content: center;
+    //overflow: hidden;
 
   }
   &__el {
@@ -31,7 +31,7 @@
     width: 250px;
 
     height: 100%;
-    margin: auto;
+    margin: auto 60px;
     &.active {
       background: #edebe1;
     }

@@ -26,4 +26,9 @@ class SeedsController extends Controller
     {
         return view('seeds')->with('seeds', Seed::all());
     }
+
+    public function postData(){
+
+    }
+
 }

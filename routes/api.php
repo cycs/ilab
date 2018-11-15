@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Soil;
+use App\Seed;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,3 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('soils', 'SoilsController@getAll');
+
+Route::get('seeds/{name?}', function($request = ''){
+        return Seed::where('name', 'LIKE', '%'.$request.'%')->get();
+
+});

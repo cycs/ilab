@@ -53,8 +53,8 @@
         </div>
     </div>
     <div class="search__container search__container--lower"><!-- mettre le php -->
-        <form>
-            <input type="text" placeholder="search.." name="search" />
+        <form method="get">
+            <input class="search--input" type="text" placeholder="Recherche.." name="search"/>
             <button class="btn search__btn" type="submit">search</button>
         </form>
     </div>
@@ -64,7 +64,7 @@
                 <li class="plantation__el">
                     <h2 class="title title--center">{{$seed->name}}</h2>
                     <img class="plantation__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="légume-edenia" />
-                    <p class="text text--italic">{{$seed->name}}</p>
+                    <p class="text text--italic">{{$seed->variety}}</p>
                     <p class="text">Difficulté</p>
                 </li>
             @endforeach
