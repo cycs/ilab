@@ -68,12 +68,18 @@
 @section('content')
     <a class="btn__return" href="{{ route('home') }}">retour</a>
     <div class="container">
+        <div class="maladie">
+            <h2 class="title title--big">Nom légume</h2>
+        </div>
         <div class="slider">
             <button id="prev" class="slider__btn"><</button>
             <ul class="slider__list">
 
                 @foreach(explode('%', $seed) as $info)
-                    <li class="slider__el">{{$info}}</li>
+                    <li class="slider__el">
+                        <h3 class="title bold">Tutos</h3>
+                        <p class="text text--big">{{$info}}</p>
+                    </li>
                     <!-- rajouter un if pour que le tout premier <li> ait la class "active" en plus de "slider__el" -->
                 @endforeach
             </ul>

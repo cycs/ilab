@@ -78,7 +78,7 @@
                 @foreach(explode('%', $seed) as $info)
                     <li class="slider__el">
                         <h2 class="title title--small">Conseils</h2>
-                        <p>{{$info}}</p>
+                        <p class="text text--big">{{$info}}</p>
                     </li>
                 @endforeach
             </ul>
