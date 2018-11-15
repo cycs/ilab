@@ -92,9 +92,19 @@
             </div>
 
             <div class="slider__el--controls">
-                <img src="{{ asset('svg/prev.svg') }}" class="prev">
-                <img src="{{ asset('svg/next.svg') }}" class="next">
-                <span class="slider__el--projectNumbers">1 / 7</span>
+                <a class="prev">
+                    <svg fill="#fff" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m10.338 20.785l-10.154-10.24 10.154-10.239 2.8402 2.8166-5.3778 5.4229h14.175v4h-14.175l5.3778 5.4229-2.8402 2.8166z" clip-rule="evenodd" fill-rule="evenodd"/>
+                    </svg>
+                </a>
+
+                <a class="next">
+                    <svg fill="#fff" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12.209 0.020264l10.154 10.239-10.154 10.24-2.8402-2.8166 5.3778-5.4229h-14.175v-4h14.175l-5.3778-5.4229 2.8402-2.8166z" clip-rule="evenodd" fill-rule="evenodd"/>
+                    </svg>
+                </a>
+
+                <span class="slider__el--projectNumbers"><span class="number">1</span> / 7</span>
             </div>
         </div>
 
@@ -146,6 +156,15 @@
 
         </section>
 
+        <section id="conctact" class="contact col--small">
+            <h3 class="title__small">Contacter Edenia</h3>
+            <ul>
+                <li class="contact__el">Par téléphone: <a href="tel:01234567890">01234 567 890</a></li>
+                <li class="contact__el">Par email: <a href="mailto:edenia@dedenia.com">edenia@dedenia.com</a></li>
+            </ul>
+
+        </section>
+
         <section id="dwl_app" class="dwl_app col--small">
             <h3 class="title__small">Télécharger l'application</h3>
             <p>Téléchargez l’application ! Elle permet de visualiser l’état de votre potager en temps réel et vous avez accès facilement à votre carte de membre. Vous pouvez également avoir accès au solde du pot commun ou consulter l’agenda des réunions.</p>
@@ -156,9 +175,9 @@
     </main>
 
     <footer>
-        <ul>
-            <li><a href="https://medium.com/@louiselepoivre/les-liens-dedenia-b1c4d3abe3c4?fbclid=IwAR37JdefMQARDfehQEG9HoilcREOROsvtNl_-J9ahYtxzl2LrfF3RY2ehQ8">À propos</a></li>
-            <li>Made for <a href="http://dwm.re/" target="_blank">DWM</a></li>
+        <ul class="footer">
+            <li class="footer__el"><a href="https://medium.com/@louiselepoivre/les-liens-dedenia-b1c4d3abe3c4?fbclid=IwAR37JdefMQARDfehQEG9HoilcREOROsvtNl_-J9ahYtxzl2LrfF3RY2ehQ8">À propos</a></li>
+            <li class="footer__el">Made for <a href="http://dwm.re/" target="_blank">DWM</a></li>
         </ul>
     </footer>
 

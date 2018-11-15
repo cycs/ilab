@@ -84,7 +84,7 @@ body {
       height: 0%;
       width: 5px;
       position: absolute;
-      top: -3px;
+      top: -4px;
       right: 23px;
       transition: .25s ease-in-out;
       transition-delay: 0s;
@@ -277,8 +277,7 @@ section {
 .slider .slider__el {
   position: absolute;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   display: none;
   margin-top: 20px;
 }
@@ -296,9 +295,13 @@ section {
   justify-content: center;
 }
 
-.slider .slider__el--controls img{
+.slider .slider__el--controls a svg{
   width:30px;
   height: 30px;
+}
+
+.slider .slider__el--controls a svg:hover{
+  fill: #3e6949;
 }
 
 .slider .prev {
@@ -381,6 +384,18 @@ form{
     background-color: #3e6949;
 }
 
+.contact__el{
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.contact__el a{
+  color: #3e6949;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3e6949;
+}
+
 .button{
   width: 100%;
   text-align: center;
@@ -419,20 +434,22 @@ form{
   height:250px;
 }
 
-footer{
+.footer{
   font-family: "Montserrat", sans-serif;
   background-color: #3e6949;
   color: #ffffff;
-  height: 50px;
   margin-top: 40px;
-  padding: 30px 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-footer ul li {
+.footer__el{
   list-style: none;
 }
 
-footer ul li a {
+.footer__el a {
   color: #ffffff;
   text-decoration: underline;
 }

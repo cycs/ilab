@@ -10,10 +10,10 @@ $(document).ready(function() {
 });
 
 
-//MENU Hamburger
+// MENU Hamburger
 const toggleTag = document.querySelector(".menu");
 const mainTag = document.querySelector(".site__header nav");
-const menuTag = document.querySelector(".site__header nav ul a");
+const menuTag = document.querySelectorAll(".site__header nav ul a");
 
 toggleTag.addEventListener("click", function() {
     mainTag.classList.toggle("open");
@@ -23,20 +23,14 @@ toggleTag.addEventListener("click", function() {
         mainTag.style.display = displayNav;
     }
     setTimeout(hide, 150);
-
-  /*  if (mainTag.classList.contains("open")) {
-        toggleTag.innerHTML = `<img src="svg/close.svg">`;
-    } else {
-        toggleTag.innerHTML = `<img src="svg/menu.svg">`;
-    }*/
 });
 
-menuTag.addEventListener("click", function() {
-    mainTag.classList.toggle("close");
-});
+menuTag.forEach(el => el.addEventListener("click", function() {
+    mainTag.classList.remove("open");
+}));
 
 
-
+// Formulaire
 $(document).ready(function() {
     // Test for placeholder support
     $.support.placeholder = (function(){
@@ -85,10 +79,12 @@ $(document).ready(function() {
 var sliderEl = document.querySelectorAll('.slider__el');
 var sliderPrev = document.querySelector('.slider .prev');
 var sliderNext = document.querySelector('.slider .next');
+var number = document.querySelector('.slider__el--projectNumbers .number');
 var slideIndex = 0;
 
 sliderPrev.addEventListener('click', function(e){
     slideIndex -= 1;
+
     if(slideIndex < 0) {
         slideIndex = sliderEl.length -1;
     }
@@ -96,6 +92,8 @@ sliderPrev.addEventListener('click', function(e){
         document.querySelector('.slider .slider__el.active').classList.remove('active');
         sliderEl[slideIndex].classList.add('active');
     }
+    number.innerHTML = slideIndex+1;
+
 });
 
 sliderNext.addEventListener('click', function(e){
@@ -105,4 +103,6 @@ sliderNext.addEventListener('click', function(e){
     }
     document.querySelector('.slider .slider__el.active').classList.remove('active');
     sliderEl[slideIndex].classList.add('active');
+
+    number.innerHTML = slideIndex+1;
 });
