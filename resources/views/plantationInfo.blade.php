@@ -85,17 +85,17 @@
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/arrosoir.png') }}" alt="icon edenia" />
                         <h3 class="title title--small">Plants</h3>
-                        <h3 class="title title--small title--light">nombre de plants</h3>
+                        <p class="title title--small title--light">nombre de plants</p>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/feuille.png') }}" alt="icon edenia" />
                         <h3 class="title title--small">Plantation</h3>
-                        <h3 class="title title--small title--light">{{$plantation}}</h3>
+                        <p class="title title--small title--light">{{$plantation}}</p>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/panier.png') }}" alt="icon de panier" />
                         <h3 class="title title--small">Récolte</h3>
-                        <h3 class="title title--small title--light">Vers le {{$harvest}}</h3>
+                        <p class="title title--small title--light">Vers le {{$harvest}}</p>
                     </li>
                 </ul>
             </div>
