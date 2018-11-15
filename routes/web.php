@@ -65,6 +65,14 @@ Route::get('/app/tuto', function () {
     return view('tuto')->with('seeds', Seed::all());
 })->name('tuto');
 
+Route::get('/app/tuto/{id}', function ($id) {
+    return view('tutoSeed')->with('seed', Seed::find($id)->tutorial);
+})->name('tutoSeed');
+
+Route::get('/app/advices/{id}', function ($id) {
+    return view('advicesSeed')->with('seed', Seed::find($id)->advices);
+})->name('advicesSeed');
+
 Route::get('/app/envie', function () {
     return view('envie')->with('seeds', Seed::all());
 })->name('envie');

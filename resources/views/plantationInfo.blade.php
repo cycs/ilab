@@ -69,8 +69,8 @@
         <div class="info">
             <div class="col col--left">
                 <img class="info__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="legume Edenia" />
-                <a class="info__link btn__tuto" href="#">En pratique</a>
-                <a class="info__link btn__tuto" href="#">Les bons tuyaux</a>
+                <a class="info__link btn__tuto" href="{{ route('tutoSeed', ['id' => $seed->id]) }}">En pratique</a>
+                <a class="info__link btn__tuto" href="{{ route('advicesSeed', ['id' => $seed->id]) }}">Les bons tuyaux</a>
             </div>
             <div class="col col--right">
                 <h2 class="title title--big">{{$seed->name}}</h2>

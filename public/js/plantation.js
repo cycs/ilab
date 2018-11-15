@@ -13,7 +13,7 @@ const filterInput = document.querySelector('.search--input');
 
 filterInput.addEventListener('input', function(e){
     console.log(filterInput.value);
-    let value = filterInput.value;
+    let value = (filterInput.value).toLowerCase();
 
     let url = '../api/seeds/'+value;
 
@@ -23,7 +23,7 @@ filterInput.addEventListener('input', function(e){
 
 function display(res){
     const ul = document.querySelector('.plantation__list');
-    let value = filterInput.value;
+    let value = (filterInput.value).toLowerCase();
     let seeds = [];
     res.forEach(el => {
         if(el.name.includes(value)){
