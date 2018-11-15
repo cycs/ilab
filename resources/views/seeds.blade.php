@@ -63,7 +63,10 @@
                         <h2 class="title">{{$seed->name}}</h2>
                         <img class="graine__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="légume-edenia" />
                         <p class="text text--italic">{{ $seed->variety }}</p>
-                        <p class="text">Difficulté</p>
+                        <div class="difficult">
+                            <p class="text difficult__txt">Difficulté</p>
+                            <img class="difficult__img" src="{{ asset('img/icon/difficulte.png') }} " />
+                        </div>
                         <a class="btn__tuto btn__tuto--center" href="{{ route('info', ['id' => $seed->id]) }}">En savoir +</a>
                     </li>
                 @endforeach

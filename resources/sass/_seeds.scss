@@ -5,6 +5,8 @@
   overflow-y: scroll;
 }
 
+
+
 .graine {
 
   margin-bottom: 90px;
@@ -26,11 +28,22 @@
     align-items: center;
     & p {
       margin: 0;
+      &.difficult__txt {
+        margin-right: 10px;
+      }
     }
   }
   &__img {
     display: block;
     margin: 0 auto;
     height: 220px;
+  }
+}
+
+.difficult {
+  display: flex;
+  justify-content: space-between;
+  &__img {
+    height: 30px;
   }
 }
