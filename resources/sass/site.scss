@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat:500,600');
@@ -5,23 +9,39 @@
 // Variables
 @import 'variables';
 $duration : .7s;
+$base: 1.8;
+$height: 1.5;
+
+body {
+  color: #3e6949;
+  font-size: 18px;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  width: 100vw;
+}
 
 // hamburger
+.menu {
+  position: relative;
+  width: 45px;
+  height: 30px;
+}
+
 .hamb {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
   height: 100%;
   width: 100%;
   z-index: 2;
   & span {
     background: #3c6a48;
-    height: 7px;
+    height: 5px;
     position: absolute;
     right: 0;
     transition: .25s ease-in-out;
     &:first-child {
-      width: 65px;
+      width: 65px / $base;
       top: 0;
       transition-delay: .5s;
       &.open {
@@ -30,8 +50,8 @@ $duration : .7s;
       }
     }
     &:nth-child(2) {
-      width: 33px;
-      top: 17px;
+      width: 33px / $base;
+      top: 17px / $height;
       transition-delay: .625s;
       &.open {
         width: 0%;
@@ -39,8 +59,8 @@ $duration : .7s;
       }
     }
     &:nth-child(3) {
-      width: 52px;
-      top: 34px;
+      width: 52px / $base;
+      top: 34px / $height;
       transition-delay: .75s;
       &.open {
         width: 0%;
@@ -52,7 +72,7 @@ $duration : .7s;
 
 .cross {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 0;
   height: 100%;
   width: 100%;
@@ -62,117 +82,55 @@ $duration : .7s;
     &:nth-child(1) {
       background: #3c6a48;
       height: 0%;
-      width: 7px;
+      width: 5px;
       position: absolute;
-      top: -14px;
+      top: -3px;
       right: 23px;
       transition: .25s ease-in-out;
       transition-delay: 0s;
       &.open {
-        height: 52px;
+        height: 52px / $base;
         transition-delay: .625s;
       }
     }
     &:nth-child(2) {
       background: #3c6a48;
       width: 0%;
-      height: 7px;
+      height: 5px;
       position: absolute;
-      right: 0;
+      right: 11px;
       top: 8px;
       transition: .25s ease-in-out;
       transition-delay: .25s;
       z-index: 1;
       &.open {
-        width: 52px;
+        width: 52px / $base;
         transition-delay: .375s;
       }
     }
   }
 }
-.menu {
-  position: relative;
-  width: 45px;
-  height: 30px;
-}
 
-
-// nav
-.nav {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  &.open {
-    display: block;
-  }
+.title__big{
   position: absolute;
-  //right: 0;
-  //top: 0;
-  text-align: center;
-  z-index: 1;
-  background: url('../img/fond-nav-feuille-bottom.png') no-repeat bottom right,
-  url('../img/fond-nav-bottom.png') no-repeat bottom right,
-  url('../img/fond-nav-feuille-top.png') no-repeat top left 4%,
-  url('../img/fond-nav-top.png') no-repeat top left, #fff;
-  background-size: 20%, 72%, 17%, 81%;
-  &__el {
-    margin-bottom: 40px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  &__link {
-    font-family: 'Montserrat';
-    font-size: 60px;
-    color: #1d1d1b;
-    text-decoration: none;
-
-  }
+  top: 55%;
+  right: 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  z-index: 0;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, .4);
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  display: none;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-
-/*   HEADINGS  */
-
-h3 {
+.title__small {
   margin: 70px 0 40px 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 600;
 }
 
-.carte h3{
+.carte .title__small{
   padding: 0 20px 0 20px;
-}
-
-h2{
-  position: absolute;
-  top: 460px;
-  left: 190px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 21px;
-  font-weight: 600;
-  z-index: 0;
-}
-
-
-body {
-
-  color: #3e6949;
-  font-size: 18px;
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 400;
-  width: 100vw;
 }
 
 p{
@@ -183,11 +141,7 @@ section p:last-child{
   margin-bottom: 0;
 }
 
-main {
-}
-
 .site__header {
-
   a {
     padding: 0 10px;
     width: 35px;
@@ -258,7 +212,7 @@ nav.close {
   opacity: 0;
 }
 
-h2 .hide{
+.title__big .hide{
   display: none;
 }
 
@@ -270,11 +224,13 @@ section {
 .landing{
   z-index: -1;
   background-image: url('../img/landing_banner.jpg');
-  background-position-x: -415px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -335px;
   height: 100vh;
 }
 
-.concept .objectifs:after{
+.concept .concept--el:after{
   content: '';
   background: url('../img/seeds.jpg');
   background-size: cover;
@@ -299,34 +255,40 @@ section {
 
   .concept ul li{
     list-style: none;
-    margin-left:15px;
+    margin-left:30px;
     margin-bottom: 30px;
+    position: relative;
   }
 
   .concept ul li:before{
-    content:'_';
-    margin-left:-15px;
+    content:'—';
+    position: absolute;
+    left: -30px;
   }
 
 
 .slider {
   position: relative;
-  height: 450px;
+  height: 360px;
   background-color: #7fc490;
   margin: 35px 0;
 }
 
-.slider .slide {
+.slider .slider__el {
   position: absolute;
   height: 100%;
-  text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px ;
+  display: none;
+  margin-top: 20px;
 }
 
-.slider .controls {
+.slider .slider__el.active {
+  display: flex;
+  padding: 0 20px 0 20px;
+}
+
+.slider .slider__el--controls {
   position: absolute;
   width: 100%;
   bottom: 10px;
@@ -334,7 +296,7 @@ section {
   justify-content: center;
 }
 
-.slider .controls img{
+.slider .slider__el--controls img{
   width:30px;
   height: 30px;
 }
@@ -343,7 +305,7 @@ section {
   margin-right: 20px;
 }
 
-.slider .projectNumbers {
+.slider .slider__el--projectNumbers {
   position: absolute;
   right: 20px;
 }
@@ -358,16 +320,22 @@ form{
 }
 
 .form-group input{
-  width: 200px;
+  width: 100%;
   outline: none;
+  height: 20px;
+  font-size: 14px;
 }
 
 .form-label {
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   color: #3e6949;
   margin: 0;
   display: block;
   opacity: 1;
+  text-align: right;
+  text-transform: uppercase;
+  margin-right: 40px;
   -webkit-transition: .333s ease top, .333s ease opacity;
   transition: .333s ease top, .333s ease opacity;
 }
@@ -378,6 +346,11 @@ form{
   border-style: none none solid none;
   box-shadow: none;
 }
+
+.form-control::placeholder{
+  font-size: 14px;
+}
+
 .form-control:focus {
   box-shadow: none;
   border-color: #3e6949;
@@ -404,8 +377,8 @@ form{
   transition: all 0.25s ease 0s;
 }
 .btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
-  border-color: #3e6949;
-  color: #3e6949;
+    color: #ffffff;
+    background-color: #3e6949;
 }
 
 .button{
@@ -447,18 +420,16 @@ form{
 }
 
 footer{
+  font-family: "Montserrat", sans-serif;
   background-color: #3e6949;
   color: #ffffff;
-  height: 100px;
-
+  height: 50px;
   margin-top: 40px;
   padding: 30px 20px;
-
-  text-align: center;
 }
 
 footer ul li {
-  margin-bottom: 30px;
+  list-style: none;
 }
 
 footer ul li a {
@@ -470,9 +441,10 @@ footer ul li a {
 @media (min-width: 768px) {
   .landing{
     background-size: cover;
+    background-position-x: 0px;
   }
 
-  h2 {
+  .title__big {
     top: 600px;
     left: 365px;
     font-size: 26px;
@@ -482,7 +454,7 @@ footer ul li a {
     width: 62%;
   }
 
-  .objectifs{
+  .concept--el{
     float: right;
   }
 
@@ -490,8 +462,8 @@ footer ul li a {
     clear: both;
   }
 
-  .concept .objectifs:after{
-    left: -295px;
+  .concept .concept--el:after{
+    left: -297px;
     margin-bottom: 70px;
   }
 
@@ -500,7 +472,15 @@ footer ul li a {
   }
 
   .slider{
-    border-radius: 20px;
+    height: 340px;
+  }
+
+  .slider .slider__el{
+    width: 100%;
+  }
+  .slider .slider__el p{
+    width: 50%;
+    margin: 0 auto;
   }
 
   .borne{
@@ -517,11 +497,19 @@ footer ul li a {
   }
 
   .membre:after{
-    left: -145px;
+    left: -147px;
+  }
+
+  .membre:after{
+    background-position-y: -85px;
+  }
+
+  .form{
+    width: 100%;
   }
 
   .form .form-group input{
-    width: 250px;
+    width: 100%;
     height: 30px;
     font-size: 18px;
   }
@@ -535,7 +523,7 @@ footer ul li a {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   section{
     padding: 0;
   }
@@ -545,7 +533,7 @@ footer ul li a {
     background-size: cover;
   }
 
-  h2 {
+  .title__big {
     color: #ffffff;
     font-size: 54px;
     top: 510px;
@@ -558,10 +546,14 @@ footer ul li a {
   }
 
 
-  .concept .objectifs:after{
+  .concept .concept--el:after{
     left: -603px;
     background-position-y: -215px;
     height: 500px;
+  }
+
+  .slider{
+    height: 280px;
   }
 
   .membre:after {
@@ -569,7 +561,7 @@ footer ul li a {
     background-position-y: -125px;
     height: 500px;
   }
-  .membre h3{
+  .membre .title__small{
     margin: 0 auto;
   }
   .membre p{
@@ -579,7 +571,6 @@ footer ul li a {
     margin: 0 auto;
   }
 
-
   .col--small{
     width: 50%;
   }
@@ -587,7 +578,6 @@ footer ul li a {
   .philosophie, .borne{
     width: 40%;
   }
-
 
 }
 

@@ -78,3 +78,31 @@ $(document).ready(function() {
         });
     }
 });
+
+
+// Slider site
+
+var sliderEl = document.querySelectorAll('.slider__el');
+var sliderPrev = document.querySelector('.slider .prev');
+var sliderNext = document.querySelector('.slider .next');
+var slideIndex = 0;
+
+sliderPrev.addEventListener('click', function(e){
+    slideIndex -= 1;
+    if(slideIndex < 0) {
+        slideIndex = sliderEl.length -1;
+    }
+    for(var i=0; i < sliderEl.length; i++) {
+        document.querySelector('.slider .slider__el.active').classList.remove('active');
+        sliderEl[slideIndex].classList.add('active');
+    }
+});
+
+sliderNext.addEventListener('click', function(e){
+    slideIndex += 1;
+    if(slideIndex > sliderEl.length -1) {
+        slideIndex = 0;
+    }
+    document.querySelector('.slider .slider__el.active').classList.remove('active');
+    sliderEl[slideIndex].classList.add('active');
+});
