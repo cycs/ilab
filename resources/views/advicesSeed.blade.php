@@ -66,11 +66,26 @@
 
 @endsection
 @section('content')
-    @foreach(explode('%', $seed) as $info)
-        <li>{{$info}}</li>
-    @endforeach
+    <a class="btn__return" href="{{ route('home') }}">retour</a>
+
+    <div class="container">
+        <div class="maladie">
+            <h2 class="title title--big">Nom légume</h2>
+        </div>
+        <div class="slider">
+            <button id="prev" class="slider__btn"><</button>
+            <ul class="slider__list">
+                @foreach(explode('%', $seed) as $info)
+                    <li class="slider__el">
+                        <h2 class="title title--small">Conseils</h2>
+                        <p>{{$info}}</p>
+                    </li>
+                @endforeach
+            </ul>
+            <button id="next" class="slider__btn slider__btn--right">></button>
+        </div>
+    </div>
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/homeBorne.js') }}"></script>
-    <script src="{{ asset('js/meteo.js') }}"></script>
+    <script src="{{ asset('js/slider.js') }}"></script>
 @endsection

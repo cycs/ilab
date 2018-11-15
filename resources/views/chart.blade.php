@@ -51,7 +51,7 @@
         <div class="slider">
             <button id="prev" class="slider__btn"><</button>
             <ul class="slider__list">
-                <li class="slider__el active">
+                <li class="slider__el">
                     <p class="text">
                         <span class="bold">1. </span>En prenant part à ce projet, vous vous engagez à respecter le fonctionnement d'Edenia pour le bien du potager mais également pour celui des autres membres.
                     </p>

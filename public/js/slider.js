@@ -5,6 +5,8 @@ var sliderPrev = document.querySelector('#prev');
 var sliderNext = document.querySelector('#next');
 var slideIndex = 0;
 
+sliderEl[0].classList.add('active');
+
 /*function plusSlides(n) {
     showSlides(slideIndex += n);
 }

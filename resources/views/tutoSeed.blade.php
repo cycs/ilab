@@ -82,5 +82,5 @@
     </div>
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/homeBorne.js') }}"></script>
+    <script src="{{ asset('js/slider.js') }}"></script>
 @endsection
