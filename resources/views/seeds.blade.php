@@ -30,7 +30,7 @@
                     <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>
+                    <a class="nav__link" href="{{ route('maladie') }}">Les maladies</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
@@ -52,7 +52,7 @@
         </div>
         <div class="search__container"><!-- mettre le php -->
             <form>
-                <input type="text" placeholder="search.." name="search" />
+                <input type="text" placeholder="Recherche..." name="search" class="search--input"/>
                 <button class="btn search__btn" type="submit">search</button>
             </form>
         </div>
@@ -71,5 +71,8 @@
         </div>
     </div>
 
+@section('scripts')
+    <script src="{{ asset('js/graines.js') }}"></script>
+@endsection
 
 @endsection

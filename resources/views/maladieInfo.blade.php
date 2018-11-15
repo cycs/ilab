@@ -32,7 +32,7 @@
                     <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>
+                    <a class="nav__link" href="{{ route('maladie') }}">Les maladies</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
@@ -46,7 +46,7 @@
 @endsection
 
 @section('content')
-    <a class="btn__return" href="{{ route('maladie') }}">retour</a>
+    <a class="btn__return" href="{{ route('home') }}">retour</a>
     <div class="container">
         <div class="maladie">
             <h2 class="title title--big">{{$illness->name}}</h2>

@@ -32,7 +32,7 @@
                     <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('tuto') }}">Les bonnes pratiques</a>
+                    <a class="nav__link" href="{{ route('maladie') }}">Les maladies</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
@@ -48,7 +48,7 @@
 @section('content')
     <div class="container">
         <div class="maladie">
-            <a class="btn__return" href="{{ route('tuto') }}">retour</a>
+            <a class="btn__return" href="{{ route('home') }}">retour</a>
             <h2 class="title title--big">Les maladies</h2>
             <h3 class="title title--small title--light">Apprends-en plus sur les différentes maladies</h3>
         </div>
