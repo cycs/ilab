@@ -2,16 +2,13 @@
 
 var plantEl = document.querySelectorAll('.graine__el');
 
-function changeDataKey(){
-    let key = this.dataset.id;
-    document.querySelector('.seedId').value = key;
-}
+
 
 for(var i = 0; i < plantEl.length; i++) {
     plantEl[i].addEventListener('click', function(e){
         plantEl.forEach(pl => pl.classList.remove('active'));
         this.classList.add('active');
-        changeDataKey.call(this);
+
     });
 }
 
