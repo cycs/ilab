@@ -46,7 +46,7 @@
 @endsection
 
 @section('content')
-    <a class="btn__return" href="{{ route('home') }}">retour</a>
+    <a class="btn__return" href="{{ route('seeds') }}">retour</a>
     <div class="container container--center">
         <div class="info">
             <div class="info--left">
