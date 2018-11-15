@@ -79,13 +79,8 @@
                 <ul class="info__list">
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/arrosoir.png') }}" alt="icon d'arrosoir" />
-                        <h3 class="title title--small">Récolte possible</h3>
-                        <h3 class="title title--small title--light">kg possible de récolte</h3>
-                    </li>
-                    <li class="info__el">
-                        <img class="info__img--small" src="{{ asset('img/icon/arrosoir.png') }}" alt="icon edenia" />
-                        <h3 class="title title--small">Plants</h3>
-                        <p class="title title--small title--light">nombre de plants</p>
+                        <h3 class="title title--small">Arrosage</h3>
+                        <p class="title title--small title--light">{{$seed->water}}</p>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/feuille.png') }}" alt="icon edenia" />
