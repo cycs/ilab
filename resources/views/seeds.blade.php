@@ -45,8 +45,10 @@
 
 @section('content')
     <div class="container">
-        <div class="graine">
-            <h2 class="title title--big">Les plantations</h2>
+        <div class="maladie maladie--left">
+            <div class="graine">
+                <h2 class="title title--big">Les plantations</h2>
+            </div>
         </div>
         <div class="search__container"><!-- mettre le php -->
             <form>
