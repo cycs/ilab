@@ -46,7 +46,7 @@ var forecastFetch = fetch(forecastMeteo).then(blob => blob.json()).then(data => 
 function drought(rain){
     let time = new Date();
     let month = time.getMonth();
-    let diff = parseFloat(((rain*6/average_rain[month])).toFixed(2));
+    let diff = parseFloat(((rain*6)/average_rain[month]).toFixed(2));
     let result;
 
     if(diff < 0.2) {
@@ -72,7 +72,7 @@ function timeOut(){
     var time = new Date();
 
     document.querySelector('.meteo--time').innerHTML = `${time.getHours()}:${time.getMinutes() < 10 ? '0'+(time.getMinutes()) : time.getMinutes()}`;
-    document.querySelector('.meteo--date').innerHTML = `${time.getDate()}.${time.getMonth()}.${time.getFullYear()}`;
+    document.querySelector('.meteo--date').innerHTML = `${time.getDate()}.${time.getMonth()+1}.${time.getFullYear()}`;
     setTimeout(timeOut, 3600);
 };
 timeOut();

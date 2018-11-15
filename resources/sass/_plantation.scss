@@ -9,29 +9,24 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 424px;
   width: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+
   &--big {
     height: 500px;
   }
   &__list {
-    //margin: 0 30px;
     height: 100%;
-    //width: 15710px;
     display: flex;
-    flex-wrap: nowrap;
-    //justify-content: center;
-    //overflow: hidden;
-
+    //flex-wrap: nowrap;
   }
   &__el {
     position: relative;
-    box-sizing: border-box;
-    width: 250px;
+    min-width: 250px;
 
-    height: 100%;
-    margin: auto 60px;
+    padding: 0 30px;
+    margin: auto 30px;
     &.active {
       background: #edebe1;
     }

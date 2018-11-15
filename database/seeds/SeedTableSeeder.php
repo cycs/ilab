@@ -23,7 +23,7 @@ class SeedTableSeeder extends Seeder
         $tomatoes = Seed::create([
             'name' => 'tomate',
             'latin_name' => 'Solanum lycopersicum',
-            'variety' => 'coeur de boeuf',
+            'variety' => 'cœur de bœuf',
             'type' => 'solanacée',
             'exposure' => 'ensoleillé',
             'water' => '1 l/jour',
