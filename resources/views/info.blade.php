@@ -49,8 +49,9 @@
     <a class="btn__return" href="{{ route('tuto') }}">retour</a>
     <div class="container container--center">
         <div class="info">
-            <div class="col col--left">
+            <div class="info--left">
                 <img class="info__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="legume Edenia" />
+                <div class="info__maladie">
                 <h2 class="title title--cap">Maladies & parasites</h2>
                 <h3 class="title title--small title--light">
                     @foreach($seed->illnesses as $illness)
@@ -61,38 +62,43 @@
                         @endif
                     @endforeach
                 </h3>
-                <a class="info__link btn__tuto" href="#">En pratique</a>
-                <a class="info__link btn__tuto" href="#">Les bons tuyaux</a>
+                </div>
+                <div class="info__btn">
+                    <a class="info__link btn__tuto" href="{{ route('tutoSeed', ['id' => $seed->id]) }}">En pratique</a>
+                    <a class="info__link btn__tuto" href="#">Les bons tuyaux</a>
+                </div>
             </div>
-            <div class="col col--right">
+            <div class="info--right">
                 <h2 class="title title--big">{{ $seed->name }}</h2>
-                <p class="text text--italic">{{ $seed->latin_name }}</p>
-                <p class="text">{{ $seed->variety }}</p>
+                <div class="info__name">
+                    <p class="text text--italic">{{ $seed->latin_name }}</p>
+                    <p class="text">{{ $seed->variety }}</p>
+                </div>
                 <ul class="info__list">
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/soleil.png') }}" alt="icon de soleil" />
                         <h3 class="title title--small">Ensoleillement</h3>
-                        <h3 class="title title--small title--light">{{ $seed->exposure }}</h3>
+                        <p class="title title--small title--light">{{ $seed->exposure }}</p>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/arrosoir.png') }}" alt="icon d'arrosoir" />
                         <h3 class="title title--small">Arrosage</h3>
-                        <h3 class="title title--small title--light">{{ $seed->water }}</h3>
+                        <p class="title title--small title--light">{{ $seed->water }}</p>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/engrais.png') }}" alt="icon de graines" />
                         <h3 class="title title--small">Engrais</h3>
-                        <h3 class="title title--small title--light">{{ $seed->fertilizer }}</h3>
+                        <p class="title title--small title--light">{{ $seed->fertilizer }}</p>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/feuille.png') }}" alt="icon de feuilles" />
                         <h3 class="title title--small">Plantation</h3>
-                        <h3 class="title title--small title--light">{{ $start_plant }} - {{ $end_plant }} </h3>
+                        <p class="title title--small title--light">{{ $start_plant }} - {{ $end_plant }} </p>
                     </li>
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/panier.png') }}" alt="icon de panier" />
                         <h3 class="title title--small">Récolte</h3>
-                        <h3 class="title title--small title--light">{{ $start_harvest }} - {{ $end_harvest }} </h3>
+                        <p class="title title--small title--light">{{ $start_harvest }} - {{ $end_harvest }} </p>
                     </li>
                 </ul>
             </div>

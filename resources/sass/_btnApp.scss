@@ -34,7 +34,6 @@
     color: #fff;
     border-radius: 25px;
     padding: 10px 30px;
-    margin: 0 20px;
     font-family: 'Montserrat';
     font-size: $font-size-small;
     &--center {
@@ -47,7 +46,7 @@
   }
   &__return {
     position: absolute;
-    top: 45px;
+    top: 7px;
     left: 68px;
     height: 67px;
     width: 67px;

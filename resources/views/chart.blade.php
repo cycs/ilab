@@ -45,7 +45,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="maladie">
+        <div class="maladie maladie--left">
             <h2 class="title title--big">Notre philosophie</h2>
         </div>
         <div class="slider">

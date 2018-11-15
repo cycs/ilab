@@ -67,15 +67,19 @@
     <a class="btn__return" href="{{ route('home') }}">retour</a>
     <div class="container container--center">
         <div class="info">
-            <div class="col col--left">
+            <div class="info--left">
                 <img class="info__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="legume Edenia" />
-                <a class="info__link btn__tuto" href="{{ route('tutoSeed', ['id' => $seed->id]) }}">En pratique</a>
-                <a class="info__link btn__tuto" href="{{ route('advicesSeed', ['id' => $seed->id]) }}">Les bons tuyaux</a>
+                <div class="info__btn info__btn--center">
+                    <a class="info__link btn__tuto" href="{{ route('tutoSeed', ['id' => $seed->id]) }}">En pratique</a>
+                    <a class="info__link btn__tuto" href="{{ route('advicesSeed', ['id' => $seed->id]) }}">Les bons tuyaux</a>
+                </div>
             </div>
-            <div class="col col--right">
+            <div class="info--right info--small">
                 <h2 class="title title--big">{{$seed->name}}</h2>
-                <p class="text text--italic">{{$seed->latin_name}}</p>
-                <p class="text">{{$seed->variety}}</p>
+                <div class="info__name">
+                    <p class="text text--italic">{{$seed->latin_name}}</p>
+                    <p class="text">{{$seed->variety}}</p>
+                </div>
                 <ul class="info__list">
                     <li class="info__el">
                         <img class="info__img--small" src="{{ asset('img/icon/arrosoir.png') }}" alt="icon d'arrosoir" />
