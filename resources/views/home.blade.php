@@ -169,6 +169,10 @@
             </g>
         </svg>
 
+
+
+
+
         <ul class="potager__list">
                {{-- @for($i=0; $i<9; $i++)
                     <li class="potager__el">
@@ -189,11 +193,14 @@
                         @endforeach
 
                     @endforeach
-            <li class="potager__el">
-                <a class="potager__link" href="{{ route('plantation') }}">
-                    <img class="potager__img" src="{{ asset('img/icon/cross.png') }}" alt="parcelle vide" />
-                </a>
-            </li>
+            @if(count($parcels) <= 9)
+                <li class="potager__el">
+                    <a class="potager__link" href="{{ route('plantation') }}">
+                        <img class="potager__img" src="{{ asset('img/icon/cross.png') }}" alt="parcelle vide" />
+                    </a>
+                </li>
+            @endif
+
             </ul>
     </div>
 @endsection

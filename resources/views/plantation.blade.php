@@ -61,7 +61,7 @@
     <div class="plantation">
         <ul class="plantation__list">
             @foreach($seeds as $seed)
-                <li class="plantation__el">
+                <li class="plantation__el" data-id="{{$seed->id}}">
                     <h2 class="title title--center">{{$seed->name}}</h2>
                     <img class="plantation__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="légume-edenia" />
                     <p class="text text--italic">{{$seed->variety}}</p>
@@ -70,7 +70,11 @@
             @endforeach
         </ul>
     </div>
-    <a class="btn__planter" href="#">Planter</a>
+    <form method="post" action="{{action('SeedsController@store')}}">
+        @csrf
+        <input type="text" value="1" class="hidden seedId" name="seedId">
+        <button class="btn__planter">Planter</button>
+    </form>
 @endsection
 @section('scripts')
     <script src="{{ asset('js/plantation.js') }}"></script>

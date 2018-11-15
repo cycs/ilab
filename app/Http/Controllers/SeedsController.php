@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Seed;
+use App\Parcel;
 use Illuminate\Http\Request;
 
 class SeedsController extends Controller
@@ -27,8 +28,16 @@ class SeedsController extends Controller
         return view('seeds')->with('seeds', Seed::all());
     }
 
-    public function postData(){
+    public function store(Request $request){
+        $c1 = Parcel::create([
+            'name' => 'c1',
+        ]);
 
+        $seed = Seed::find($request->input('seedId'));
+        $seed->parcel_seeded()->attach($c1);
+        $seed->save();
+
+        return redirect('app');
     }
 
 }

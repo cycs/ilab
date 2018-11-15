@@ -142,6 +142,8 @@ Route::get('/site', function() {
 
 Route::get('/app/seeds', 'SeedsController@index')->name('seeds');
 
+Route::post('app/plantation', 'SeedsController@store');
+
 
 
 
