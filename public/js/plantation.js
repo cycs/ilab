@@ -75,19 +75,9 @@ function display(res){
             lis.appendChild(p);
             lis.appendChild(d);
             lis.addEventListener('click', changeDataKey);
-            console.log(lis);
-
-            let li =
-                `<li class="plantation__el">
-                    <h2 class="title title--center">${el.name}</h2>
-                    <img class="plantation__img" src='../img/${el.grown_img_url}' alt="légume-edenia" />
-                    <p class="text text--italic">${el.variety}</p>
-                    <p class="text">Difficulté</p>
-                </li>`;
 
             seeds.push(lis);
 
-            console.log(el.name);
         }
     });
 

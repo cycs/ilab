@@ -47,8 +47,8 @@
             <p>Ces potagers sont destinés à cultiver des légumes, des plantes, des fruits dans une optique de respect de l’environnement et de développement durable. Ceux-ci se basent sur un système exclusivement écologique: sans pesticide, ni engrais chimique, ni organisme génétiquement modifié.</p>
             </div>
             <div class="concept--el col--small">
-                <h3 class="title__small">Les objectifs</h3>
-                    <ul>
+                <h3 class="title__small col--right">Les objectifs</h3>
+                    <ul class="col--right">
                         <li>Cultiver des produits sains et frais que vous consommerez.</li>
                         <li>Favoriser les échanges et le savoir.</li>
                         <li>Donner la possibilité aux personnes ne disposant pas de potager de passer du temps libre à jardiner.</li>
@@ -85,7 +85,7 @@
             </div>
             <div class="slider__el">
                 <p>L’entretien du potager se fait avec les outils mis à disposition dans un abri. Un espace de compostage est prévu dans l’intention de réutiliser les déchets verts. Pour l'arrosage, une citerne est alimentée avec un système de récupération
-                    d’eau de pluie. Cette eau est utilisée de façon parcimonieuse. De plus, les membres sont invités à utiliser des techniques permettant au sol de rester humide (recouvrement en mousse ou en paille).</p>
+                    d’eau de pluie. Les membres sont invités à utiliser des techniques permettant au sol de rester humide.</p>
             </div>
             <div class="slider__el">
                 <p>Tous les trois mois, une réunion est organisée dans le but de discuter de points essentiels tels que le développement du potager ou les projets à venir. Il est souhaitable de participer à la vie du potager au minimum une fois par mois.</p>
@@ -109,54 +109,55 @@
         </div>
 
         <section class="borne col--small">
-            <h3 class="title__small">L'utilité de la borne</h3>
-            <p>Les membres jardinent pour leur plaisir mais la borne les guide de façon optimale.</p>
-            <p>Pour organiser l’espace et la production, le potager est divisé en parcelles de mêmes dimensions. La borne affiche une représentation du potager qui illustre son état et les tâches à réaliser. Par exemple, l’arrosage ou la période de récolte.</p>
-            <p>En fonction des paramètres propres à l’emplacement et des plantations actuelles, elle propose une liste de graines adaptée et intéressante pour les prochaines cultures. </p>
-            <p>Enfin, elle propose une série de tutoriels et de conseils spécifiques à chaque semence.</p>
-            <p>Enfin, elle propose une série de «trucs et astuces» spécifiques à chaque semence. Toute cette organisation permet de maintenir l’équilibre et l’harmonie du potager.</p>
+            <h3 class="borne--el title__small">L'utilité de la borne</h3>
+            <p class="borne--el">Les membres jardinent pour leur plaisir mais la borne les guide de façon optimale.</p>
+            <p class="borne--el">Pour organiser l’espace et la production, le potager est divisé en parcelles de mêmes dimensions. La borne affiche une représentation du potager qui illustre son état et les tâches à réaliser. Par exemple, l’arrosage ou la période de récolte.</p>
+            <p class="borne--el">En fonction des paramètres propres à l’emplacement et des plantations actuelles, elle propose une liste de graines adaptée et intéressante pour les prochaines cultures. </p>
+            <p class="borne--el">Enfin, elle propose une série de tutoriels et de conseils spécifiques à chaque semence.</p>
+            <p class="borne--el">Enfin, elle propose une série de «trucs et astuces» spécifiques à chaque semence. Toute cette organisation permet de maintenir l’équilibre et l’harmonie du potager.</p>
         </section>
 
-        <section id="potager" class="carte clear">
-            <h3 class="title__small">Où trouver un potager Edenia&nbsp;?</h3>
-            <div id="myMap" class="myMap"></div>
+        <section class="carte__membre">
+            <div id="potager" class="carte">
+                <h3 class="title__small title--map">Où trouver un potager Edenia&nbsp;?</h3>
+                <div id="myMap" class="myMap"></div>
+            </div>
+
+            <div id="membre" class="membre">
+                <h3 class="title__small col--small">Comment devenir membre Edenia&nbsp;?</h3>
+                <p class="col--small">Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
+
+                <form id="contact-form col--small" class="form col--small" action="#" method="POST" role="form">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom" tabindex="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="name">Prénom</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Prénom" tabindex="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="adress">Adresse</label>
+                        <input type="text" class="form-control" id="adress" name="adress" placeholder="Adresse" tabindex="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="4" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="tel">Téléphone</label>
+                        <input type="tel" class="form-control" id="tel" name="tel" placeholder="Téléphone" tabindex="5" required>
+                    </div>
+
+
+                    <div class="button">
+                        <button type="submit" class="btn btn-start-order">Ok</button>
+                    </div>
+                </form>
+
+            </div>
         </section>
-
-        <section id="membre" class="membre col--small">
-            <h3 class="title__small">Comment devenir membre Edenia&nbsp;?</h3>
-            <p>Complétez ce formulaire pour devenir membre d’Edenia. Cette inscription vous donnera accès à votre carte de membre.</p>
-
-            <form id="contact-form" class="form col--small" action="#" method="POST" role="form">
-                <div class="form-group">
-                    <label class="form-label" for="name">Nom</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nom" tabindex="1" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="name">Prénom</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Prénom" tabindex="2" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="adress">Adresse</label>
-                    <input type="text" class="form-control" id="adress" name="adress" placeholder="Adresse" tabindex="3" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="4" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="tel">Téléphone</label>
-                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="Téléphone" tabindex="5" required>
-                </div>
-
-
-                <div class="button">
-                    <button type="submit" class="btn btn-start-order">Ok</button>
-                </div>
-            </form>
-
-        </section>
-
-        <section id="conctact" class="contact col--small">
+        <section id="contact" class="contact col--small clear">
             <h3 class="title__small">Contacter Edenia</h3>
             <ul>
                 <li class="contact__el">Par téléphone: <a href="tel:01234567890">01234 567 890</a></li>
@@ -166,10 +167,12 @@
         </section>
 
         <section id="dwl_app" class="dwl_app col--small">
+            <div class="dwl_app--el">
             <h3 class="title__small">Télécharger l'application</h3>
             <p>Téléchargez l’application ! Elle permet de visualiser l’état de votre potager en temps réel et vous avez accès facilement à votre carte de membre. Vous pouvez également avoir accès au solde du pot commun ou consulter l’agenda des réunions.</p>
             <div class="button">
             <button class="btn_edenia">Edenia app</button>
+            </div>
             </div>
         </section>
     </main>

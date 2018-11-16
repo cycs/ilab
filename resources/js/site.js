@@ -26,7 +26,13 @@ toggleTag.addEventListener("click", function() {
 });
 
 menuTag.forEach(el => el.addEventListener("click", function() {
-    mainTag.classList.remove("open");
+    mainTag.classList.toggle("open");
+    let open = mainTag.classList.contains('open') ? true : false;
+    function hide(){
+        let displayNav = open ? 'flex' : 'none';
+        mainTag.style.display = displayNav;
+    }
+    setTimeout(hide, 150);
 }));
 
 

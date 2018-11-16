@@ -1,8 +1,5 @@
 var infobox, map;
 function GetMap() {
-    console.log("get map");
-    console.log(Microsoft.Maps.Events);
-    console.log(document.getElementById('myMap'));
 
     // Custom map --> https://msdn.microsoft.com/en-us/library/mt823636.aspx
     var bingStyle = {
@@ -33,7 +30,7 @@ function GetMap() {
           }
       },
       "settings": {
-          "landColor": "#e0ffdb",
+          "landColor": "#E5F3E9",
           "shadedReliefVisible":  true
       },
     };
@@ -59,7 +56,6 @@ function GetMap() {
     var soils = fetch('./api/soils').then(response => response.json()).then(display);
 
     function display(edenias){
-        console.log(edenias);
         edenias.forEach(edenia => {
             let location = new Microsoft.Maps.Location(edenia.lat, edenia.long);
             let pin = new Microsoft.Maps.Pushpin(location, {
@@ -81,8 +77,6 @@ function GetMap() {
 
     // Custom infobox -> https://msdn.microsoft.com/en-us/library/mt750271.aspx
     function pushpinClicked(e){
-        console.log(e.target.metadata);
-        console.log(e.target.getLocation());
 
         infobox.setOptions({
             location: e.target.getLocation(),

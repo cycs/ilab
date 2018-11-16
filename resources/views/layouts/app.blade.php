@@ -41,7 +41,7 @@
         @yield('content')
 </body>
 <!-- Scripts -->
-@if(!Request::is('login') || !Request::is('site'))
+@if(!Request::is('login') && !Request::is('site'))
 <script src="{{ asset('js/app.js') }}" defer></script>
 @endif
 @yield('bingmap_script')

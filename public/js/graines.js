@@ -78,11 +78,9 @@ function display(res){
             lis.appendChild(p);
             lis.appendChild(d);
             lis.appendChild(a);
-            console.log(lis);
 
             seeds.push(lis);
 
-            console.log(el.name);
         }
     });
 

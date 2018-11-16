@@ -20,6 +20,7 @@ body {
   width: 100vw;
 }
 
+
 // hamburger
 .menu {
   position: relative;
@@ -111,14 +112,31 @@ body {
   }
 }
 
-.title__big{
+.landing{
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.landing:after{
+  content: '';
   position: absolute;
-  top: 55%;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .7));
+  height: 250px;
+  bottom: 0;
+  width: 100%;
+}
+
+.title__big{
+  padding-bottom: 40px;
+  bottom: 0;
   right: 20%;
   font-family: 'Montserrat', sans-serif;
-  font-size: 21px;
+  font-size: 44px;
+  color: #fff;
   font-weight: 600;
-  z-index: 0;
+  z-index: 1;
   text-shadow: 1px 1px 3px rgba(255, 255, 255, .4);
 }
 
@@ -158,6 +176,10 @@ section p:last-child{
   z-index: 2;
   position: fixed;
   width: 100vw;
+}
+
+.site__header a:hover{
+  text-decoration: underline;
 }
 
 .site__header .button__menu{
@@ -230,15 +252,26 @@ section {
   height: 100vh;
 }
 
-.concept .concept--el:after{
-  content: '';
-  background: url('../img/seeds.jpg');
-  background-size: cover;
-  display: block;
-  height: 300px;
-  width: 100vw;
-  left: -20px;
-  position: relative;
+.col--right {
+  float: none;
+}
+
+.concept{
+  div {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+
+  &:after{
+    content: '';
+    background: url('../img/seeds.jpg');
+    background-size: cover;
+    display: block;
+    height: 300px;
+    width: 100vw;
+    left: -20px;
+    position: relative;
+  }
 }
 
 .membre:after{
@@ -270,16 +303,21 @@ section {
 .slider {
   position: relative;
   height: 360px;
-  background-color: #7fc490;
+  background-color: rgba(127, 196, 144, .3);
   margin: 35px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .slider .slider__el {
   position: absolute;
-  height: 100%;
-  justify-content: flex-start;
+  //height: 50%;
+  justify-content: center;
   display: none;
-  margin-top: 20px;
+  //margin-top: 20px;
 }
 
 .slider .slider__el.active {
@@ -315,6 +353,8 @@ section {
 
 form{
   width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .form-group{
@@ -432,12 +472,13 @@ form{
   position:relative;
   width:100vw;
   height:250px;
+  left: -20px;
 }
 
 .footer{
   font-family: "Montserrat", sans-serif;
-  background-color: #3e6949;
-  color: #ffffff;
+  background-color: rgba(127, 196, 144, .3);
+  color: rgba(127, 196, 144, 1);
   margin-top: 40px;
   padding: 30px;
   display: flex;
@@ -450,38 +491,43 @@ form{
 }
 
 .footer__el a {
-  color: #ffffff;
+  color: rgba(127, 196, 144, 1);
   text-decoration: underline;
 }
+
+.footer__el a:hover{
+  color: #3e6949;
+}
+
 
 
 @media (min-width: 768px) {
   .landing{
+    background-position-x: 0;
     background-size: cover;
-    background-position-x: 0px;
-  }
-
-  .title__big {
-    top: 600px;
-    left: 365px;
-    font-size: 26px;
   }
 
   .col--small{
-    width: 62%;
-  }
-
-  .concept--el{
-    float: right;
+    width: 450px;
   }
 
   .clear{
     clear: both;
   }
 
-  .concept .concept--el:after{
-    left: -297px;
-    margin-bottom: 70px;
+
+  .concept{
+    padding: 0;
+      &:after{
+
+        left:0;
+        height: 500px;
+        background-size: cover;
+        margin-bottom: 70px;
+    }
+  }
+
+  .concept--el{
   }
 
   .philosophie{
@@ -492,11 +538,12 @@ form{
     height: 340px;
   }
 
-  .slider .slider__el{
-    width: 100%;
+  .slider{
+    width: 60%;
+    margin: 30px auto;
   }
   .slider .slider__el p{
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -507,22 +554,40 @@ form{
 
   .myMap{
     height: 300px;
+    left: 0;
   }
 
   .membre{
     margin: 0 auto;
+
+    h3, p {
+      width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .membre:after{
-    left: -147px;
+    width: 100vw;
   }
 
   .membre:after{
     background-position-y: -85px;
+    left: 0;
+  }
+
+  .carte h3{
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+  .carte__membre {
+    padding: 0;
   }
 
   .form{
-    width: 100%;
+    width: 450px;
+    margin: 0 auto;
   }
 
   .form .form-group input{
@@ -535,12 +600,24 @@ form{
     font-size: 18px;
   }
 
+  .contact{
+    margin: 0 auto;
+  }
+
   .dwl_app{
     margin:0 auto;
   }
 }
 
 @media (min-width: 1024px) {
+  .col {
+    &--right {
+      float: right;
+    }
+  }
+  body {
+    font-size: 22px;
+  }
   section{
     padding: 0;
   }
@@ -550,51 +627,200 @@ form{
     background-size: cover;
   }
 
-  .title__big {
-    color: #ffffff;
-    font-size: 54px;
-    top: 510px;
-    left: 580px;
+  .title__big{
+    font-size: 60px;
   }
 
-  .concept{
-    max-width: 800px;
+  .concept {
     margin: 0 auto;
+    background-image: url('../img/imageDeco-1.png'), url('../img/imageDeco-2.png'), url('../img/imageBackground-1.png');
+    background-position: right top, 0 565px, 0 693px;
+    background-repeat: no-repeat;
+    background-size: auto, auto, contain;
+
+    div {
+      width: 800px;
+      margin: 0 auto;
+
+      * {
+        width: 450px;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: table;
+      background-position-y: -215px;
+      height: 500px;
+      clear: both;
+    }
   }
 
-
-  .concept .concept--el:after{
-    left: -603px;
-    background-position-y: -215px;
-    height: 500px;
+  .title--map {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    margin: 20px;
+    margin-top: 40px;
+    padding: 0;
   }
 
   .slider{
     height: 280px;
   }
+  .carte__membre{
+    height: 700px;
+    width: 100%;
+  }
+
+  .carte{
+    float: left;
+    width: 60%;
+    height: 100%;
+    position: relative;
+  }
+
+  .myMap{
+    width: 100%;
+    height: 100%;
+  }
+
+  .membre{
+    width: 40%;
+    float: right;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #3e6949;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+
+    & p, h3{
+      width: 400px;
+    }
+
+    &:before {
+      content:'';
+      display: block;
+      height: 50px;
+      width: 50px;
+      background: #3e6949;
+      position: absolute;
+      left: -25px;
+      top: calc(50% - 40px);
+      transform: rotate(45deg);
+    }
+  }
+
 
   .membre:after {
-    left: 0;
-    background-position-y: -125px;
-    height: 500px;
+    display: none;
   }
+
   .membre .title__small{
     margin: 0 auto;
   }
   .membre p{
+    padding-top: 20px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  .form {
+    width: 400px;
+    ::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  .form-group input{
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+
+  }
+  .form-group label{
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+
+
+  .philosophie{
+    width: 450px;
+  }
+
+  .borne{
+    padding-bottom: 70px;
+    height: 750px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url("../img/imageBackground-2.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    margin-top: 70px;
+  }
+
+  .borne--el{
+    width: 450px;
     margin: 0 auto;
   }
-  .membre form{
-    margin: 0 auto;
+  .borne p{
+    margin-top: 20px;
   }
 
-  .col--small{
-    width: 50%;
-  }
-
-  .philosophie, .borne{
-    width: 40%;
-  }
-
+.contact{
+  width: 450px;
+  margin-top: 90px;
 }
 
+  .dwl_app{
+    width: 100%;
+    background-image: url('../img/imageDeco-3.png'), url('../img/imageDeco-4.png');
+    background-position: left, right 400px;
+    background-repeat: no-repeat;
+    & .dwl_app--el{
+      width: 450px;
+      margin: 0 auto;
+    }
+    &:after{
+      content: '';
+      display: block;
+      height: 600px;
+      margin-top: 50px;
+      background-image: url('../img/imageApp.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+footer{
+  margin-top: 100px;
+}
+
+@media (min-width: 1200px) {
+  .slider{
+    height: 310px;
+    width: 50%;
+    max-width: 600px;
+  }
+
+  .membre:after {
+    background-position-y: -135px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .membre:after {
+    background-position-y: -230px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .membre:after {
+    background-position-y: -265px;
+  }
+}
