@@ -32,7 +32,6 @@ var average_rain = [
 
 var forecastFetch = fetch(forecastMeteo).then(blob => blob.json()).then(data => {
     let list = data.list;
-    console.log(data);
     let rain = Math.round(list.reduce((a,b) => {
         return b.rain && b.rain['3h'] ? a + b.rain['3h'] : a + 0;
     }, 0));
