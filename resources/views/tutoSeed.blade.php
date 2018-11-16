@@ -28,13 +28,10 @@
                     <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
-                </li>
-                <li class="nav__el">
                     <a class="nav__link" href="{{ route('maladie') }}">Les maladies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
+                    <a class="nav__link" href="{{ route('chart') }}">7 points clés</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('logout') }}">Déconnexion</a>
@@ -69,7 +66,7 @@
     <a class="btn__return" href="{{ route('home') }}">retour</a>
     <div class="container">
         <div class="maladie">
-            <h2 class="title title--big">Nom légume</h2>
+            <h2 class="title title--big">{{$name}}</h2>
         </div>
         <div class="slider">
             <button id="prev" class="slider__btn"><</button>

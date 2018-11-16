@@ -37,8 +37,8 @@ class SeedTableSeeder extends Seeder
             'seed_img_url' => '/tomate_seed.png',
             'price' => '1.79',
             'difficulty' => 'hard',
-            'tutorial' => 'lorem',
-            'advices' => 'lorem'
+            'tutorial' => "1. Tracer des sillons de 1 à 2 cm de profondeur dans la terre.%2. Semer clair en espacant les graines de 5 à 10cm de façon à former des plants différents.%3. Recouvrir de terre fine les semences et tasser.%4. Arroser en pluie fine.%5. Maintenir la terre humide jusqu'a ce que les feuilles apparaissent.",
+            'advices' => "1. Couper fréquemment pour stimuler la pousse des feuilles.%2. Couper les fleurs lorsqu'elles apparaissent pour ne pas affaiblir le plant.%3. Couper le bouquet à 5cm de la base lorsqu'il commence à ramolir. "				,
         ]);
 
         $potatoes = Seed::create([
@@ -57,8 +57,8 @@ class SeedTableSeeder extends Seeder
             'seed_img_url' => '/tomate_seed.png',
             'price' => '1.79',
             'difficulty' => 'hard',
-            'tutorial' => '',
-            'advices' => '',
+            'tutorial' => "1. Tracer des sillons de 1 à 2 cm de profondeur dans la terre.%2. Semer clair en espacant les graines de 5 à 10cm de façon à former des plants différents.%3. Recouvrir de terre fine les semences et tasser.%4. Arroser en pluie fine.%5. Maintenir la terre humide jusqu'a ce que les feuilles apparaissent.",
+            'advices' => "1. Couper fréquemment pour stimuler la pousse des feuilles.%2. Couper les fleurs lorsqu'elles apparaissent pour ne pas affaiblir le plant.%3. Couper le bouquet à 5cm de la base lorsqu'il commence à ramolir. "				,
             'soil_ph'=> 7,
             'soil_humus_percent'=> 5,
             'soil_granulometry'=> 'limons fins',

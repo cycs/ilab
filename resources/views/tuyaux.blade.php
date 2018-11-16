@@ -26,13 +26,10 @@
                     <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
-                </li>
-                <li class="nav__el">
                     <a class="nav__link" href="{{ route('maladie') }}">Les maladies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
+                    <a class="nav__link" href="{{ route('chart') }}">7 points clés</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('logout') }}">Déconnexion</a>

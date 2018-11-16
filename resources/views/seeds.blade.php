@@ -27,13 +27,10 @@
                     <a class="nav__link" href="{{ route('seeds') }}">Plantations</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('envie') }}">Vos envies</a>
-                </li>
-                <li class="nav__el">
                     <a class="nav__link" href="{{ route('maladie') }}">Les maladies</a>
                 </li>
                 <li class="nav__el">
-                    <a class="nav__link" href="{{ route('chart') }}">Notre philosophie</a>
+                    <a class="nav__link" href="{{ route('chart') }}">7 points clés</a>
                 </li>
                 <li class="nav__el">
                     <a class="nav__link" href="{{ route('logout') }}">Déconnexion</a>
@@ -58,7 +55,7 @@
         </div>
         <div class="seeds">
             <ul class="graine__list">
-                @foreach($seeds as $seed)
+            @foreach($seeds as $seed)
                     <li class="graine__el">
                         <h2 class="title">{{$seed->name}}</h2>
                         <img class="graine__img" src="{{ asset('img'.$seed->grown_img_url) }}" alt="légume-edenia" />

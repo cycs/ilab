@@ -66,11 +66,11 @@ Route::get('/app/tuto', function () {
 })->name('tuto');
 
 Route::get('/app/tuto/{id}', function ($id) {
-    return view('tutoSeed')->with('seed', Seed::find($id)->tutorial);
+    return view('tutoSeed')->with('seed', Seed::find($id)->tutorial)->with('name', Seed::find($id)->name);
 })->name('tutoSeed');
 
 Route::get('/app/advices/{id}', function ($id) {
-    return view('advicesSeed')->with('seed', Seed::find($id)->advices);
+    return view('advicesSeed')->with('seed', Seed::find($id)->advices)->with('name', Seed::find($id)->name);;
 })->name('advicesSeed');
 
 Route::get('/app/envie', function () {

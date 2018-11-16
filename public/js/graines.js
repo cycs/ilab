@@ -48,10 +48,23 @@ function display(res){
             let pContent = document.createTextNode(el.variety);
             p.appendChild(pContent);
 
-            let d = document.createElement('p');
-            d.className = 'text';
-            let dContent = document.createTextNode(el.difficulty);
-            d.appendChild(dContent);
+            let d = document.createElement('div');
+            d.className = 'difficult';
+            let newP = document.createElement('p');
+            newP.className = 'text difficult__txt';
+            let newPContent = document.createTextNode('Difficulté');
+            newP.appendChild(newPContent);
+
+            let newImg = document.createElement('img');
+            newImg.className = 'difficult__img';
+            newImg.src = '../img/icon/difficulte.png';
+            newImg.alt = 'icone de difficulte';
+
+            let newImgClone = newImg.cloneNode(true);
+
+            d.appendChild(newP);
+            d.appendChild(newImg);
+            d.appendChild(newImgClone);
 
             let a = document.createElement('a');
             a.className = 'btn__tuto btn__tuto--center';
@@ -65,7 +78,6 @@ function display(res){
             lis.appendChild(p);
             lis.appendChild(d);
             lis.appendChild(a);
-            lis.addEventListener('click', changeDataKey);
             console.log(lis);
 
             seeds.push(lis);

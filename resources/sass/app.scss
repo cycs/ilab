@@ -73,7 +73,7 @@ td {
 .search {
   &__container {
     position: absolute;
-    top: 111px;
+    top: 160px;
     right: 69px;
     &--lower {
       top: 140px;
@@ -114,6 +114,18 @@ td {
 
 // slider
 
+$elements: 8;
+@for $i from 1 to $elements {
+  ol li:nth-child(#{$i}):before {
+    content: '#{$i}.';
+    position:absolute;
+    left: -50px;
+    font-family: 'Libre Baskerville';
+    color: #28453c;
+    font-size: 25px;
+  }
+}
+
 .slider {
   display: flex;
   justify-content: space-between;
@@ -122,12 +134,17 @@ td {
   &__list {
     position: relative;
     width: 750px;
+    height: 300px;
+    padding-left: 80px;
+
   }
   &__el {
     display: none;
+    position: relative;
     &.active {
       display: block;
     }
+
   }
   &__btn {
     width: 67px;
@@ -196,6 +213,7 @@ td {
     padding: 10px;
     border: 1px solid #3e6949;
     border-radius: 20px;
+    z-index: 2;
   }
 }
 

@@ -51,10 +51,24 @@ function display(res){
             let pContent = document.createTextNode(el.variety);
             p.appendChild(pContent);
 
-            let d = document.createElement('p');
-            d.className = 'text';
-            let dContent = document.createTextNode(el.difficulty);
-            d.appendChild(dContent);
+            let d = document.createElement('div');
+            d.className = 'difficult';
+            let newP = document.createElement('p');
+            newP.className = 'text difficult__txt';
+            let newPContent = document.createTextNode('Difficulté');
+            newP.appendChild(newPContent);
+
+            let newImg = document.createElement('img');
+            newImg.className = 'difficult__img';
+            newImg.src = '../img/icon/difficulte.png';
+            newImg.alt = 'icone de difficulte';
+            d.appendChild(newP);
+            d.appendChild(newImg);
+            let newImgClone = newImg.cloneNode(true);
+            d.appendChild(newImgClone);
+
+          //  let dContent = document.createTextNode(el.difficulty);
+           // d.appendChild(dContent);
 
             lis.appendChild(h2);
             lis.appendChild(img);
